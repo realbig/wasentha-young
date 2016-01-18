@@ -1,0 +1,3 @@
+[submodule "build/vendor/foundation-sites"]
+	path = build/vendor/foundation-sites
+	url = git@github.com:zurb/foundation-sites.git

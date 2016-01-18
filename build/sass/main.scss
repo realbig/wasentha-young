@@ -1,0 +1,26 @@
+/*!
+Theme Name: Wasentha Young
+Description: A kick-butt theme for Wasentha Young.
+Author: Eric Defore
+Author URI: http://realbigmarketing.com
+Version: 0.1.0
+*/
+
+// Vendor
+@import "../vendor/sass/normalize";
+
+// Dependencies
+@import "settings.scss";
+@import "functions.scss";
+
+// Foundation
+// Here we control all the various Foundation components to use
+@import "../vendor/sass/foundation/foundation";
+@include foundation-global-styles;
+@include foundation-visibility-classes;
+@include foundation-tabs;
+@include foundation-reveal;
+@include foundation-grid;
+@include foundation-button;
+@include foundation-typography;
+@include foundation-forms;
