@@ -24,3 +24,8 @@ Version: 0.1.0
 @include foundation-button;
 @include foundation-typography;
 @include foundation-forms;
+
+// General Styling
+@import "foundation-extend";
+@import "base";
+@import "wp";

@@ -84,7 +84,8 @@ module.exports = function (grunt) {
                         '!build/vendor/js/html5.js',
 
                         // Theme scripts
-                        'build/js/*.js'
+                        'build/js/**/*.js',
+                        '!build/js/admin/**/*.js'
                     ]
                 }
             },
