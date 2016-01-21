@@ -20,6 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </footer>
 
+</div>
+
 <?php // #wrapper ?>
 </div>
 

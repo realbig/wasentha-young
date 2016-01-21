@@ -57,6 +57,8 @@ add_action( 'after_setup_theme', function () {
 
     // Add theme support
     require_once __DIR__ . '/includes/theme-support.php';
+    
+    require_once __DIR__ . '/includes/class-foundation_nav_walker.php';
 
     // Allow shortcodes in text widget
     add_filter( 'widget_text', 'do_shortcode' );
@@ -131,12 +133,12 @@ add_action( 'wp_head', '_wasentha_favicon' );
 add_action( 'admin_head', '_wasentha_favicon' );
 function _wasentha_favicon() {
 
-	if ( ! file_exists( get_stylesheet_directory() . '/assets/images/favicon.ico' ) ) {
-		return;
-	}
-	?>
-	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() . '/assets/images/favicon.ico'; ?>" />
-	<?php
+    if ( ! file_exists( get_stylesheet_directory() . '/assets/images/favicon.ico' ) ) {
+        return;
+    }
+?>
+<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() . '/assets/images/favicon.ico'; ?>" />
+<?php
 }
 
 /**
@@ -160,6 +162,17 @@ add_action( 'wp_enqueue_scripts', function () {
             wp_enqueue_style( THEME_ID . "-font-$ID" );
         }
     }
+
+} );
+
+/**
+ * Register nav menus.
+ *
+ * @since 0.1.0
+ */
+add_action( 'after_setup_theme', function () {
+
+    register_nav_menu( 'primary-nav', 'Primary Menu' );
 
 } );
 

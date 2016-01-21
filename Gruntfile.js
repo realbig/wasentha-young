@@ -78,14 +78,23 @@ module.exports = function (grunt) {
                         'build/vendor/js/placeholder.js',
                         'build/vendor/js/jquery.cookie.js',
                         'build/vendor/js/foundation/foundation.core.js',
+                        'build/vendor/js/foundation/foundation.util.keyboard.js',
+                        'build/vendor/js/foundation/foundation.util.box.js',
+                        'build/vendor/js/foundation/foundation.util.nest.js',
                         'build/vendor/js/foundation/foundation.util.mediaQuery.js',
+                        'build/vendor/js/foundation/foundation.util.triggers.js',
+                        'build/vendor/js/foundation/foundation.util.motion.js',
+                        'build/vendor/js/foundation/foundation.dropdownMenu.js',
+                        'build/vendor/js/foundation/foundation.offcanvas.js',
                         'build/vendor/js/foundation/foundation.reveal.js',
                         // Included dynamically in header.php
                         '!build/vendor/js/html5.js',
 
                         // Theme scripts
                         'build/js/**/*.js',
-                        '!build/js/admin/**/*.js'
+                        '!build/js/foundation-init.js',
+                        '!build/js/admin/**/*.js',
+                        'build/js/foundation-init.js'
                     ]
                 }
             },

@@ -24,8 +24,22 @@ Version: 0.1.0
 @include foundation-button;
 @include foundation-typography;
 @include foundation-forms;
+@include foundation-top-bar;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-off-canvas;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-off-canvas;
 
-// General Styling
-@import "foundation-extend";
-@import "base";
-@import "wp";
+// Global Styling
+@import "global/foundation-extend";
+@import "global/base";
+@import "global/wp";
+@import "global/icons";
+
+// Static
+@import "static/off-canvas";
+@import "static/nav-menus";
+
+// Page Templates

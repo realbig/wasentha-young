@@ -1,0 +1,24 @@
+.off-canvas-content {
+    box-shadow: none;
+    // For something that has to wrap your Site Content, this is a really silly default...
+}
+
+.off-canvas {
+
+    > .menu {
+
+        > li {
+
+            background-color: green; /* Top Level */
+
+            ul {
+                li {
+                    background-color: pink;
+                }
+            }
+
+        }
+
+    }
+
+}

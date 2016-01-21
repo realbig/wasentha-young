@@ -34,16 +34,58 @@ if ( ! isset( $_SESSION ) ) {
 
     </head>
 
-    <body <?php body_class(); ?>>
+    <body <?php body_class( 'off-canvas-wrapper' ); ?>>
 
-        <div id="wrapper">
+        <div id="wrapper" class = "off-canvass-wrapper-inner" data-off-canvas-wrapper>
 
-            <header id="site-header">
+            <div class="off-canvas position-left nav-menu" id="offCanvasLeft" data-off-canvas>
+            
+                <?php
+                wp_nav_menu( array(
+                    'container' => false,
+                    'menu' => __( 'Primary Menu', THEME_ID ),
+                    'menu_class' => 'menu',
+                    'theme_location' => 'primary-nav',
+                    'items_wrap'      => '<ul id="%1$s" class="vertical %2$s" data-dropdown-menu>%3$s</ul>',
+                    //Recommend setting this to false, but if you need a fallback...
+                    //'fallback_cb' => 'f6_topbar_menu_fallback',
+                    'fallback_cb' => false,
+                    'walker' => new Foundation_Nav_Walker(),
+                ) );
+                ?>
+            
+            </div>
 
-                <div class = "row">
+            <div class="off-canvas-content" data-off-canvas-content>
 
-                   
-                </div>
-            </header>
+                <header id="site-header">
 
-            <section id="site-content">
+                    <div class="top-bar">
+
+                        <div class="top-bar-left hide-for-small-only nav-menu">
+                            <?php
+                            wp_nav_menu( array(
+                                'container' => false,
+                                'menu' => __( 'Primary Menu', THEME_ID ),
+                                'menu_class' => 'dropdown menu top-level',
+                                'theme_location' => 'primary-nav',
+                                'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+                                //Recommend setting this to false, but if you need a fallback...
+                                //'fallback_cb' => 'f6_topbar_menu_fallback',
+                                'fallback_cb' => false,
+                                'walker' => new Foundation_Nav_Walker(),
+                            ) );
+                            ?>
+                        </div>
+
+                        <div class="top-bar-left show-for-small-only">
+
+                            <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
+
+                        </div>
+
+                    </div>
+
+                </header>
+
+                <section id="site-content">
