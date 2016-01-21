@@ -741,7 +741,7 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #222;
-  background: #fefefe;
+  background: #cacaca;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1823,8 +1823,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica", sans-serif;
-  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   color: inherit;
   text-rendering: optimizeLegibility;
@@ -1869,7 +1869,7 @@ h6 {
     font-size: 1rem; } }
 
 a {
-  color: #2199e8;
+  color: #f36557;
   text-decoration: none;
   line-height: inherit;
   cursor: pointer; }
@@ -2221,7 +2221,7 @@ legend {
   padding: 1.25rem;
   margin: 1.125rem 0; }
   .fieldset legend {
-    background: #fefefe;
+    background: #cacaca;
     padding: 0 0.1875rem;
     margin: 0;
     margin-left: -0.1875rem; }
@@ -2292,7 +2292,7 @@ select {
   .top-bar ul {
     background-color: #e6e6e6; }
   .top-bar a {
-    color: #2199e8; }
+    color: #f36557; }
   .top-bar input {
     width: 200px;
     margin-right: 1rem; }
@@ -2561,7 +2561,7 @@ body {
 .off-canvas-content,
 .off-canvas-content {
   min-height: 100%;
-  background: #fefefe;
+  background: #cacaca;
   -webkit-transition: -webkit-transform 0.5s ease;
           transition: transform 0.5s ease;
   -webkit-backface-visibility: hidden;
@@ -2637,7 +2637,7 @@ body {
       margin-right: 250px; } }
 
 .dropdown-pane {
-  background-color: #fefefe;
+  background-color: #cacaca;
   border: 1px solid #cacaca;
   display: block;
   padding: 1rem;
@@ -2774,7 +2774,7 @@ body {
 .off-canvas-content,
 .off-canvas-content {
   min-height: 100%;
-  background: #fefefe;
+  background: #cacaca;
   -webkit-transition: -webkit-transform 0.5s ease;
           transition: transform 0.5s ease;
   -webkit-backface-visibility: hidden;
@@ -2973,97 +2973,26 @@ Base element settings (no classes or id's).
     width: 100%;
     overflow-x: hidden; } }
 
-a.color-invert {
-  color: inherit; }
-  a.color-invert:hover {
-    color: #0a4378; }
-
-button, .button {
-  -webkit-transition: border 300ms, color 300ms, background-color 300ms;
-          transition: border 300ms, color 300ms, background-color 300ms; }
-  button:hover, .button:hover {
-    border-color: #0b467d;
-    color: #0b467d; }
-  button:active, button:focus, .button:active, .button:focus {
-    color: inherit; }
-  button.fill, .button.fill {
-    background-color: #ebebeb;
-    color: #D6E0EB;
-    border: none; }
-    button.fill:active, button.fill:focus, .button.fill:active, .button.fill:focus {
-      color: #fff; }
-    button.fill:hover, .button.fill:hover {
-      background-color: #dedede;
-      color: #2199e8; }
-  button.secondary, .button.secondary {
-    color: #777;
-    border-color: #777; }
-    button.secondary:active, button.secondary:focus, .button.secondary:active, .button.secondary:focus {
-      color: #fff; }
-    button.secondary:hover, .button.secondary:hover {
-      border-color: #e6e6e6;
-      color: #e6e6e6; }
-    button.secondary.fill, .button.secondary.fill {
-      background-color: #777;
-      color: #fff; }
-      button.secondary.fill:hover, .button.secondary.fill:hover {
-        background-color: #2199e8; }
-  button.warning:active, button.warning:focus, .button.warning:active, .button.warning:focus {
-    color: #e87c10; }
-  button.warning:hover, .button.warning:hover {
-    border-color: #e87c10;
-    color: #e87c10; }
-  button.info:active, button.info:focus, .button.info:active, .button.info:focus {
-    color: #80c4e0; }
-  button.info:hover, .button.info:hover {
-    border-color: #80c4e0;
-    color: #80c4e0; }
-  button.alert:active, button.alert:focus, .button.alert:active, .button.alert:focus {
-    color: #e82f10; }
-  button.alert:hover, .button.alert:hover {
-    border-color: #e82f10;
-    color: #e82f10; }
-  button.success:active, button.success:focus, .button.success:active, .button.success:focus {
-    color: transparent; }
-  button.success:hover, .button.success:hover {
-    border-color: #3c9b5f;
-    color: #3c9b5f; }
-
 ::-moz-selection {
   background: #2199e8;
-  color: #D6E0EB; }
+  color: #333; }
 
 ::selection {
   background: #2199e8;
-  color: #D6E0EB; }
+  color: #333; }
 
 ::-moz-selection {
   background: #2199e8;
-  color: #D6E0EB; }
+  color: #333; }
 
 .screen-reader-text {
   display: none; }
 
-.row.expand {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: none; }
-
-.alignleft {
-  float: left;
-  margin-right: 30px; }
-
-.alignright {
-  float: right;
-  margin-left: 30px; }
-
-.aligncenter {
-  display: block;
-  margin: 30px auto; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Lora"; }
+#site-content {
+  background-color: #fefefe;
+  min-height: 80vh;
+  height: 80vh;
+  padding: 30px; }
 
 /*
 This provides overrides for some WP stuff (not much at all).
@@ -4885,11 +4814,15 @@ This provides overrides for some WP stuff (not much at all).
 .off-canvas-content {
   box-shadow: none; }
 
-.off-canvas > .menu > li {
-  background-color: green;
-  /* Top Level */ }
-  .off-canvas > .menu > li ul li {
-    background-color: pink; }
+.off-canvas {
+  background-color: #2199e8;
+  min-height: 100vh;
+  height: 100vh; }
+  .off-canvas > .menu > li {
+    background-color: green;
+    /* Top Level */ }
+    .off-canvas > .menu > li ul li {
+      background-color: pink; }
 
 .nav-menu > .menu {
   /* Adds Stone Icon to each top-level item. Cycles through in sets of 3 after setting "Home" to Stacked */ }

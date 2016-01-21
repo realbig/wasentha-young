@@ -57,7 +57,7 @@ add_action( 'after_setup_theme', function () {
 
     // Add theme support
     require_once __DIR__ . '/includes/theme-support.php';
-    
+
     require_once __DIR__ . '/includes/class-foundation_nav_walker.php';
 
     // Allow shortcodes in text widget
@@ -122,6 +122,22 @@ add_action( 'init', function () {
         }
     }
 
+} );
+
+/**
+ * Register sidebars.
+ *
+ * @since 0.1.0
+ */
+add_action( 'widgets_init', function () {
+
+    // Main Sidebar
+    register_sidebar( array(
+        'name' => __( 'Main Sidebar', THEME_ID ),
+        'id' => 'main-sidebar',
+        'description' => __( 'This is the default sidebar that appears.', THEME_ID ),
+    ) );
+    
 } );
 
 /**

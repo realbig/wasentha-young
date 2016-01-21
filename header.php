@@ -36,7 +36,7 @@ if ( ! isset( $_SESSION ) ) {
 
     <body <?php body_class( 'off-canvas-wrapper' ); ?>>
 
-        <div id="wrapper" class = "off-canvass-wrapper-inner" data-off-canvas-wrapper>
+        <div id="wrapper" class = "off-canvass-wrapper-inner row" data-off-canvas-wrapper>
 
             <div class="off-canvas position-left nav-menu" id="offCanvasLeft" data-off-canvas>
             
@@ -46,9 +46,7 @@ if ( ! isset( $_SESSION ) ) {
                     'menu' => __( 'Primary Menu', THEME_ID ),
                     'menu_class' => 'menu',
                     'theme_location' => 'primary-nav',
-                    'items_wrap'      => '<ul id="%1$s" class="vertical %2$s" data-dropdown-menu>%3$s</ul>',
-                    //Recommend setting this to false, but if you need a fallback...
-                    //'fallback_cb' => 'f6_topbar_menu_fallback',
+                    'items_wrap'      => '<ul id="%1$s" class="vertical %2$s">%3$s</ul>',
                     'fallback_cb' => false,
                     'walker' => new Foundation_Nav_Walker(),
                 ) );
@@ -67,11 +65,9 @@ if ( ! isset( $_SESSION ) ) {
                             wp_nav_menu( array(
                                 'container' => false,
                                 'menu' => __( 'Primary Menu', THEME_ID ),
-                                'menu_class' => 'dropdown menu top-level',
+                                'menu_class' => 'dropdown menu',
                                 'theme_location' => 'primary-nav',
                                 'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
-                                //Recommend setting this to false, but if you need a fallback...
-                                //'fallback_cb' => 'f6_topbar_menu_fallback',
                                 'fallback_cb' => false,
                                 'walker' => new Foundation_Nav_Walker(),
                             ) );

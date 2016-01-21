@@ -4,22 +4,14 @@
 
 /* Override Foundation's _settings.scss here, or store your own variables */
 
-// Grayscale colors
-$dark-color: #D6E0EB;
-$medium-color: #ebebeb;
+$dark-color: #333;
 $light-color: #fff;
 
-// Extra colors
-
 // We use these as default colors throughout
-$primary-color: #0C4E8B;
-$secondary-color: #C73144;
-$alert-color: #f04124;
-$success-color: #43AC6A;
-$warning-color: #f08a24;
-$info-color: #a0d3e8;
+$primary-color: #222832;
+$secondary-color: #f36557;
 
-$body-bg: $light-color;
+$body-background: $medium-gray;
 
 // We use these to define default font stacks
 $font-family-sans-serif: "Helvetica", sans-serif;
@@ -27,63 +19,11 @@ $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 $body-font-color: #222;
 
-// Sizes
-$gutter: 30px;
-$column-gutter: rem-calc(30);
-
 // We use these to control header font styles
-$header-font-family: $font-family-sans-serif;
-$header-font-color: $primary-color;
-$header-font-weight: bold;
-$header-line-height: 1.4;
-$header-top-margin: .2rem;
-$header-bottom-margin: .5rem;
-$h1-font-size: rem-calc(35);
-$h2-font-size: rem-calc(30);
-$h3-font-size: rem-calc(26);
-$h4-font-size: rem-calc(22);
-$h5-font-size: rem-calc(18);
-$h6-font-size: 1rem;
 
 // We use these to style anchors
-$anchor-text-decoration: none;
-$anchor-text-decoration-hover: none;
-$anchor-font-color: $primary-color;
-$anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
-
-// Grid
-$row-width: rem-calc(1000);
-
-// Buttons
-$button-function-factor: -10%;
-$button-border-width: 2;
-$button-border-style: solid;
-$button-font-color: $primary-color;
-$button-bg-color: transparent;
-$button-bg-hover: transparent;
-$button-border-color: $primary-color;
-$button-border-hover: scale-color($primary-color, $lightness: $button-function-factor);
-$secondary-button-bg-color: transparent;
-$secondary-button-bg-hover: transparent;
-$secondary-button-border-color: $light-color;
-$secondary-button-border-hover: scale-color($light-color, $lightness: $button-function-factor);
-$success-button-bg-color: transparent;
-$success-button-bg-hover: transparent;
-$success-button-border-color: darken($light-color, 10%);
-$success-button-border-hover: scale-color($success-color, $lightness: $button-function-factor);
-$alert-button-border-hover: scale-color($alert-color, $lightness: $button-function-factor);
-$alert-button-bg-color: transparent;
-$alert-button-bg-hover: transparent;
-$alert-button-border-color: scale-color($alert-color, $lightness: $button-function-factor);
-$alert-button-border-hover: scale-color($alert-color, $lightness: $button-function-factor);
-$warning-button-bg-color: transparent;
-$warning-button-bg-hover: transparent;
-$warning-button-border-color: scale-color($warning-color, $lightness: $button-function-factor);
-$warning-button-border-hover: scale-color($warning-color, $lightness: $button-function-factor);
-$info-button-bg-color: transparent;
-$info-button-bg-hover: transparent;
-$info-button-border-color: scale-color($info-color, $lightness: $button-function-factor);
-$info-button-border-hover: scale-color($info-color, $lightness: $button-function-factor);
+$anchor-color: $secondary-color;
+$topbar-link-color: $secondary-color;
 
 // Media query ranges
 $small-range: (0em, 40em);

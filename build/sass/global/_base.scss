@@ -16,117 +16,6 @@ Base element settings (no classes or id's).
         }
 }
 
-a {
-    &.color-invert {
-        color: inherit;
-
-        &:hover {
-            color: $anchor-font-color-hover;
-        }
-    }
-}
-
-// Ghost buttons
-button, .button {
-    transition: border 300ms, color 300ms, background-color 300ms;
-
-    &:hover {
-        border-color: $button-border-hover;
-        color: $button-border-hover;
-    }
-
-    &:active, &:focus {
-        color: inherit;
-    }
-
-    &.fill {
-        background-color: $medium-color;
-        color: $dark-color;
-        border: none;
-
-        &:active, &:focus {
-            color: $light-color;
-        }
-
-        &:hover {
-            background-color: darken($medium-color, 5%);
-            color: $primary-color;
-        }
-    }
-
-    &.secondary {
-        color: $secondary-color;
-        border-color: $secondary-color;
-
-        &:active, &:focus {
-            color: $light-color;
-        }
-
-        &:hover {
-            border-color: $secondary-button-border-hover;
-            color: $secondary-button-border-hover;
-        }
-
-        &.fill {
-            background-color: $secondary-color;
-            color: $light-color;
-
-            &:hover {
-                background-color: $primary-color;
-            }
-        }
-
-    }
-
-    &.warning {
-
-        &:active, &:focus {
-            color: $warning-button-border-hover;
-        }
-
-        &:hover {
-            border-color: $warning-button-border-hover;
-            color: $warning-button-border-hover;
-        }
-    }
-
-    &.info {
-
-        &:active, &:focus {
-            color: $info-button-border-hover;
-        }
-
-        &:hover {
-            border-color: $info-button-border-hover;
-            color: $info-button-border-hover;
-        }
-    }
-
-    &.alert {
-
-        &:active, &:focus {
-            color: $alert-button-border-hover;
-        }
-
-        &:hover {
-            border-color: $alert-button-border-hover;
-            color: $alert-button-border-hover;
-        }
-    }
-
-    &.success {
-
-        &:active, &:focus {
-            color: $success-button-bg-hover;
-        }
-
-        &:hover {
-            border-color: $success-button-border-hover;
-            color: $success-button-border-hover;
-        }
-    }
-}
-
 // Select color
 ::selection {
     background: $primary-color;
@@ -143,28 +32,11 @@ button, .button {
     display: none;
 }
 
-.row.expand {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: none;
-}
-
-.alignleft {
-    float: left;
-    margin-right: $gutter;
-}
-
-.alignright {
-    float: right;
-    margin-left: $gutter;
-}
-
-.aligncenter {
-    display: block;
-    margin: $gutter auto;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lora',
+#site-content {
+    
+    background-color: $white;
+    min-height: 80vh;
+    height: 80vh;
+    padding: 30px;
+    
 }

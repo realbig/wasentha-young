@@ -24,7 +24,7 @@ get_header();
             while ( have_posts() ) :
                 the_post();
                 ?>
-                <article <?php post_class( array( 'small-12', 'columns' ) ); ?>>
+                <article <?php post_class( array( 'small-12', 'medium-9', 'columns' ) ); ?>>
 
                     <h1 class="post-title">
                         <a href="<?php the_permalink(); ?>">
@@ -42,11 +42,18 @@ get_header();
         else:
         ?>
 
-        <div class="small-12 columns">
+        <div class="small-12 medium-9 columns">
             Nothing found.
         </div>
 
         <?php endif; ?>
+        
+        <div class="small-12 medium-3 columns">
+            
+            <?php dynamic_sidebar( 'main-sidebar' ); ?>
+            
+        </div>
+        
     </div>
 </section>
 
