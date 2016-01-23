@@ -46,5 +46,13 @@
         }
 
     }
+    
+    .dropdown.menu {
+
+        .submenu.first-sub {
+            left: 50%; // Forces it to move to the right from the start, to overlap the Header-Logo   
+        }
+
+    }
 
 }

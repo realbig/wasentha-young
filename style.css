@@ -4833,8 +4833,12 @@ This provides overrides for some WP stuff (not much at all).
   .nav-menu > .menu > li:nth-of-type(3n + 4) > a:before {
     content: '\e900'; }
 
+.nav-menu .dropdown.menu .submenu.first-sub {
+  left: 50%; }
+
 #site-header .header-logo {
-  width: 100%; }
+  background-repeat: no-repeat;
+  background-position: center; }
 
 .single .thumbnail.post-thumbnail-container {
   float: left;
