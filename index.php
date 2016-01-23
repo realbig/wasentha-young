@@ -17,7 +17,7 @@ get_header();
 ?>
 
 <section id="post-index" class="page-content">
-    <div class="row collapse">
+    <div class="row">
 
         <?php
         if ( have_posts() ) :

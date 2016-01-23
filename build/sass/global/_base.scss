@@ -32,11 +32,14 @@ Base element settings (no classes or id's).
     display: none;
 }
 
+body {
+    font-family: $font-family-sans-serif;
+    font-weight: 600;
+}
+
 #site-content {
     
     background-color: $white;
-    min-height: 80vh;
-    height: 80vh;
     padding: 30px;
     
 }

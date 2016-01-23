@@ -31,6 +31,9 @@ Version: 0.1.0
 @include foundation-dropdown;
 @include foundation-dropdown-menu;
 @include foundation-off-canvas;
+@include foundation-media-object;
+@include foundation-thumbnail;
+@include foundation-table;
 
 // Global Styling
 @import "global/foundation-extend";
@@ -43,3 +46,4 @@ Version: 0.1.0
 @import "static/nav-menus";
 
 // Page Templates
+@import "templates/single";

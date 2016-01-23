@@ -137,7 +137,7 @@ add_action( 'widgets_init', function () {
         'id' => 'main-sidebar',
         'description' => __( 'This is the default sidebar that appears.', THEME_ID ),
     ) );
-    
+
 } );
 
 /**
@@ -193,3 +193,155 @@ add_action( 'after_setup_theme', function () {
 } );
 
 require_once __DIR__ . '/includes/theme-functions.php';
+
+/**
+ * Creates the Artwork CPT
+ *
+ * @since 0.1.0
+ */
+add_action( 'init', 'register_cpt_wasentha_artwork' );
+function register_cpt_wasentha_artwork() {
+
+    $labels = array(
+        'name' => _x( 'Artwork', THEME_ID ),
+        'all_items' => __( 'All Artwork', THEME_ID ),
+        'singular_name' => _x( 'Artwork', THEME_ID ),
+        'add_new' => _x( 'Add New Artwork', THEME_ID ),
+        'add_new_item' => _x( 'Add New Artwork', THEME_ID ),
+        'edit_item' => _x( 'Edit Artwork', THEME_ID ),
+        'new_item' => _x( 'New Artwork', THEME_ID ),
+        'view_item' => _x( 'View Artwork', THEME_ID ),
+        'search_items' => _x( 'Search Artwork', THEME_ID ),
+        'not_found' => _x( 'No Artwork found', THEME_ID ),
+        'not_found_in_trash' => _x( 'No Artwork found in Trash', THEME_ID ),
+        'parent_item_colon' => _x( 'Parent Artwork:', THEME_ID ),
+        'menu_name' => _x( 'Artwork', THEME_ID ),
+    );
+    $args = array(
+        'labels' => $labels,
+        'menu_icon' => 'dashicons-art',
+        'hierarchical' => false,
+        'description' => 'artwork',
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail' ),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => array(
+            'slug' => 'artwork',
+            'with_front' => false,
+            'feeds' => false,
+            'pages' => true
+        ),
+        'capability_type' => 'post',
+        /*
+        'capability_type' => 'artwork',
+        'capabilities' => array(
+            // Singular
+            'edit_post'	=>	'edit_artwork',
+            'read_post'	=>	'read_artwork',
+            'delete_post'	=>	'delete_artwork',
+            // Plural
+            'edit_posts'	=>	'edit_artworks',
+            'edit_others_posts'	=>	'edit_others_artworks',
+            'publish_posts'	=>	'publish_artworks',
+            'read_private_posts'	=>	'read_private_artworks',
+            'delete_posts'	=>	'delete_artworks',
+            'delete_private_posts'	=>	'delete_private_artworks',
+            'delete_published_posts'	=>	'delete_published_artworks',
+            'delete_others_posts'	=>	'delete_others_artworks',
+            'edit_private_posts'	=>	'edit_private_artworks',
+            'edit_published_posts'	=>	'edit_published_artworks',
+        ),
+		*/
+    );
+
+    register_post_type( 'wasentha_artwork', $args );
+
+}
+
+/**
+ * Creates the Artwork Series Category
+ *
+ * @since 0.1.0
+ */
+add_action( 'init', 'register_taxonomy_wasentha_artwork_series', 0 );
+function register_taxonomy_wasentha_artwork_series() {
+
+    $labels = array(
+        'name' => _x( 'Series', THEME_ID ),
+        'singular_name' => _x( 'Artwork Series', THEME_ID ),
+        'search_items' => __( 'Search Series', THEME_ID ),
+        'popular_items' => __( 'Popular Series', THEME_ID ),
+        'all_items' => __( 'All Series', THEME_ID ),
+        'parent_item' => __( 'Parent Series', THEME_ID ),
+        'parent_item_colon' => __( 'Parent Series:', THEME_ID ),
+        'edit_item' => __( 'Edit Series', THEME_ID ),
+        'update_item' => __( 'Update Series', THEME_ID ),
+        'add_new_item' => __( 'Add New Series', THEME_ID ),
+        'new_item_name' => __( 'New Series Name', THEME_ID ),
+        'separate_items_with_commas' => __( 'Separate Series with commas', THEME_ID ),
+        'add_or_remove_items' => __( 'Add or remove Series', THEME_ID ),
+        'choose_from_most_used' => __( 'Choose from the most used Series', THEME_ID ),
+        'not_found' => __( 'No Series found.', THEME_ID ),
+        'menu_name' => __( 'Artwork Series', THEME_ID ),
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'rewrite' => array( 'slug' => 'artwork-series' ),
+    );
+
+    register_taxonomy( 'wasentha_artwork_series', 'wasentha_artwork', $args );
+
+}
+
+/**
+ * Creates the Artwork Type Category
+ *
+ * @since 0.1.0
+ */
+add_action( 'init', 'register_taxonomy_wasentha_artwork_category', 0 );
+function register_taxonomy_wasentha_artwork_category() {
+
+    $labels = array(
+        'name' => _x( 'Artwork Type', THEME_ID ),
+        'singular_name' => _x( 'Artwork Category', THEME_ID ),
+        'search_items' => __( 'Search Artwork Categories', THEME_ID ),
+        'popular_items' => __( 'Popular Artwork Categories', THEME_ID ),
+        'all_items' => __( 'All Artwork Categories', THEME_ID ),
+        'parent_item' => __( 'Parent Artwork Category', THEME_ID ),
+        'parent_item_colon' => __( 'Parent Artwork Category:', THEME_ID ),
+        'edit_item' => __( 'Edit Artwork Category', THEME_ID ),
+        'update_item' => __( 'Update Artwork Category', THEME_ID ),
+        'add_new_item' => __( 'Add New Artwork Category', THEME_ID ),
+        'new_item_name' => __( 'New Artwork Category Name', THEME_ID ),
+        'separate_items_with_commas' => __( 'Separate Artwork Categories with commas', THEME_ID ),
+        'add_or_remove_items' => __( 'Add or remove Artwork Categories', THEME_ID ),
+        'choose_from_most_used' => __( 'Choose from the most used Artwork Categories', THEME_ID ),
+        'not_found' => __( 'No Artwork Categories found.', THEME_ID ),
+        'menu_name' => __( 'Artwork Categories', THEME_ID ),
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'rewrite' => array( 'slug' => 'artwork-type' ),
+    );
+
+    register_taxonomy( 'wasentha_artwork_category', 'wasentha_artwork', $args );
+
+}

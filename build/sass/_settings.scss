@@ -13,11 +13,19 @@ $secondary-color: #f36557;
 
 $body-background: $medium-gray;
 
+// Header Font
+@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
+
+// Body Copy
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
+
 // We use these to define default font stacks
-$font-family-sans-serif: "Helvetica", sans-serif;
-$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-sans-serif: 'Titillium Web', sans-serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 $body-font-color: #222;
+
+$header-font-family: 'Dawning of a New Day', cursive;
+$header-font-weight: 700;
 
 // We use these to control header font styles
 
@@ -51,3 +59,6 @@ $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max
 
 $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
 $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+
+// Flexbox breaks Media Object
+$global-flexbox: false;

@@ -33,7 +33,25 @@ the_post();
             </h1>
 
             <div class="post-meta">
-                <strong>Date: </strong><?php the_date(); ?>
+
+                <strong>Date: </strong><?php the_date(); ?><br />
+
+                <?php if ( get_the_terms( get_the_ID(), 'wasentha_artwork_series' ) !== false ) : ?>
+                    <strong>Series:</strong> <?php the_terms( get_the_ID(), 'wasentha_artwork_series' ); ?>
+                <?php endif; ?>
+
+                <?php if ( ( get_the_terms( get_the_ID(), 'wasentha_artwork_series' ) !== false ) && ( get_the_terms( get_the_ID(), 'wasentha_artwork_category' ) !== false ) ) : ?>
+                    &nbsp;/&nbsp;
+                <?php endif; ?>
+
+                <?php if ( get_the_terms( get_the_ID(), 'wasentha_artwork_category' ) !== false ) : ?>
+                    <strong>Categories:</strong> <?php the_terms( get_the_ID(), 'wasentha_artwork_category' ); ?><br />
+                <?php endif; ?>
+
+                <?php if ( get_field( 'artwork_dimensions' ) !== '' ) : ?>
+                    <strong>Dimensions:</strong> <?php the_field( 'artwork_dimensions' ); ?>
+                <?php endif; ?>
+
             </div>
 
             <div class="post-copy">
