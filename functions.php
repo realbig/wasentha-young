@@ -57,6 +57,9 @@ add_action( 'after_setup_theme', function () {
 
     // Add theme support
     require_once __DIR__ . '/includes/theme-support.php';
+    
+    // Add Customizer Controls
+    add_action( 'customize_register', 'wasentha_customize_register' );
 
     require_once __DIR__ . '/includes/class-foundation_nav_walker.php';
 
@@ -64,6 +67,33 @@ add_action( 'after_setup_theme', function () {
     add_filter( 'widget_text', 'do_shortcode' );
 
 } );
+
+/**
+ * Adds custom Customizer Controls.
+ *
+ * @since 0.1.0
+ */
+function wasentha_customize_register( $wp_customize ) {
+    
+    // General Theme Options
+    $wp_customize->add_section( 'wasentha_customizer_section' , array(
+            'title'      => __( 'Wasentha Young Settings', THEME_ID ),
+            'priority'   => 30,
+        ) 
+    );
+    
+    $wp_customize->add_setting( 'wasentha_logo_image' , array(
+            'default'     => 'http://placehold.it/1200x312',
+            'transport'   => 'refresh',
+        ) 
+    );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wasentha_logo_image', array(
+        'label'        => __( 'Logo Banner', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'wasentha_logo_image',
+    ) ) );
+    
+}
 
 /**
  * Adds support for custom image sizes.

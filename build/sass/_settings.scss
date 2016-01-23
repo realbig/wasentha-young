@@ -8,10 +8,13 @@ $dark-color: #333;
 $light-color: #fff;
 
 // We use these as default colors throughout
-$primary-color: #222832;
-$secondary-color: #f36557;
+$primary-color: #BF67A3;
+$secondary-color: #7787A1;
 
-$body-background: $medium-gray;
+$topbar-background: lighten( $secondary-color, 20% );
+$body-background: $secondary-color;
+$offcanvas-background: darken( $secondary-color, 10% );
+
 
 // Header Font
 @import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
@@ -30,8 +33,10 @@ $header-font-weight: 700;
 // We use these to control header font styles
 
 // We use these to style anchors
-$anchor-color: $secondary-color;
-$topbar-link-color: $secondary-color;
+$anchor-color: $primary-color;
+$topbar-link-color: darken( $primary-color, 10% );
+$titlebar-icon-color: darken( $primary-color, 10% );
+$titlebar-icon-color-hover: darken( $primary-color, 20% );
 
 // Media query ranges
 $small-range: (0em, 40em);

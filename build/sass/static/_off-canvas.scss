@@ -1,3 +1,5 @@
+@import "../settings";
+
 .off-canvas-content {
     box-shadow: none;
     // For something that has to wrap your Site Content, this is a really silly default...
@@ -5,7 +7,6 @@
 
 .off-canvas {
     
-    background-color: $primary-color;
     min-height: 100vh;
     height: 100vh; 
 
@@ -13,11 +14,15 @@
 
         > li {
 
-            background-color: green; /* Top Level */
+            background-color: lighten( $secondary-color, 20% ); /* Top Level */
+            
+            a {
+                color: darken( $primary-color, 15% );
+            }
 
             ul {
                 li {
-                    background-color: pink;
+                    background-color: lighten( $secondary-color, 10% );
                 }
             }
 
