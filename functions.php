@@ -301,7 +301,7 @@ function register_cpt_wasentha_artwork() {
  *
  * @since 0.1.0
  */
-add_action( 'init', 'register_taxonomy_wasentha_artwork_series', 0 );
+add_action( 'init', 'register_taxonomy_wasentha_artwork_series' );
 function register_taxonomy_wasentha_artwork_series() {
 
     $labels = array(
@@ -341,7 +341,7 @@ function register_taxonomy_wasentha_artwork_series() {
  *
  * @since 0.1.0
  */
-add_action( 'init', 'register_taxonomy_wasentha_artwork_category', 0 );
+add_action( 'init', 'register_taxonomy_wasentha_artwork_category' );
 function register_taxonomy_wasentha_artwork_category() {
 
     $labels = array(
@@ -373,5 +373,58 @@ function register_taxonomy_wasentha_artwork_category() {
     );
 
     register_taxonomy( 'wasentha_artwork_category', 'wasentha_artwork', $args );
+
+}
+
+/**
+ * Creates the [wasentha_artwork] shortcode
+ *
+ * @since 0.1.0
+ */
+add_shortcode( 'wasentha_artwork', 'wasentha_artwork_shortcode_register' );
+function wasentha_artwork_shortcode_register( $atts ) {
+    
+    $atts = shortcode_atts(
+        array( // a few default values
+            'post_type' => 'wasentha_artwork',
+            'ignore_sticky_posts' => 1,
+            'suppress_filters' => false,
+            'post_status' => 'publish',
+            'before_item' => '<article class="media-object stack-for-small">',
+            'after_item' => '</article>',
+            'classes' => '', // Classes for wrapper <div>
+        ),
+        $atts,
+        'wasentha_artwork'
+    );
+    
+    $out = '';
+    $artwork = new WP_Query( $atts );
+    
+    if ( $artwork->have_posts() ) : 
+    
+        ob_start();
+    
+        echo '<div id="wasentha_artwork-shortcode"' . ( ( $atts['classes'] !== '' ) ? ' class="' . $atts['classes'] . '"' : '' ) . '>';
+    
+        while ( $artwork->have_posts() ) :
+            $artwork->the_post();
+    
+                echo $atts['before_item'];
+                    get_template_part( 'partials/wasentha_artwork', 'loop-single' );
+                echo $atts['after_item'];
+    
+        endwhile;
+    
+        echo '</div>';
+        
+        $out = ob_get_contents();  
+        ob_end_clean();
+    
+        return html_entity_decode( $out );
+    
+    else :
+        return 'No Artwork Found';
+    endif;
 
 }
