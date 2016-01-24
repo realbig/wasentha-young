@@ -32,6 +32,10 @@ the_post();
                 <?php the_content(); ?>
             </div>
             
+            <div class="page-comments">
+                <?php comments_template(); ?>
+            </div>
+            
         </div>
 
         <div class="small-12 medium-3 columns">

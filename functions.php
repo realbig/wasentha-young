@@ -252,7 +252,7 @@ function register_cpt_wasentha_artwork() {
         'menu_icon' => 'dashicons-art',
         'hierarchical' => false,
         'description' => 'artwork',
-        'supports' => array( 'title', 'editor', 'author', 'thumbnail' ),
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'comments' ),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,

@@ -57,6 +57,10 @@ the_post();
             <div class="post-copy">
                 <?php the_content(); ?>
             </div>
+            
+            <div class="post-comments">
+                <?php comments_template(); ?>
+            </div>
 
         </article>
 

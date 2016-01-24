@@ -4839,4 +4839,7 @@ This provides overrides for some WP stuff (not much at all).
 .single .thumbnail.post-thumbnail-container {
   float: left;
   margin-right: 2.5rem; }
+
+.single .post-comments {
+  clear: both; }
 /*# sourceMappingURL=style.css.map */
