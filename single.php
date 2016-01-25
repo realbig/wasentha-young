@@ -40,9 +40,13 @@ the_post();
                 <?php the_content(); ?>
             </div>
             
-            <div class="post-comments">
-                <?php comments_template(); ?>
-            </div>
+            <?php if ( comments_open() ) : ?>
+            
+                <div class="post-comments">
+                    <?php comments_template(); ?>
+                </div>
+            
+            <?php endif; ?>
 
         </article>
 

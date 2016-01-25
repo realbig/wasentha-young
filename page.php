@@ -26,18 +26,26 @@ the_post();
             </div>
             <?php endif; ?>
             
-            <h1 class="page-title"><?php the_title(); ?></h1>
+            <?php if ( ! is_front_page() ) : ?>
+            
+                <h1 class="page-title"><?php the_title(); ?></h1>
+            
+            <?php endif; ?>
 
             <div class="page-copy">
                 <?php the_content(); ?>
             </div>
             
-            <div class="page-comments">
-                <?php comments_template(); ?>
-            </div>
+            <?php if ( comments_open() ) : ?>
+            
+                <div class="page-comments">
+                    <?php comments_template(); ?>
+                </div>
+            
+            <?php endif; ?>
             
         </div>
-
+        
         <div class="small-12 medium-3 columns">
 
             <?php dynamic_sidebar( 'main-sidebar' ); ?>
