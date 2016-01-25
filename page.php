@@ -46,7 +46,7 @@ the_post();
             
         </div>
         
-        <div class="small-12 medium-3 columns">
+        <div class="small-12 medium-3 columns sidebar">
 
             <?php dynamic_sidebar( 'main-sidebar' ); ?>
 

@@ -4842,4 +4842,7 @@ This provides overrides for some WP stuff (not much at all).
 
 .single .post-comments {
   clear: both; }
+
+.sidebar li.widget {
+  list-style-type: none; }
 /*# sourceMappingURL=style.css.map */

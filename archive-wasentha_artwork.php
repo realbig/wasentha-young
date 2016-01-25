@@ -15,9 +15,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-global $wp_query;
-$term = $wp_query->get_queried_object();
-
 ?>
 
 <section id="wasentha_artwork-index" class="page-content">
@@ -49,7 +46,7 @@ $term = $wp_query->get_queried_object();
 
         <?php endif; ?>
 
-        <div class="small-12 medium-3 columns">
+        <div class="small-12 medium-3 columns sidebar">
 
             <?php dynamic_sidebar( 'main-sidebar' ); ?>
 
