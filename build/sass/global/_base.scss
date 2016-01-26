@@ -43,3 +43,9 @@ body {
     padding: 30px;
     
 }
+
+img[class*=" wp-image-"] { // Catch-all to grab images added via "Add Media" button
+    
+    @include thumbnail;
+    
+}
