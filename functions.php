@@ -421,10 +421,98 @@ function wasentha_artwork_shortcode_register( $atts ) {
         $out = ob_get_contents();  
         ob_end_clean();
     
+        wp_reset_postdata();
+    
         return html_entity_decode( $out );
     
     else :
         return 'No Artwork Found';
+    endif;
+
+}
+
+/**
+ * Creates the [wasentha_post] shortcode
+ *
+ * @since 0.1.0
+ */
+add_shortcode( 'wasentha_post', 'wasentha_post_shortcode_register' );
+function wasentha_post_shortcode_register( $atts ) {
+    
+    $atts = shortcode_atts(
+        array( // a few default values
+            'post_type' => 'post',
+            'ignore_sticky_posts' => 1,
+            'suppress_filters' => false,
+            'post_status' => 'publish',
+            'before_item' => '<article>',
+            'after_item' => '</article>',
+            'category' => '',
+            'classes' => '', // Classes for wrapper <div>
+        ),
+        $atts,
+        'wasentha_post'
+    );
+    
+    if ( $atts['category'] !== '' ) {
+        
+        $atts['tax_query'] = array(
+            array(
+                'taxonomy' => 'category',
+                'field' => 'name',
+                'terms' => $atts['category'],
+            ),
+        );
+        
+    }
+    
+    $out = '';
+    $wasentha_post = new WP_Query( $atts );
+    
+    if ( $wasentha_post->have_posts() ) : 
+    
+        ob_start();
+    
+        echo '<div id="wasentha_post-shortcode-' . get_the_id() . '"' . ( ( $atts['classes'] !== '' ) ? ' class="' . $atts['classes'] . '"' : '' ) . '>';
+    
+        while ( $wasentha_post->have_posts() ) :
+            $wasentha_post->the_post();
+    
+                // Forcefully add post_class()
+                if ( strpos( $atts['before_item'], 'class' ) !== false ) {
+                    
+                    $atts['before_item'] = preg_replace( '/class\s?=\s?"/i', 'class="' . implode( ' ', get_post_class() ) . ' ', $atts['before_item'] );
+                    
+                }
+                else {
+                    
+                    $atts['before_item'] = str_replace( '>', ' class="' . implode( ' ', get_post_class() ) . '">', $atts['before_item'] );
+                    
+                }
+    
+                echo $atts['before_item'];
+                    get_template_part( 'partials/post', 'loop-single' );
+                echo $atts['after_item'];
+    
+        endwhile;
+    
+        echo '</div>';
+        
+        $out = ob_get_contents();  
+        ob_end_clean();
+    
+        wp_reset_postdata();
+    
+        return html_entity_decode( $out );
+    
+    else :
+    
+        if ( $atts['category'] !== '' ) {
+            return 'No Posts in the ' . $atts['category'] . ' Category Found';
+        }
+    
+        return 'No Posts Found';
+    
     endif;
 
 }

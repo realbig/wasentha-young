@@ -33,7 +33,7 @@ the_post();
             </h1>
 
             <div class="post-meta">
-                <strong>Date: </strong><?php the_date(); ?>
+                <p><strong>Date: </strong><?php the_date(); ?></p>
             </div>
 
             <div class="post-copy">

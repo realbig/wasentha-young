@@ -4865,4 +4865,7 @@ This provides overrides for some WP stuff (not much at all).
 
 .sidebar li.widget {
   list-style-type: none; }
+
+.sidebar .em-calendar {
+  width: 100%; }
 /*# sourceMappingURL=style.css.map */
