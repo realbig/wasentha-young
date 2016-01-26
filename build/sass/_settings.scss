@@ -15,6 +15,9 @@ $topbar-background: lighten( $secondary-color, 20% );
 $body-background: $secondary-color;
 $offcanvas-background: darken( $secondary-color, 10% );
 
+$button-background: $primary-color;
+$button-background-hover: $anchor-color-hover;
+
 
 // Header Font
 @import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);

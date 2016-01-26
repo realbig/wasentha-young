@@ -1673,12 +1673,12 @@ body.is-reveal-open {
   padding: 0.85em 1em;
   margin: 0 0 1rem 0;
   font-size: 0.9rem;
-  background-color: #2199e8;
+  background-color: #BF67A3;
   color: #fff; }
   [data-whatinput='mouse'] .button {
     outline: 0; }
   .button:hover, .button:focus {
-    background-color: #1583cc;
+    background-color: #1585cf;
     color: #fff; }
   .button.tiny {
     font-size: 0.6rem; }
@@ -4848,6 +4848,14 @@ This provides overrides for some WP stuff (not much at all).
 
 #site-header .header-logo {
   width: 100%; }
+
+#respond #submit {
+  background-color: #BF67A3;
+  color: #fff;
+  border: none; }
+  #respond #submit:hover, #respond #submit:focus {
+    background-color: #1585cf;
+    color: #fff; }
 
 .single .thumbnail.post-thumbnail-container {
   float: left;
