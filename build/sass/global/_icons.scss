@@ -1,3 +1,5 @@
+@import "../settings";
+
 @font-face {
     font-family: 'icomoon';
     src:url('fonts/icons/wasentha.eot?mcl5xn');
@@ -22,8 +24,36 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-[class^='icon-'], [class*=' icon-'] {
+
+@mixin stacked-icon {
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    position: relative;
+    height: 1em;
+    width: 1em;
+}
+
+@mixin stacked-icon-before-after {
+    display: block;
+    position: absolute;
+    white-space: normal;
+    top: 0.143em;
+    left: 0.143em;
+    text-indent: 0;
+    speak: none;
+}
+
+[class^='icon-'], [class*=' icon-'], [class^="st-icon-"], [class*=' st-icon-'] {
     @include icon;
+}
+
+[class^="st-icon-"], [class*=' st-icon-'] {
+    @include stacked-icon;
+}
+
+[class^="st-icon-"]:before, [class*=' st-icon-']:before, [class^="st-icon-"]:after, [class*=' st-icon-']:after {
+    @include stacked-icon-before-after;
 }
 
 .icon-glass:before {
@@ -2412,4 +2442,46 @@
 
 .icon-stones-bottom:before {
     content: '\e900';
+}
+
+// Stacked Icons for Multi-Color
+
+[class^="st-icon-stones-"]:before, [class*=' st-icon-stones-']:before {
+    color: darken( $primary-color, 20% );
+}
+
+[class^="st-icon-stones-"]:after, [class*=' st-icon-stones-']:after {
+    color: lighten( $secondary-color, 10% );
+}
+
+.st-icon-stones-stacked:before { // With Blank Space
+    content: "\e909";
+}
+
+.st-icon-stones-stacked:after { // Interior Section
+    content: "\e908";
+}
+
+.st-icon-stones-top:before { // With Blank Space
+    content: "\e90b";
+}
+
+.st-icon-stones-top:after { // Interior Section
+    content: "\e90a";
+}
+
+.st-icon-stones-middle:before { // With Blank Space
+    content: '\e907';
+}
+
+.st-icon-stones-middle:after { // Interior Section
+    content: '\e906';
+}
+
+.st-icon-stones-bottom:before { // With Blank Space
+    content: "\e905";
+}
+
+.st-icon-stones-bottom:after { // Interior Section
+    content: "\e904";
 }

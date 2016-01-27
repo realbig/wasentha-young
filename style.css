@@ -17,6 +17,8 @@ Version: 0.1.0
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
 @import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
+@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -2975,6 +2977,7 @@ This provides overrides for some WP stuff (not much at all).
 #wpadminbar {
   position: fixed !important; }
 
+/* Override Foundation's _settings.scss here, or store your own variables */
 @font-face {
   font-family: 'icomoon';
   src: url("fonts/icons/wasentha.eot?mcl5xn");
@@ -2982,7 +2985,7 @@ This provides overrides for some WP stuff (not much at all).
   font-weight: normal;
   font-style: normal; }
 
-[class^='icon-'], [class*=' icon-'] {
+[class^='icon-'], [class*=' icon-'], [class^="st-icon-"], [class*=' st-icon-'] {
   font-family: 'icomoon', sans-serif;
   speak: none;
   font-style: normal;
@@ -2993,6 +2996,23 @@ This provides overrides for some WP stuff (not much at all).
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+[class^="st-icon-"], [class*=' st-icon-'] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  position: relative;
+  height: 1em;
+  width: 1em; }
+
+[class^="st-icon-"]:before, [class*=' st-icon-']:before, [class^="st-icon-"]:after, [class*=' st-icon-']:after {
+  display: block;
+  position: absolute;
+  white-space: normal;
+  top: 0.143em;
+  left: 0.143em;
+  text-indent: 0;
+  speak: none; }
 
 .icon-glass:before {
   content: '\f000'; }
@@ -4785,6 +4805,36 @@ This provides overrides for some WP stuff (not much at all).
 .icon-stones-bottom:before {
   content: '\e900'; }
 
+[class^="st-icon-stones-"]:before, [class*=' st-icon-stones-']:before {
+  color: #87396e; }
+
+[class^="st-icon-stones-"]:after, [class*=' st-icon-stones-']:after {
+  color: #95a2b6; }
+
+.st-icon-stones-stacked:before {
+  content: "\e909"; }
+
+.st-icon-stones-stacked:after {
+  content: "\e908"; }
+
+.st-icon-stones-top:before {
+  content: "\e90b"; }
+
+.st-icon-stones-top:after {
+  content: "\e90a"; }
+
+.st-icon-stones-middle:before {
+  content: '\e907'; }
+
+.st-icon-stones-middle:after {
+  content: '\e906'; }
+
+.st-icon-stones-bottom:before {
+  content: "\e905"; }
+
+.st-icon-stones-bottom:after {
+  content: "\e904"; }
+
 /* Override Foundation's _settings.scss here, or store your own variables */
 .off-canvas-content {
   box-shadow: none; }
@@ -4801,40 +4851,66 @@ This provides overrides for some WP stuff (not much at all).
       background-color: #95a2b6; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
-.nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a:after {
-  border-left-color: #ab488c; }
-
-.nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a:after {
-  border-top-color: #ab488c; }
-
-.nav-menu a:after {
-  border-color: #ab488c; }
-
-.nav-menu > .menu {
-  /* Adds Stone Icon to each top-level item. Cycles through in sets of 3 after setting "Home" to Stacked */ }
-  .nav-menu > .menu > li > a:before {
-    font-family: 'icomoon', sans-serif;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin-right: 0.5em; }
-  .nav-menu > .menu > li:nth-of-type(1) > a:before {
-    content: '\e902'; }
-  .nav-menu > .menu > li:nth-of-type(3n + 2) > a:before {
-    content: '\e903'; }
-  .nav-menu > .menu > li:nth-of-type(3n + 3) > a:before {
-    content: '\e901'; }
-  .nav-menu > .menu > li:nth-of-type(3n + 4) > a:before {
-    content: '\e900'; }
-
-.nav-menu .dropdown.menu .submenu.first-sub {
-  left: 50%; }
+.nav-menu {
+  width: 100%; }
+  .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a:after {
+    border-left-color: #ab488c; }
+  .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a:after {
+    border-top-color: #ab488c; }
+  .nav-menu a:after {
+    border-color: #ab488c; }
+  .nav-menu > .menu {
+    /* Adds Stone Icon to each top-level item. Cycles through in sets of 3 after setting "Home" to Stacked */ }
+    .nav-menu > .menu > li > span {
+      font-family: 'icomoon', sans-serif;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: inline-block;
+      vertical-align: top;
+      white-space: nowrap;
+      position: relative;
+      height: 1em;
+      width: 1em;
+      margin-right: 0.5em;
+      float: left; }
+    .nav-menu > .menu > li > span:before, .nav-menu > .menu > li > span:after {
+      display: block;
+      position: absolute;
+      white-space: normal;
+      top: 0.143em;
+      left: 0.143em;
+      text-indent: 0;
+      speak: none;
+      top: .75em; }
+    .nav-menu > .menu > li > span:before {
+      color: #87396e; }
+    .nav-menu > .menu > li > span:after {
+      color: #95a2b6; }
+    .nav-menu > .menu > li:nth-of-type(1) > span:before {
+      content: "\e909"; }
+    .nav-menu > .menu > li:nth-of-type(1) > span:after {
+      content: "\e908"; }
+    .nav-menu > .menu > li:nth-of-type(3n + 2) > span:before {
+      content: "\e90b"; }
+    .nav-menu > .menu > li:nth-of-type(3n + 2) > span:after {
+      content: "\e90a"; }
+    .nav-menu > .menu > li:nth-of-type(3n + 3) > span:before {
+      content: '\e907'; }
+    .nav-menu > .menu > li:nth-of-type(3n + 3) > span:after {
+      content: '\e906'; }
+    .nav-menu > .menu > li:nth-of-type(3n + 4) > span:before {
+      content: "\e905"; }
+    .nav-menu > .menu > li:nth-of-type(3n + 4) > span:after {
+      content: "\e904"; }
+  .nav-menu .dropdown.menu .submenu.first-sub {
+    left: 50%; }
 
 #site-header .header-logo {
   background-repeat: no-repeat;

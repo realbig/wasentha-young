@@ -91,7 +91,7 @@ if ( ! isset( $_SESSION ) ) {
                         'depth' => 1,
                     ) );
                     $menu_items = substr_count( $menu_to_count, 'class="menu-item ' );
-                    $menu_item_height = 39.375;
+                    $menu_item_height = 38.375;
                     $padding_top_plus_bottom = 16;
                     
                     $image_height = ( $menu_item_height * $menu_items ) + 16;

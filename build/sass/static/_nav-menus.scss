@@ -1,7 +1,9 @@
 @import "../settings";
 
 .nav-menu {
-    
+
+    width: 100%;
+
     .dropdown.menu {
         .is-dropdown-submenu-parent.is-right-arrow {
             > a:after {
@@ -14,7 +16,7 @@
             }
         }
     }
-    
+
     a:after {
         // Color for the Dropdown arrows
         border-color: darken( $primary-color, 10% );
@@ -24,29 +26,66 @@
 
         /* Adds Stone Icon to each top-level item. Cycles through in sets of 3 after setting "Home" to Stacked */
 
-        > li > a:before {
+        > li > span {
+
             @include icon;
+            @include stacked-icon;
+
             margin-right: 0.5em;
+            float: left;
+
         }
 
-        > li:nth-of-type( 1 ) > a:before {
-            content: '\e902';
+        > li > span:before, > li > span:after {
+
+            @include stacked-icon-before-after;
+
+            top: .75em;
+
         }
 
-        > li:nth-of-type( 3n + 2 ) > a:before {
-            content: '\e903';
+        > li > span:before {
+            color: darken( $primary-color, 20% );
         }
 
-        > li:nth-of-type( 3n + 3 ) > a:before {
-            content: '\e901';
+        > li > span:after {
+            color: lighten( $secondary-color, 10% );
         }
 
-        > li:nth-of-type( 3n + 4 ) > a:before {
-            content: '\e900';
+        > li:nth-of-type( 1 ) > span:before { // With Blank Space
+            content: "\e909";
+        }
+
+        > li:nth-of-type( 1 ) > span:after { // Interior Section
+            content: "\e908";
+        }
+
+        > li:nth-of-type( 3n + 2 ) > span:before { // With Blank Space
+            content: "\e90b";
+        }
+
+        > li:nth-of-type( 3n + 2 ) > span:after { // Interior Section
+            content: "\e90a";
+        }
+
+        > li:nth-of-type( 3n + 3 ) > span:before { // With Blank Space
+            content: '\e907';
+        }
+
+        > li:nth-of-type( 3n + 3 ) > span:after { // Interior Section
+            content: '\e906';
+        }
+
+        > li:nth-of-type( 3n + 4 ) > span:before { // With Blank Space
+            content: "\e905";
+        }
+
+        > li:nth-of-type( 3n + 4 ) > span:after { // Interior Section
+            content: "\e904";
         }
 
     }
-    
+
     .dropdown.menu {
 
         .submenu.first-sub {
