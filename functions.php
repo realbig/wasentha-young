@@ -141,6 +141,8 @@ add_action( 'init', function () {
         defined( 'WP_DEBUG' ) && WP_DEBUG ? time() : THEME_VERSION,
         true
     );
+    
+    wp_localize_script( THEME_ID, THEME_ID . '_data', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' ) ) );
 
     // Theme fonts
     if ( ! empty( $wasentha_fonts ) ) {
@@ -515,4 +517,139 @@ function wasentha_post_shortcode_register( $atts ) {
     
     endif;
 
+}
+
+/**
+ * Creates the [wasentha_testimonial] shortcode
+ *
+ * @since 0.1.0
+ */
+add_shortcode( 'wasentha_testimonial', 'wasentha_testimonial_shortcode_register' );
+function wasentha_testimonial_shortcode_register( $atts ) {
+    
+    $atts = shortcode_atts(
+        array( // a few default values
+            'post_type' => 'testimonial',
+            'ignore_sticky_posts' => 1,
+            'suppress_filters' => false,
+            'post_status' => 'publish',
+            'category' => '',
+            'classes' => '', // Classes for wrapper <div>
+        ),
+        $atts,
+        'wasentha_testimonial'
+    );
+    
+    if ( $atts['category'] !== '' ) {
+        
+        $atts['tax_query'] = array(
+            array(
+                'taxonomy' => 'testimonial-category',
+                'field' => 'name',
+                'terms' => $atts['category'],
+            ),
+        );
+        
+    }
+    
+    $out = '';
+    $wasentha_testimonial = new WP_Query( $atts );
+    
+    if ( $wasentha_testimonial->have_posts() ) : 
+    
+        ob_start();
+    
+        $classes = $atts['classes'];
+        
+        $category = '';
+        if ( $atts['category'] !== '' ) {
+            $category .= ' data-category="' . $atts['category'] . '"';
+        }
+    
+        echo '<div id="wasentha_testimonial-shortcode" class="post-' . get_the_ID() . $classes . '"' . $category . '>';
+            ?>
+                    <span class="fa fa-spinner fa-spin testimonial-loading"></span>
+
+                    <div class="testimonials-content" style="display: none;">
+
+                        <blockquote class="testimonials-text" itemprop="reviewBody">
+                        </blockquote>
+
+                        <cite class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"></span></cite>
+                        
+                    </div>
+                
+            <?php
+    
+        echo '</div>';
+        
+        $out = ob_get_contents();  
+        ob_end_clean();
+    
+        wp_reset_postdata();
+    
+        return html_entity_decode( $out );
+    
+    else :
+    
+        if ( $atts['category'] !== '' ) {
+            return 'No Posts in the ' . $atts['category'] . ' Category Found';
+        }
+    
+        return 'No Posts Found';
+    
+    endif;
+
+}
+
+/*
+ * Allows Testimonials to be Random while getting around WP Engine's RAND limitations
+ *
+ * @since 0.1.0
+ */
+// The AJAX call is given "get_testimonial" which corresponds with the WordPress Action Hook.
+add_action( 'wp_ajax_get_testimonial', 'get_wasentha_testimonial_callback' );
+add_action( 'wp_ajax_nopriv_get_testimonial', 'get_wasentha_testimonial_callback' );
+function get_wasentha_testimonial_callback() {
+    
+    global $post;
+        
+    $atts = array(
+        'posts_per_page' => -1,
+        'post_type' => 'testimonial',
+        'post_status' => 'publish',
+    );
+    
+    if ( isset( $_POST['testimonial_category'] ) && ( $_POST['testimonial_category'] !== '' ) ) {
+        
+        $atts['tax_query'] = array(
+            array(
+                'taxonomy' => 'testimonial-category',
+                'field' => 'name',
+                'terms' => $_POST['testimonial_category'],
+            ),
+        );
+        
+    }
+    
+    $testimonials = get_posts( $atts );
+    
+    $items = array(); // Create an Array for the JSON
+    foreach ( $testimonials as $post ) {
+        
+        setup_postdata( $post );
+        
+        $items[] = array(
+            'name' => get_the_title(),
+            'body' => get_the_content(),
+        );
+        
+    }
+    
+    wp_reset_postdata();
+    
+    echo json_encode( $items );
+    
+    die();
+    
 }
