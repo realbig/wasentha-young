@@ -34,7 +34,7 @@ if ( ! class_exists( 'Foundation_Nav_Walker' ) ) {
             $output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="' . $depth_class_names . ' ' . $class_names . '">';
             
             if ( $depth == 0 ) {
-                $output .= '<span></span>';
+                $args->link_before = '<span></span>';
             }
 
             // Link attributes.

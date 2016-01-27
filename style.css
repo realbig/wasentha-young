@@ -4861,7 +4861,7 @@ This provides overrides for some WP stuff (not much at all).
     border-color: #ab488c; }
   .nav-menu > .menu {
     /* Adds Stone Icon to each top-level item. Cycles through in sets of 3 after setting "Home" to Stacked */ }
-    .nav-menu > .menu > li > span {
+    .nav-menu > .menu > li > a > span {
       font-family: 'icomoon', sans-serif;
       speak: none;
       font-style: normal;
@@ -4880,34 +4880,33 @@ This provides overrides for some WP stuff (not much at all).
       width: 1em;
       margin-right: 0.5em;
       float: left; }
-    .nav-menu > .menu > li > span:before, .nav-menu > .menu > li > span:after {
+    .nav-menu > .menu > li > a > span:before, .nav-menu > .menu > li > a > span:after {
       display: block;
       position: absolute;
       white-space: normal;
       top: 0.143em;
       left: 0.143em;
       text-indent: 0;
-      speak: none;
-      top: .75em; }
-    .nav-menu > .menu > li > span:before {
+      speak: none; }
+    .nav-menu > .menu > li > a > span:before {
       color: #87396e; }
-    .nav-menu > .menu > li > span:after {
+    .nav-menu > .menu > li > a > span:after {
       color: #95a2b6; }
-    .nav-menu > .menu > li:nth-of-type(1) > span:before {
+    .nav-menu > .menu > li:nth-of-type(1) > a > span:before {
       content: "\e909"; }
-    .nav-menu > .menu > li:nth-of-type(1) > span:after {
+    .nav-menu > .menu > li:nth-of-type(1) > a > span:after {
       content: "\e908"; }
-    .nav-menu > .menu > li:nth-of-type(3n + 2) > span:before {
+    .nav-menu > .menu > li:nth-of-type(3n + 2) > a > span:before {
       content: "\e90b"; }
-    .nav-menu > .menu > li:nth-of-type(3n + 2) > span:after {
+    .nav-menu > .menu > li:nth-of-type(3n + 2) > a > span:after {
       content: "\e90a"; }
-    .nav-menu > .menu > li:nth-of-type(3n + 3) > span:before {
+    .nav-menu > .menu > li:nth-of-type(3n + 3) > a > span:before {
       content: '\e907'; }
-    .nav-menu > .menu > li:nth-of-type(3n + 3) > span:after {
+    .nav-menu > .menu > li:nth-of-type(3n + 3) > a > span:after {
       content: '\e906'; }
-    .nav-menu > .menu > li:nth-of-type(3n + 4) > span:before {
+    .nav-menu > .menu > li:nth-of-type(3n + 4) > a > span:before {
       content: "\e905"; }
-    .nav-menu > .menu > li:nth-of-type(3n + 4) > span:after {
+    .nav-menu > .menu > li:nth-of-type(3n + 4) > a > span:after {
       content: "\e904"; }
   .nav-menu .dropdown.menu .submenu.first-sub {
     left: 50%; }
