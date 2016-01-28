@@ -747,7 +747,7 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #222;
-  background: #7787A1;
+  background: #222832;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1673,7 +1673,7 @@ body.is-reveal-open {
   padding: 0.85em 1em;
   margin: 0 0 1rem 0;
   font-size: 0.9rem;
-  background-color: #BF67A3;
+  background-color: #f36557;
   color: #fff; }
   [data-whatinput='mouse'] .button {
     outline: 0; }
@@ -1875,7 +1875,7 @@ h6 {
     font-size: 1rem; } }
 
 a {
-  color: #BF67A3;
+  color: #f36557;
   text-decoration: none;
   line-height: inherit;
   cursor: pointer; }
@@ -2205,7 +2205,7 @@ legend {
   padding: 1.25rem;
   margin: 1.125rem 0; }
   .fieldset legend {
-    background: #7787A1;
+    background: #222832;
     padding: 0 0.1875rem;
     margin: 0;
     margin-left: -0.1875rem; }
@@ -2264,9 +2264,9 @@ select {
     clear: both; }
   .top-bar,
   .top-bar ul {
-    background-color: #b3bccb; }
+    background-color: #414c60; }
   .top-bar a {
-    color: #ab488c; }
+    color: #f03927; }
   .top-bar input {
     width: 200px;
     margin-right: 1rem; }
@@ -2386,13 +2386,13 @@ select {
     display: block;
     width: 100%;
     height: 2px;
-    background: #ab488c;
+    background: #f03927;
     top: 0;
     left: 0;
-    box-shadow: 0 7px 0 #ab488c, 0 14px 0 #ab488c; }
+    box-shadow: 0 7px 0 #f03927, 0 14px 0 #f03927; }
   .menu-icon:hover::after {
-    background: #87396e;
-    box-shadow: 0 7px 0 #87396e, 0 14px 0 #87396e; }
+    background: #d5210f;
+    box-shadow: 0 7px 0 #d5210f, 0 14px 0 #d5210f; }
 
 .menu-icon.dark {
   position: relative;
@@ -2441,7 +2441,7 @@ body {
 .off-canvas-content,
 .off-canvas-content {
   min-height: 100%;
-  background: #7787A1;
+  background: #222832;
   -webkit-transition: -webkit-transform 0.5s ease;
           transition: transform 0.5s ease;
   -webkit-backface-visibility: hidden;
@@ -2465,7 +2465,7 @@ body {
 
 .off-canvas {
   position: absolute;
-  background: #5e6e87;
+  background: #0d1014;
   z-index: -1;
   max-height: 100%;
   overflow-y: auto;
@@ -2517,7 +2517,7 @@ body {
       margin-right: 250px; } }
 
 .dropdown-pane {
-  background-color: #7787A1;
+  background-color: #222832;
   border: 1px solid #cacaca;
   display: block;
   padding: 1rem;
@@ -2654,7 +2654,7 @@ body {
 .off-canvas-content,
 .off-canvas-content {
   min-height: 100%;
-  background: #7787A1;
+  background: #222832;
   -webkit-transition: -webkit-transform 0.5s ease;
           transition: transform 0.5s ease;
   -webkit-backface-visibility: hidden;
@@ -2678,7 +2678,7 @@ body {
 
 .off-canvas {
   position: absolute;
-  background: #5e6e87;
+  background: #0d1014;
   z-index: -1;
   max-height: 100%;
   overflow-y: auto;
@@ -4806,22 +4806,22 @@ This provides overrides for some WP stuff (not much at all).
   min-height: 100vh;
   height: 100vh; }
   .off-canvas > .menu > li {
-    background-color: #b3bccb;
+    background-color: #414c60;
     /* Top Level */ }
     .off-canvas > .menu > li a {
-      color: #99407d; }
+      color: #ed2511; }
     .off-canvas > .menu > li ul li {
-      background-color: #95a2b6; }
+      background-color: #374050; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a:after {
-  border-left-color: #ab488c; }
+  border-left-color: #f03927; }
 
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a:after {
-  border-top-color: #ab488c; }
+  border-top-color: #f03927; }
 
 .nav-menu a:after {
-  border-color: #ab488c; }
+  border-color: #f03927; }
 
 .nav-menu > .menu {
   /* Adds Stone Icon to each top-level item. Cycles through in sets of 3 after setting "Home" to Stacked */ }
@@ -4850,7 +4850,7 @@ This provides overrides for some WP stuff (not much at all).
   width: 100%; }
 
 #respond #submit {
-  background-color: #BF67A3;
+  background-color: #f36557;
   color: #fff;
   border: none; }
   #respond #submit:hover, #respond #submit:focus {
