@@ -82,7 +82,16 @@ if ( ! isset( $_SESSION ) ) {
 
                     </div>
                     
-                    <img class="header-logo" src="<?php echo get_theme_mod( 'wasentha_logo_image', 'http://placehold.it/1200x312' ); ?>" />
+                    <div class="header-logo-wrapper">
+                    
+                        <img class="header-logo" src="<?php echo get_theme_mod( 'wasentha_logo_image', 'http://placehold.it/1200x312' ); ?>" />
+                        
+                        <h1>
+                            <span class="title"><?php echo get_bloginfo( 'name' ); ?></span>
+                            <span class="description"><?php echo get_bloginfo( 'description' ); ?></span>
+                        </h1>
+                        
+                    </div>
 
                 </header>
 
