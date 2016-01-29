@@ -37,9 +37,22 @@ $header-font-weight: 700;
 
 // We use these to style anchors
 $anchor-color: $primary-color;
+
 $topbar-link-color: darken( $primary-color, 10% );
-$titlebar-icon-color: darken( $primary-color, 10% );
-$titlebar-icon-color-hover: darken( $primary-color, 20% );
+
+@if lightness( $topbar-background ) < 50% {
+
+    $topbar-link-color: $light-color;
+
+}
+@else {
+
+    $topbar-link-color: $dark-color;
+
+}
+
+$titlebar-icon-color: $topbar-link-color;
+$titlebar-icon-color-hover: darken( $topbar-link-color, 20% );
 
 // Media query ranges
 $small-range: (0em, 40em);

@@ -2268,7 +2268,7 @@ select {
   .top-bar ul {
     background-color: #414c60; }
   .top-bar a {
-    color: #f03927; }
+    color: #fff; }
   .top-bar input {
     width: 200px;
     margin-right: 1rem; }
@@ -2388,13 +2388,13 @@ select {
     display: block;
     width: 100%;
     height: 2px;
-    background: #f03927;
+    background: #fff;
     top: 0;
     left: 0;
-    box-shadow: 0 7px 0 #f03927, 0 14px 0 #f03927; }
+    box-shadow: 0 7px 0 #fff, 0 14px 0 #fff; }
   .menu-icon:hover::after {
-    background: #d5210f;
-    box-shadow: 0 7px 0 #d5210f, 0 14px 0 #d5210f; }
+    background: #cccccc;
+    box-shadow: 0 7px 0 #cccccc, 0 14px 0 #cccccc; }
 
 .menu-icon.dark {
   position: relative;
@@ -4811,16 +4811,16 @@ This provides overrides for some WP stuff (not much at all).
     background-color: #414c60;
     /* Top Level */ }
     .off-canvas > .menu > li a {
-      color: #ed2511; }
+      color: #d9d9d9 !important; }
     .off-canvas > .menu > li ul li {
       background-color: #374050; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a:after {
-  border-left-color: #f03927; }
+  border-left-color: #fff; }
 
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a:after {
-  border-top-color: #f03927; }
+  border-top-color: #fff; }
 
 .nav-menu a:after {
   border-color: #f03927; }
@@ -4847,6 +4847,12 @@ This provides overrides for some WP stuff (not much at all).
     content: '\e901'; }
   .nav-menu > .menu > li:nth-of-type(3n + 4) > a:before {
     content: '\e900'; }
+  .nav-menu > .menu > li > ul * {
+    color: #f36557; }
+  .nav-menu > .menu > li > ul.menu.is-dropdown-submenu .is-dropdown-submenu-parent.is-right-arrow > a:after {
+    border-left-color: #f36557; }
+  .nav-menu > .menu > li > ul.menu.is-dropdown-submenu .is-dropdown-submenu-parent.is-down-arrow > a:after {
+    border-top-color: #f36557; }
 
 #site-header .header-logo {
   width: 100%; }
