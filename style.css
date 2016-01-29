@@ -17,6 +17,8 @@ Version: 0.1.0
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
 @import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
+@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -2964,7 +2966,7 @@ body {
   font-family: "Titillium Web", sans-serif;
   font-weight: 600; }
 
-#site-content {
+.page-content {
   background-color: #fefefe;
   padding: 30px; }
 
@@ -4876,4 +4878,17 @@ This provides overrides for some WP stuff (not much at all).
 
 .sidebar .em-calendar {
   width: 100%; }
+
+/* Override Foundation's _settings.scss here, or store your own variables */
+.home #intro-message {
+  padding: 30px;
+  background-color: #414c60;
+  color: #fff;
+  font-size: 1.5em; }
+  .home #intro-message .media-object {
+    margin-bottom: 0; }
+  .home #intro-message .media-object-section:last-of-type {
+    vertical-align: middle; }
+  .home #intro-message .thumbnail {
+    margin-bottom: 0; }
 /*# sourceMappingURL=style.css.map */

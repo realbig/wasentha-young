@@ -93,6 +93,31 @@ function wasentha_customize_register( $wp_customize ) {
         'settings'   => 'wasentha_logo_image',
     ) ) );
     
+    $wp_customize->add_setting( 'home_page_intro_image' , array(
+            'default'     => 9,
+            'transport'   => 'refresh',
+        ) 
+    );
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'home_page_intro_image', array(
+        'label'        => __( 'Intro Image', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'mime_type' => 'image',
+        'active_callback' => 'is_front_page',
+    ) ) );
+    
+    $wp_customize->add_setting( 'home_page_intro_paragraph' , array(
+            'default'     => 'Enter Text in the Customizer',
+            'transport'   => 'refresh',
+        ) 
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_intro_paragraph', array(
+        'type' => 'textarea',
+        'label'        => __( 'Intro Paragraph', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'home_page_intro_paragraph',
+        'active_callback' => 'is_front_page',
+    ) ) );
+    
 }
 
 /**
