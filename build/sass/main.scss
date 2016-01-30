@@ -45,6 +45,11 @@ Version: 0.1.0
 @import "static/off-canvas";
 @import "static/nav-menus";
 @import "static/header";
+@import "static/comments";
+@import "static/footer";
 
 // Page Templates
 @import "templates/single";
+@import "templates/page";
+@import "templates/sidebar";
+@import "templates/front-page";

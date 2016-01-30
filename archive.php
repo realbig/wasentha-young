@@ -1,6 +1,6 @@
 <?php
 /**
- * Post index page.
+ * Post archive page.
  *
  * @since 0.1.0
  * @package wasentha
@@ -14,6 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
+
+global $wp_query;
+$term = $wp_query->get_queried_object();
+
 ?>
 
 <section id="post-index" class="page-content">
@@ -24,6 +28,14 @@ get_header();
         
             <div class="small-12 medium-9 columns">
                 <?php
+        
+                if ( is_tax() || is_category() ) : ?>
+
+                    <h1><?php echo get_post_type_object( get_post_type() )->labels->name; ?> in the <?php echo $term->name; ?> Category</h1>
+
+                <?php 
+                endif;
+
                 while ( have_posts() ) :
                     the_post();
                     ?>

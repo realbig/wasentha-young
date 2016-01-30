@@ -17,6 +17,12 @@ Version: 0.1.0
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
 @import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
+@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
+@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
+@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -747,7 +753,7 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #222;
-  background: #7787A1;
+  background: #222832;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1673,12 +1679,12 @@ body.is-reveal-open {
   padding: 0.85em 1em;
   margin: 0 0 1rem 0;
   font-size: 0.9rem;
-  background-color: #2199e8;
+  background-color: #f36557;
   color: #fff; }
   [data-whatinput='mouse'] .button {
     outline: 0; }
   .button:hover, .button:focus {
-    background-color: #1583cc;
+    background-color: #1585cf;
     color: #fff; }
   .button.tiny {
     font-size: 0.6rem; }
@@ -1875,7 +1881,7 @@ h6 {
     font-size: 1rem; } }
 
 a {
-  color: #BF67A3;
+  color: #f36557;
   text-decoration: none;
   line-height: inherit;
   cursor: pointer; }
@@ -2205,7 +2211,7 @@ legend {
   padding: 1.25rem;
   margin: 1.125rem 0; }
   .fieldset legend {
-    background: #7787A1;
+    background: #222832;
     padding: 0 0.1875rem;
     margin: 0;
     margin-left: -0.1875rem; }
@@ -2264,9 +2270,9 @@ select {
     clear: both; }
   .top-bar,
   .top-bar ul {
-    background-color: #b3bccb; }
+    background-color: #414c60; }
   .top-bar a {
-    color: #ab488c; }
+    color: #fff; }
   .top-bar input {
     width: 200px;
     margin-right: 1rem; }
@@ -2386,13 +2392,13 @@ select {
     display: block;
     width: 100%;
     height: 2px;
-    background: #ab488c;
+    background: #fff;
     top: 0;
     left: 0;
-    box-shadow: 0 7px 0 #ab488c, 0 14px 0 #ab488c; }
+    box-shadow: 0 7px 0 #fff, 0 14px 0 #fff; }
   .menu-icon:hover::after {
-    background: #87396e;
-    box-shadow: 0 7px 0 #87396e, 0 14px 0 #87396e; }
+    background: #cccccc;
+    box-shadow: 0 7px 0 #cccccc, 0 14px 0 #cccccc; }
 
 .menu-icon.dark {
   position: relative;
@@ -2441,7 +2447,7 @@ body {
 .off-canvas-content,
 .off-canvas-content {
   min-height: 100%;
-  background: #7787A1;
+  background: #222832;
   -webkit-transition: -webkit-transform 0.5s ease;
           transition: transform 0.5s ease;
   -webkit-backface-visibility: hidden;
@@ -2465,7 +2471,7 @@ body {
 
 .off-canvas {
   position: absolute;
-  background: #5e6e87;
+  background: #0d1014;
   z-index: -1;
   max-height: 100%;
   overflow-y: auto;
@@ -2517,7 +2523,7 @@ body {
       margin-right: 250px; } }
 
 .dropdown-pane {
-  background-color: #7787A1;
+  background-color: #222832;
   border: 1px solid #cacaca;
   display: block;
   padding: 1rem;
@@ -2654,7 +2660,7 @@ body {
 .off-canvas-content,
 .off-canvas-content {
   min-height: 100%;
-  background: #7787A1;
+  background: #222832;
   -webkit-transition: -webkit-transform 0.5s ease;
           transition: transform 0.5s ease;
   -webkit-backface-visibility: hidden;
@@ -2678,7 +2684,7 @@ body {
 
 .off-canvas {
   position: absolute;
-  background: #5e6e87;
+  background: #0d1014;
   z-index: -1;
   max-height: 100%;
   overflow-y: auto;
@@ -2926,14 +2932,6 @@ Adds some functionality to foundation.
   .button.xxlarge-expand {
     width: 100%; } }
 
-.valign-center {
-  display: table; }
-  .valign-center > .columns {
-    display: table-cell;
-    vertical-align: middle; }
-  .valign-center > .columns, .valign-center > [class*="column"] + [class*="column"]:last-child {
-    float: none; }
-
 /*
 Base element settings (no classes or id's).
 
@@ -2957,6 +2955,10 @@ Base element settings (no classes or id's).
   background: #2199e8;
   color: #333; }
 
+html {
+  height: auto;
+  overflow-y: auto; }
+
 .screen-reader-text {
   display: none; }
 
@@ -2964,9 +2966,22 @@ body {
   font-family: "Titillium Web", sans-serif;
   font-weight: 600; }
 
-#site-content {
+.page-content {
   background-color: #fefefe;
   padding: 30px; }
+
+img[class*=" wp-image-"] {
+  border: solid 4px #fefefe;
+  box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+  display: inline-block;
+  line-height: 0;
+  max-width: 100%;
+  -webkit-transition: box-shadow 200ms ease-out;
+          transition: box-shadow 200ms ease-out;
+  border-radius: 0;
+  margin-bottom: 1rem; }
+  img[class*=" wp-image-"]:hover, img[class*=" wp-image-"]:focus {
+    box-shadow: 0 0 6px 1px rgba(33, 153, 232, 0.5); }
 
 /*
 This provides overrides for some WP stuff (not much at all).
@@ -4793,22 +4808,22 @@ This provides overrides for some WP stuff (not much at all).
   min-height: 100vh;
   height: 100vh; }
   .off-canvas > .menu > li {
-    background-color: #b3bccb;
+    background-color: #414c60;
     /* Top Level */ }
     .off-canvas > .menu > li a {
-      color: #99407d; }
+      color: #d9d9d9 !important; }
     .off-canvas > .menu > li ul li {
-      background-color: #95a2b6; }
+      background-color: #374050; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a:after {
-  border-left-color: #ab488c; }
+  border-left-color: #fff; }
 
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a:after {
-  border-top-color: #ab488c; }
+  border-top-color: #fff; }
 
 .nav-menu a:after {
-  border-color: #ab488c; }
+  border-color: #f03927; }
 
 .nav-menu > .menu {
   /* Adds Stone Icon to each top-level item. Cycles through in sets of 3 after setting "Home" to Stacked */ }
@@ -4832,15 +4847,127 @@ This provides overrides for some WP stuff (not much at all).
     content: '\e901'; }
   .nav-menu > .menu > li:nth-of-type(3n + 4) > a:before {
     content: '\e900'; }
+  .nav-menu > .menu > li > ul * {
+    color: #f36557; }
+  .nav-menu > .menu > li > ul.menu.is-dropdown-submenu .is-dropdown-submenu-parent.is-right-arrow > a:after {
+    border-left-color: #f36557; }
+  .nav-menu > .menu > li > ul.menu.is-dropdown-submenu .is-dropdown-submenu-parent.is-down-arrow > a:after {
+    border-top-color: #f36557; }
 
 .nav-menu .dropdown.menu .submenu.first-sub {
   left: 50%; }
 
+/* Override Foundation's _settings.scss here, or store your own variables */
 #site-header .header-logo {
   background-repeat: no-repeat;
   background-position: center; }
 
+#site-header .header-logo-wrapper h1 {
+  width: 100%;
+  margin-bottom: 0; }
+  #site-header .header-logo-wrapper h1 span {
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    width: 30%;
+    text-shadow: -1px -1px 0 #8a8a8a, 1px -1px 0 #8a8a8a, -1px 1px 0 #8a8a8a, 1px 1px 0 #8a8a8a; }
+  @media only screen and (max-width: 40em) {
+    #site-header .header-logo-wrapper h1 span {
+      top: 5%; } }
+  #site-header .header-logo-wrapper h1 span.title {
+    left: 5%; }
+  #site-header .header-logo-wrapper h1 span.description {
+    right: 5%;
+    text-align: right; }
+
+#respond #submit {
+  background-color: #f36557;
+  color: #fff;
+  border: none; }
+  #respond #submit:hover, #respond #submit:focus {
+    background-color: #1585cf;
+    color: #fff; }
+
+/* Override Foundation's _settings.scss here, or store your own variables */
+#site-footer {
+  padding: 30px;
+  background-color: #414c60;
+  color: #fff; }
+  #site-footer .em-calendar thead, #site-footer .em-calendar tbody, #site-footer .em-calendar tfoot {
+    background-color: transparent;
+    color: #fff; }
+    #site-footer .em-calendar thead td, #site-footer .em-calendar tbody td, #site-footer .em-calendar tfoot td {
+      border-bottom: none; }
+  #site-footer .em-calendar thead {
+    border-bottom: none; }
+  #site-footer .em-calendar tbody {
+    border-top: none; }
+    #site-footer .em-calendar tbody tr:nth-child(even) {
+      background-color: #374050;
+      color: #fff; }
+    #site-footer .em-calendar tbody .eventless-today, #site-footer .em-calendar tbody .eventful-today {
+      background-color: #222832;
+      color: #fff; }
+    #site-footer .em-calendar tbody td {
+      border: 1px solid #f1f1f1; }
+    #site-footer .em-calendar tbody .days-names td {
+      border-top: none; }
+  #site-footer #wasentha_testimonial-shortcode .testimonials-text, #site-footer #wasentha_testimonial-shortcode .testimonials-text p, #site-footer #wasentha_testimonial-shortcode .author, #site-footer #wasentha_testimonial-shortcode .author span {
+    color: #fff; }
+
 .single .thumbnail.post-thumbnail-container {
   float: left;
   margin-right: 2.5rem; }
+
+.single .post-comments {
+  clear: both; }
+
+.page img[class*=" wp-image-"]:first-of-type {
+  float: left;
+  margin-right: 2.5rem; }
+
+.page .page-comments {
+  clear: both; }
+
+.sidebar li.widget {
+  list-style-type: none; }
+
+.sidebar .em-calendar {
+  width: 100%; }
+
+/* Override Foundation's _settings.scss here, or store your own variables */
+.home #intro-message {
+  padding: 30px;
+  background-color: #414c60;
+  color: #fff;
+  font-size: 1.5em; }
+  .home #intro-message .media-object {
+    margin-bottom: 0; }
+  .home #intro-message .media-object-section:last-of-type {
+    vertical-align: middle; }
+  .home #intro-message .thumbnail {
+    margin-bottom: 0; }
+
+.home #workshops-exhibits {
+  padding: 30px;
+  background-color: #414c60;
+  color: #fff; }
+  .home #workshops-exhibits .valign-center {
+    display: table-cell;
+    vertical-align: middle; }
+
+.home #recent-posts .heading {
+  padding: 1em;
+  background-color: #2c3441;
+  color: #fff;
+  border-bottom: 1px solid #f36557; }
+
+.home #recent-posts .post {
+  padding: 1em; }
+  .home #recent-posts .post:nth-child(odd) {
+    background-color: #2c3441;
+    color: #fff; }
+  .home #recent-posts .post:nth-child(even) {
+    background-color: #374050;
+    color: #fff; }
 /*# sourceMappingURL=style.css.map */

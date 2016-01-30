@@ -1,0 +1,68 @@
+@import "../settings";
+
+#site-footer {
+    
+    padding: 30px;
+    background-color: $topbar-background;
+    @include light-or-dark-text( $topbar-background );
+    
+    .em-calendar {
+        
+        thead, tbody, tfoot {
+            
+            background-color: transparent;
+            @include light-or-dark-text( $topbar-background );
+            
+            td {
+                
+                border-bottom: none;
+                
+            }
+            
+        }
+        
+        thead {
+            border-bottom: none;
+        }
+        
+        tbody {
+            
+            border-top: none;
+            
+            tr:nth-child( even ) {
+                
+                background-color: darken( $topbar-background, 5% );
+                @include light-or-dark-text( darken( $topbar-background, 5% ) );
+                
+            }
+            
+            .eventless-today, .eventful-today {
+                
+                background-color: darken( $topbar-background, 15% );
+                @include light-or-dark-text( darken( $topbar-background, 15% ) );
+                
+            }
+            
+            td {
+                border: $table-border;
+            }
+            
+            .days-names td {
+                border-top: none;
+            }
+            
+        }
+        
+    }
+    
+    #wasentha_testimonial-shortcode {
+        
+        .testimonials-text, .testimonials-text p, .author, .author span {
+            
+            @include light-or-dark-text( $topbar-background );
+            
+        }
+        
+    }
+    
+}

@@ -1,8 +1,47 @@
-#site-header {
+@import "../settings";
 
+#site-header {
+    
     .header-logo {
         background-repeat: no-repeat;
         background-position: center;
+    }
+    
+    .header-logo-wrapper {
+
+        h1 {
+            width: 100%;
+            margin-bottom: 0;
+
+            span {
+                color: $light-color;
+                position: absolute; 
+                top: 40%;
+                width: 30%;
+                text-shadow:
+                    -1px -1px 0 $dark-gray,  
+                    1px -1px 0 $dark-gray,
+                    -1px 1px 0 $dark-gray,
+                    1px 1px 0 $dark-gray;
+            }
+
+            @media #{$screen} and ( max-width: 40em ) {
+                span {
+                    top: 5%;
+                }    
+            }
+
+            span.title { 
+                left: 5%;
+            }
+
+            span.description {
+                right: 5%;
+                text-align: right;
+            }
+
+        }
+
     }
 
 }

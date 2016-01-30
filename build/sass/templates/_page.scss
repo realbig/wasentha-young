@@ -1,13 +1,13 @@
-.single {
+.page {
 
-    .thumbnail.post-thumbnail-container {
+    img[class*=" wp-image-"]:first-of-type {
 
         float: left;
         margin-right: $thumbnail-margin-bottom + 1.5;
 
     }
     
-    .post-comments {
+    .page-comments {
         clear: both;
     }
 
