@@ -755,7 +755,7 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #222;
-  background: #0a0a0a;
+  background: #1b0c16;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1681,7 +1681,7 @@ body.is-reveal-open {
   padding: 0.85em 1em;
   margin: 0 0 1rem 0;
   font-size: 0.9rem;
-  background-color: #873258;
+  background-color: #BF67A3;
   color: #fff; }
   [data-whatinput='mouse'] .button {
     outline: 0; }
@@ -1883,7 +1883,7 @@ h6 {
     font-size: 1rem; } }
 
 a {
-  color: #bc4a7d;
+  color: #d69dc4;
   text-decoration: none;
   line-height: inherit;
   cursor: pointer; }
@@ -2213,7 +2213,7 @@ legend {
   padding: 1.25rem;
   margin: 1.125rem 0; }
   .fieldset legend {
-    background: #0a0a0a;
+    background: #1b0c16;
     padding: 0 0.1875rem;
     margin: 0;
     margin-left: -0.1875rem; }
@@ -2272,7 +2272,7 @@ select {
     clear: both; }
   .top-bar,
   .top-bar ul {
-    background-color: #2d2340; }
+    background-color: #343d4b; }
   .top-bar a {
     color: #fff; }
   .top-bar input {
@@ -2449,7 +2449,7 @@ body {
 .off-canvas-content,
 .off-canvas-content {
   min-height: 100%;
-  background: #0a0a0a;
+  background: #1b0c16;
   -webkit-transition: -webkit-transform 0.5s ease;
           transition: transform 0.5s ease;
   -webkit-backface-visibility: hidden;
@@ -2473,7 +2473,7 @@ body {
 
 .off-canvas {
   position: absolute;
-  background: #392c51;
+  background: #5e6e87;
   z-index: -1;
   max-height: 100%;
   overflow-y: auto;
@@ -2525,7 +2525,7 @@ body {
       margin-right: 250px; } }
 
 .dropdown-pane {
-  background-color: #0a0a0a;
+  background-color: #1b0c16;
   border: 1px solid #cacaca;
   display: block;
   padding: 1rem;
@@ -2662,7 +2662,7 @@ body {
 .off-canvas-content,
 .off-canvas-content {
   min-height: 100%;
-  background: #0a0a0a;
+  background: #1b0c16;
   -webkit-transition: -webkit-transform 0.5s ease;
           transition: transform 0.5s ease;
   -webkit-backface-visibility: hidden;
@@ -2686,7 +2686,7 @@ body {
 
 .off-canvas {
   position: absolute;
-  background: #392c51;
+  background: #5e6e87;
   z-index: -1;
   max-height: 100%;
   overflow-y: auto;
@@ -4821,10 +4821,10 @@ This provides overrides for some WP stuff (not much at all).
   content: '\e900'; }
 
 [class^="st-icon-stones-"]:before, [class*=' st-icon-stones-']:before {
-  color: #3d1627; }
+  color: #87396e; }
 
 [class^="st-icon-stones-"]:after, [class*=' st-icon-stones-']:after {
-  color: #675093; }
+  color: #95a2b6; }
 
 .st-icon-stones-stacked:before {
   content: "\e909"; }
@@ -4858,12 +4858,12 @@ This provides overrides for some WP stuff (not much at all).
   min-height: 100vh;
   height: 100vh; }
   .off-canvas > .menu > li {
-    background-color: #7359a4;
+    background-color: #a4afc0;
     /* Top Level */ }
     .off-canvas > .menu > li a {
       color: #d9d9d9 !important; }
     .off-canvas > .menu > li ul li {
-      background-color: #675093; }
+      background-color: #95a2b6; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a:after {
@@ -4873,7 +4873,7 @@ This provides overrides for some WP stuff (not much at all).
   border-top-color: #fff; }
 
 .nav-menu a:after {
-  border-color: #622440; }
+  border-color: #ab488c; }
 
 .nav-menu > .menu {
   /* Adds Stone Icon to each top-level item. Cycles through in sets of 3 after setting "Home" to Stacked */ }
@@ -4905,9 +4905,9 @@ This provides overrides for some WP stuff (not much at all).
     text-indent: 0;
     speak: none; }
   .nav-menu > .menu > li > a > span:before {
-    color: #3d1627; }
+    color: #5e6e87; }
   .nav-menu > .menu > li > a > span:after {
-    color: #675093; }
+    color: #b3bccb; }
   .nav-menu > .menu > li:nth-of-type(1) > a > span:before {
     content: "\e909"; }
   .nav-menu > .menu > li:nth-of-type(1) > a > span:after {
@@ -4925,16 +4925,19 @@ This provides overrides for some WP stuff (not much at all).
   .nav-menu > .menu > li:nth-of-type(3n + 4) > a > span:after {
     content: "\e904"; }
   .nav-menu > .menu > li > ul * {
-    color: #873258; }
+    color: #BF67A3; }
   .nav-menu > .menu > li > ul.menu.is-dropdown-submenu .is-dropdown-submenu-parent.is-right-arrow > a:after {
-    border-left-color: #873258; }
+    border-left-color: #BF67A3; }
   .nav-menu > .menu > li > ul.menu.is-dropdown-submenu .is-dropdown-submenu-parent.is-down-arrow > a:after {
-    border-top-color: #873258; }
+    border-top-color: #BF67A3; }
 
 .nav-menu .dropdown.menu .submenu.first-sub {
   left: 50%; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
+#site-header .top-bar {
+  height: 100%; }
+
 #site-header .header-logo {
   background-repeat: no-repeat;
   background-position: center; }
@@ -4965,7 +4968,7 @@ This provides overrides for some WP stuff (not much at all).
         top: 5% !important; } }
 
 #respond #submit {
-  background-color: #873258;
+  background-color: #BF67A3;
   color: #fff;
   border: none; }
   #respond #submit:hover, #respond #submit:focus {
@@ -4975,7 +4978,7 @@ This provides overrides for some WP stuff (not much at all).
 /* Override Foundation's _settings.scss here, or store your own variables */
 #site-footer {
   padding: 30px;
-  background-color: #2d2340;
+  background-color: #343d4b;
   color: #fff; }
   #site-footer .em-calendar thead, #site-footer .em-calendar tbody, #site-footer .em-calendar tfoot {
     background-color: transparent;
@@ -4987,10 +4990,10 @@ This provides overrides for some WP stuff (not much at all).
   #site-footer .em-calendar tbody {
     border-top: none; }
     #site-footer .em-calendar tbody tr:nth-child(even) {
-      background-color: #221a30;
+      background-color: #29313c;
       color: #fff; }
     #site-footer .em-calendar tbody .eventless-today, #site-footer .em-calendar tbody .eventful-today {
-      background-color: #0a080f;
+      background-color: #15181e;
       color: #fff; }
     #site-footer .em-calendar tbody td {
       border: 1px solid #f1f1f1; }
@@ -5022,7 +5025,7 @@ This provides overrides for some WP stuff (not much at all).
 /* Override Foundation's _settings.scss here, or store your own variables */
 .home #intro-message {
   padding: 30px;
-  background-color: #16111f;
+  background-color: #1f242d;
   color: #fff;
   font-size: 1.5em; }
   .home #intro-message .media-object {
@@ -5034,7 +5037,7 @@ This provides overrides for some WP stuff (not much at all).
 
 .home #workshops-exhibits {
   padding: 30px;
-  background-color: #2d2340;
+  background-color: #343d4b;
   color: #fff; }
   .home #workshops-exhibits .valign-center {
     display: table-cell;
@@ -5044,15 +5047,15 @@ This provides overrides for some WP stuff (not much at all).
   padding: 30px; }
 
 .home #recent-posts .heading {
-  background-color: #16111f;
+  background-color: #1f242d;
   color: #fff;
-  border-bottom: 1px solid #873258; }
+  border-bottom: 1px solid #BF67A3; }
 
 .home #recent-posts .post:nth-child(odd) {
-  background-color: #16111f;
+  background-color: #1f242d;
   color: #fff; }
 
 .home #recent-posts .post:nth-child(even) {
-  background-color: #221a30;
+  background-color: #29313c;
   color: #fff; }
 /*# sourceMappingURL=style.css.map */

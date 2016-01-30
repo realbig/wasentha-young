@@ -8,11 +8,11 @@ $dark-color: #333;
 $light-color: #fff;
 
 // We use these as default colors throughout
-$primary-color: #873258;
-$secondary-color: #503E72;
+$primary-color: #BF67A3;
+$secondary-color: #7787A1;
 
-$topbar-background: darken( $secondary-color, 15% );
-$body-background: $black;
+$topbar-background: darken( $secondary-color, 30% );
+$body-background: darken( $primary-color, 50% );
 $offcanvas-background: darken( $secondary-color, 10% );
 
 $button-background: $primary-color;

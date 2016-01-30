@@ -41,11 +41,11 @@
         }
 
         > li > a > span:before {
-            color: darken( $primary-color, 20% );
+            color: darken( $secondary-color, 10% );
         }
 
         > li > a > span:after {
-            color: lighten( $secondary-color, 10% );
+            color: lighten( $secondary-color, 20% );
         }
 
         > li:nth-of-type( 1 ) > a > span:before { // With Blank Space
