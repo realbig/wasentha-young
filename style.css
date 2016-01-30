@@ -4963,18 +4963,19 @@ This provides overrides for some WP stuff (not much at all).
     display: table-cell;
     vertical-align: middle; }
 
+.home #recent-posts .heading, .home #recent-posts .post {
+  padding: 30px; }
+
 .home #recent-posts .heading {
-  padding: 1em;
   background-color: #2c3441;
   color: #fff;
   border-bottom: 1px solid #f36557; }
 
-.home #recent-posts .post {
-  padding: 1em; }
-  .home #recent-posts .post:nth-child(odd) {
-    background-color: #2c3441;
-    color: #fff; }
-  .home #recent-posts .post:nth-child(even) {
-    background-color: #374050;
-    color: #fff; }
+.home #recent-posts .post:nth-child(odd) {
+  background-color: #2c3441;
+  color: #fff; }
+
+.home #recent-posts .post:nth-child(even) {
+  background-color: #374050;
+  color: #fff; }
 /*# sourceMappingURL=style.css.map */

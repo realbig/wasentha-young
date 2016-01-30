@@ -41,9 +41,11 @@
     
     #recent-posts {
         
+        .heading, .post {
+            padding: 30px;
+        }
+        
         .heading {
-            
-            padding: 1em;
             
             background-color: darken( $topbar-background, 10% );
             @include light-or-dark-text( darken( $topbar-background, 10% ) );
@@ -53,8 +55,6 @@
         }
         
         .post {
-            
-            padding: 1em;
             
             &:nth-child( odd ) {
                 
