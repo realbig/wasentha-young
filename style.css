@@ -11,20 +11,20 @@ Version: 0.1.0
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
-@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
-@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
-@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
-@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
-@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
-@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -1837,7 +1837,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Dawning of a New Day", cursive;
+  font-family: "Dancing Script", cursive;
   font-weight: 700;
   font-style: normal;
   color: inherit;
@@ -2965,7 +2965,7 @@ html {
   display: none; }
 
 body {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 600; }
 
 .page-content {
@@ -4958,8 +4958,7 @@ This provides overrides for some WP stuff (not much at all).
       width: 33%;
       text-shadow: -1px -1px 0 #8a8a8a, 1px -1px 0 #8a8a8a, -1px 1px 0 #8a8a8a, 1px 1px 0 #8a8a8a; }
     #site-header .header-logo-wrapper h1 span.title {
-      left: 3%;
-      top: 20%; }
+      left: 3%; }
     #site-header .header-logo-wrapper h1 span.description {
       right: 5%;
       text-align: right; }
