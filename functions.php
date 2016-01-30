@@ -180,6 +180,18 @@ function wasentha_customize_register( $wp_customize ) {
         'active_callback' => 'is_front_page',
     ) ) );
     
+    $wp_customize->add_setting( 'wasentha_footer_columns' , array(
+            'default'     => 4,
+            'transport'   => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wasentha_footer_columns', array(
+        'type' => 'number',
+        'label'        => __( 'Footer Number of Columns/Widget Areas', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'wasentha_footer_columns',
+    ) ) );
+    
 }
 
 /**
@@ -256,6 +268,22 @@ add_action( 'widgets_init', function () {
         'id' => 'main-sidebar',
         'description' => __( 'This is the default sidebar that appears.', THEME_ID ),
     ) );
+    
+    // Footer
+    $footer_columns = get_theme_mod( 'wasentha_footer_columns', 4 );
+    for ( $index = 0; $index < $footer_columns; $index++ ) {
+        register_sidebar(
+            array(
+                'name'          =>  'Footer ' . ( $index + 1 ),
+                'id'            =>  'footer-' . ( $index + 1 ),
+                'description'   =>  '',
+                'before_widget' =>  '<aside id="%1$s" class="widget %2$s">',
+                'after_widget'  =>  '</aside>',
+                'before_title'  =>  '<h3 class="widget-title">',
+                'after_title'   =>  '</h3>',
+            )
+        );
+    }
 
 } );
 
