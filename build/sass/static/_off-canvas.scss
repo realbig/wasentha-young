@@ -14,10 +14,10 @@
 
         > li {
 
-            background-color: lighten( $secondary-color, 20% ); /* Top Level */
+            background-color: lighten( $secondary-color, 15% ); /* Top Level */
             
             a {
-                color: darken( $primary-color, 15% );
+                color: darken( $topbar-link-color, 15% ) !important;
             }
 
             ul {

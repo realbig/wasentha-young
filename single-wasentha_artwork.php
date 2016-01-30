@@ -57,10 +57,18 @@ the_post();
             <div class="post-copy">
                 <?php the_content(); ?>
             </div>
+            
+            <?php if ( comments_open() ) : ?>
+            
+                <div class="post-comments">
+                    <?php comments_template(); ?>
+                </div>
+            
+            <?php endif; ?>
 
         </article>
 
-        <div class="small-12 medium-3 columns">
+        <div class="small-12 medium-3 columns sidebar">
 
             <?php dynamic_sidebar( 'main-sidebar' ); ?>
 

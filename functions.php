@@ -82,7 +82,7 @@ function wasentha_customize_register( $wp_customize ) {
         ) 
     );
     
-    $wp_customize->add_setting( 'wasentha_logo_image' , array(
+    $wp_customize->add_setting( 'wasentha_logo_image', array(
             'default'     => 'http://placehold.it/1200x312',
             'transport'   => 'refresh',
         ) 
@@ -91,6 +91,105 @@ function wasentha_customize_register( $wp_customize ) {
         'label'        => __( 'Logo Banner', THEME_ID ),
         'section'    => 'wasentha_customizer_section',
         'settings'   => 'wasentha_logo_image',
+    ) ) );
+    
+    $wp_customize->add_setting( 'home_page_intro_image' , array(
+            'default'     => 9,
+            'transport'   => 'refresh',
+        ) 
+    );
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'home_page_intro_image', array(
+        'label'        => __( 'Intro Image', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'mime_type' => 'image',
+        'active_callback' => 'is_front_page',
+    ) ) );
+    
+    $wp_customize->add_setting( 'home_page_intro_paragraph', array(
+            'default'     => 'Enter Text in the Customizer',
+            'transport'   => 'refresh',
+        ) 
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_intro_paragraph', array(
+        'type' => 'textarea',
+        'label'        => __( 'Intro Paragraph', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'home_page_intro_paragraph',
+        'active_callback' => 'is_front_page',
+    ) ) );
+    
+    $wp_customize->add_setting( 'home_page_workshop_title', array(
+            'default'     => 'Workshops',
+            'transport'   => 'refresh',
+        ) 
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_workshop_title', array(
+        'label'        => __( 'Workshops Title', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'home_page_workshop_title',
+        'active_callback' => 'is_front_page',
+    ) ) );
+    
+    $wp_customize->add_setting( 'home_page_workshop_content' , array(
+            'default'     => 'Enter Text in the Customizer',
+            'transport'   => 'refresh',
+        ) 
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_workshop_content', array(
+        'type' => 'textarea',
+        'label'        => __( 'Workshops Content', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'home_page_workshop_content',
+        'active_callback' => 'is_front_page',
+    ) ) );
+    
+    $wp_customize->add_setting( 'home_page_exhibits_title', array(
+            'default'     => 'Current Exhibits',
+            'transport'   => 'refresh',
+        ) 
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_exhibits_title', array(
+        'label'        => __( 'Exhibits Title', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'home_page_exhibits_title',
+        'active_callback' => 'is_front_page',
+    ) ) );
+    
+    $wp_customize->add_setting( 'home_page_exhibits_content' , array(
+            'default'     => 'Enter Text in the Customizer',
+            'transport'   => 'refresh',
+        ) 
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_exhibits_content', array(
+        'type' => 'textarea',
+        'label'        => __( 'Exhibits Content', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'home_page_exhibits_content',
+        'active_callback' => 'is_front_page',
+    ) ) );
+    
+    $wp_customize->add_setting( 'home_page_recent_posts' , array(
+            'default'     => '[wasentha_post excerpt=false date=true classes="home-blogs-list" title="Recent Blog Posts"]',
+            'transport'   => 'refresh',
+        ) 
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_recent_posts', array(
+        'label'        => __( 'Recent Posts Shortcode', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'home_page_recent_posts',
+        'active_callback' => 'is_front_page',
+    ) ) );
+    
+    $wp_customize->add_setting( 'wasentha_footer_columns' , array(
+            'default'     => 4,
+            'transport'   => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wasentha_footer_columns', array(
+        'type' => 'number',
+        'label'        => __( 'Footer Number of Columns/Widget Areas', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'wasentha_footer_columns',
     ) ) );
     
 }
@@ -141,6 +240,8 @@ add_action( 'init', function () {
         defined( 'WP_DEBUG' ) && WP_DEBUG ? time() : THEME_VERSION,
         true
     );
+    
+    wp_localize_script( THEME_ID, THEME_ID . '_data', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' ) ) );
 
     // Theme fonts
     if ( ! empty( $wasentha_fonts ) ) {
@@ -167,6 +268,22 @@ add_action( 'widgets_init', function () {
         'id' => 'main-sidebar',
         'description' => __( 'This is the default sidebar that appears.', THEME_ID ),
     ) );
+    
+    // Footer
+    $footer_columns = get_theme_mod( 'wasentha_footer_columns', 4 );
+    for ( $index = 0; $index < $footer_columns; $index++ ) {
+        register_sidebar(
+            array(
+                'name'          =>  'Footer ' . ( $index + 1 ),
+                'id'            =>  'footer-' . ( $index + 1 ),
+                'description'   =>  '',
+                'before_widget' =>  '<aside id="%1$s" class="widget %2$s">',
+                'after_widget'  =>  '</aside>',
+                'before_title'  =>  '<h3 class="widget-title">',
+                'after_title'   =>  '</h3>',
+            )
+        );
+    }
 
 } );
 
@@ -252,7 +369,7 @@ function register_cpt_wasentha_artwork() {
         'menu_icon' => 'dashicons-art',
         'hierarchical' => false,
         'description' => 'artwork',
-        'supports' => array( 'title', 'editor', 'author', 'thumbnail' ),
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'comments' ),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
@@ -301,7 +418,7 @@ function register_cpt_wasentha_artwork() {
  *
  * @since 0.1.0
  */
-add_action( 'init', 'register_taxonomy_wasentha_artwork_series', 0 );
+add_action( 'init', 'register_taxonomy_wasentha_artwork_series' );
 function register_taxonomy_wasentha_artwork_series() {
 
     $labels = array(
@@ -341,7 +458,7 @@ function register_taxonomy_wasentha_artwork_series() {
  *
  * @since 0.1.0
  */
-add_action( 'init', 'register_taxonomy_wasentha_artwork_category', 0 );
+add_action( 'init', 'register_taxonomy_wasentha_artwork_category' );
 function register_taxonomy_wasentha_artwork_category() {
 
     $labels = array(
@@ -374,4 +491,296 @@ function register_taxonomy_wasentha_artwork_category() {
 
     register_taxonomy( 'wasentha_artwork_category', 'wasentha_artwork', $args );
 
+}
+
+/**
+ * Creates the [wasentha_artwork] shortcode
+ *
+ * @since 0.1.0
+ */
+add_shortcode( 'wasentha_artwork', 'wasentha_artwork_shortcode_register' );
+function wasentha_artwork_shortcode_register( $atts ) {
+    
+    $atts = shortcode_atts(
+        array( // a few default values
+            'post_type' => 'wasentha_artwork',
+            'ignore_sticky_posts' => 1,
+            'suppress_filters' => false,
+            'post_status' => 'publish',
+            'before_item' => '<article class="media-object stack-for-small">',
+            'after_item' => '</article>',
+            'classes' => '', // Classes for wrapper <div>
+        ),
+        $atts,
+        'wasentha_artwork'
+    );
+    
+    $out = '';
+    $artwork = new WP_Query( $atts );
+    
+    if ( $artwork->have_posts() ) : 
+    
+        ob_start();
+    
+        echo '<div id="wasentha_artwork-shortcode"' . ( ( $atts['classes'] !== '' ) ? ' class="' . $atts['classes'] . '"' : '' ) . '>';
+    
+        while ( $artwork->have_posts() ) :
+            $artwork->the_post();
+    
+                echo $atts['before_item'];
+                    include( locate_template( 'partials/wasentha_artwork-loop-single.php' ) );
+                echo $atts['after_item'];
+    
+        endwhile;
+    
+        echo '</div>';
+        
+        $out = ob_get_contents();  
+        ob_end_clean();
+    
+        wp_reset_postdata();
+    
+        return html_entity_decode( $out );
+    
+    else :
+        return 'No Artwork Found';
+    endif;
+
+}
+
+/**
+ * Creates the [wasentha_post] shortcode
+ *
+ * @since 0.1.0
+ */
+add_shortcode( 'wasentha_post', 'wasentha_post_shortcode_register' );
+function wasentha_post_shortcode_register( $atts ) {
+    
+    $atts = shortcode_atts(
+        array( // a few default values
+            'post_type' => 'post',
+            'ignore_sticky_posts' => 1,
+            'suppress_filters' => false,
+            'post_status' => 'publish',
+            'before_item' => '<article>',
+            'after_item' => '</article>',
+            'category' => '',
+            'classes' => '', // Classes for wrapper <div>
+            'posts_per_page' => 5,
+            'excerpt' => true,
+            'date' => false,
+            'title' => '',
+        ),
+        $atts,
+        'wasentha_post'
+    );
+    
+    if ( $atts['category'] !== '' ) {
+        
+        $atts['tax_query'] = array(
+            array(
+                'taxonomy' => 'category',
+                'field' => 'name',
+                'terms' => $atts['category'],
+            ),
+        );
+        
+    }
+    
+    $out = '';
+    $wasentha_post = new WP_Query( $atts );
+    
+    if ( $wasentha_post->have_posts() ) : 
+    
+        ob_start();
+    
+        echo '<div id="wasentha_post-shortcode-' . get_the_id() . '"' . ( ( $atts['classes'] !== '' ) ? ' class="' . $atts['classes'] . '"' : '' ) . '>';
+    
+        if ( $atts['title'] !== '' ) {
+            ?>
+            
+            <div class="heading">
+                
+                <h2><?php echo $atts['title']; ?></h2>
+
+            </div>
+
+            <?php
+        }
+    
+        while ( $wasentha_post->have_posts() ) :
+            $wasentha_post->the_post();
+    
+                // Forcefully add post_class()
+                if ( strpos( $atts['before_item'], 'class' ) !== false ) {
+                    
+                    $atts['before_item'] = preg_replace( '/class\s?=\s?"/i', 'class="' . implode( ' ', get_post_class() ) . ' ', $atts['before_item'] );
+                    
+                }
+                else {
+                    
+                    $atts['before_item'] = str_replace( '>', ' class="' . implode( ' ', get_post_class() ) . '">', $atts['before_item'] );
+                    
+                }
+    
+                echo $atts['before_item'];
+                    include( locate_template( 'partials/post-loop-single.php' ) );
+                echo $atts['after_item'];
+    
+        endwhile;
+    
+        echo '</div>';
+        
+        $out = ob_get_contents();  
+        ob_end_clean();
+    
+        wp_reset_postdata();
+    
+        return html_entity_decode( $out );
+    
+    else :
+    
+        if ( $atts['category'] !== '' ) {
+            return 'No Posts in the ' . $atts['category'] . ' Category Found';
+        }
+    
+        return 'No Posts Found';
+    
+    endif;
+
+}
+
+/**
+ * Creates the [wasentha_testimonial] shortcode
+ *
+ * @since 0.1.0
+ */
+add_shortcode( 'wasentha_testimonial', 'wasentha_testimonial_shortcode_register' );
+function wasentha_testimonial_shortcode_register( $atts ) {
+    
+    $atts = shortcode_atts(
+        array( // a few default values
+            'post_type' => 'testimonial',
+            'ignore_sticky_posts' => 1,
+            'suppress_filters' => false,
+            'post_status' => 'publish',
+            'category' => '',
+            'classes' => '', // Classes for wrapper <div>
+        ),
+        $atts,
+        'wasentha_testimonial'
+    );
+    
+    if ( $atts['category'] !== '' ) {
+        
+        $atts['tax_query'] = array(
+            array(
+                'taxonomy' => 'testimonial-category',
+                'field' => 'name',
+                'terms' => $atts['category'],
+            ),
+        );
+        
+    }
+    
+    $out = '';
+    $wasentha_testimonial = new WP_Query( $atts );
+    
+    if ( $wasentha_testimonial->have_posts() ) : 
+    
+        ob_start();
+    
+        $classes = $atts['classes'];
+        
+        $category = '';
+        if ( $atts['category'] !== '' ) {
+            $category .= ' data-category="' . $atts['category'] . '"';
+        }
+    
+        echo '<div id="wasentha_testimonial-shortcode" class="post-' . get_the_ID() . $classes . '"' . $category . '>';
+            ?>
+                    <span class="fa fa-spinner fa-spin testimonial-loading"></span>
+
+                    <div class="testimonials-content" style="display: none;">
+
+                        <blockquote class="testimonials-text" itemprop="reviewBody">
+                        </blockquote>
+
+                        <cite class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"></span></cite>
+                        
+                    </div>
+                
+            <?php
+    
+        echo '</div>';
+        
+        $out = ob_get_contents();  
+        ob_end_clean();
+    
+        wp_reset_postdata();
+    
+        return html_entity_decode( $out );
+    
+    else :
+    
+        if ( $atts['category'] !== '' ) {
+            return 'No Testimonials in the ' . $atts['category'] . ' Category Found';
+        }
+    
+        return 'No Testimonials Found';
+    
+    endif;
+
+}
+
+/*
+ * Allows Testimonials to be Random while getting around WP Engine's RAND limitations
+ *
+ * @since 0.1.0
+ */
+// The AJAX call is given "get_testimonial" which corresponds with the WordPress Action Hook.
+add_action( 'wp_ajax_get_testimonial', 'get_wasentha_testimonial_callback' );
+add_action( 'wp_ajax_nopriv_get_testimonial', 'get_wasentha_testimonial_callback' );
+function get_wasentha_testimonial_callback() {
+    
+    global $post;
+        
+    $atts = array(
+        'posts_per_page' => -1,
+        'post_type' => 'testimonial',
+        'post_status' => 'publish',
+    );
+    
+    if ( isset( $_POST['testimonial_category'] ) && ( $_POST['testimonial_category'] !== '' ) ) {
+        
+        $atts['tax_query'] = array(
+            array(
+                'taxonomy' => 'testimonial-category',
+                'field' => 'name',
+                'terms' => $_POST['testimonial_category'],
+            ),
+        );
+        
+    }
+    
+    $testimonials = get_posts( $atts );
+    
+    $items = array(); // Create an Array for the JSON
+    foreach ( $testimonials as $post ) {
+        
+        setup_postdata( $post );
+        
+        $items[] = array(
+            'name' => get_the_title(),
+            'body' => get_the_content(),
+        );
+        
+    }
+    
+    wp_reset_postdata();
+    
+    echo json_encode( $items );
+    
+    die();
+    
 }

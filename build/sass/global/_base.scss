@@ -27,6 +27,11 @@ Base element settings (no classes or id's).
     @include light-or-dark-text($primary-color);
 }
 
+html {
+    height: auto;
+    overflow-y: auto;
+}
+
 // Classes
 .screen-reader-text {
     display: none;
@@ -37,9 +42,15 @@ body {
     font-weight: 600;
 }
 
-#site-content {
+.page-content {
     
     background-color: $white;
     padding: 30px;
+    
+}
+
+img[class*=" wp-image-"] { // Catch-all to grab images added via "Add Media" button
+    
+    @include thumbnail;
     
 }

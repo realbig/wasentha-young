@@ -1,0 +1,77 @@
+@import "../functions";
+@import "../settings";
+
+.home {
+    
+    #intro-message {
+        
+        padding: 30px;
+        background-color: darken( $topbar-background, 10% );
+        @include light-or-dark-text( darken( $topbar-background, 10% ) );
+        font-size: 1.5em;
+        
+        .media-object {
+            margin-bottom: 0;
+        }
+        
+        .media-object-section:last-of-type {
+            vertical-align: middle;
+        }
+        
+        .thumbnail {
+            margin-bottom: 0;
+        }
+        
+    }
+    
+    #workshops-exhibits {
+        
+        padding: 30px;
+        background-color: $topbar-background;
+        @include light-or-dark-text( $topbar-background );
+        
+        .valign-center {
+            
+            display: table-cell;
+            vertical-align: middle;
+            
+        }
+        
+    }
+    
+    #recent-posts {
+        
+        .heading, .post {
+            padding: 30px;
+        }
+        
+        .heading {
+            
+            background-color: darken( $topbar-background, 10% );
+            @include light-or-dark-text( darken( $topbar-background, 10% ) );
+            
+            border-bottom: 1px solid $primary-color;
+            
+        }
+        
+        .post {
+            
+            &:nth-child( odd ) {
+                
+                background-color: darken( $topbar-background, 10% );
+                @include light-or-dark-text( darken( $topbar-background, 10% ) );
+                
+            }
+            
+            &:nth-child( even ) {
+                
+                background-color: darken( $topbar-background, 5% );
+                @include light-or-dark-text( darken( $topbar-background, 5% ) );
+                
+            }
+            
+        }
+        
+    }
+    
+}
