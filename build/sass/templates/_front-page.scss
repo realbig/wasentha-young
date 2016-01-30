@@ -24,4 +24,54 @@
         
     }
     
+    #workshops-exhibits {
+        
+        padding: 30px;
+        background-color: $topbar-background;
+        @include light-or-dark-text( $topbar-background );
+        
+        .valign-center {
+            
+            display: table-cell;
+            vertical-align: middle;
+            
+        }
+        
+    }
+    
+    #recent-posts {
+        
+        .heading {
+            
+            padding: 1em;
+            
+            background-color: darken( $topbar-background, 10% );
+            @include light-or-dark-text( darken( $topbar-background, 10% ) );
+            
+            border-bottom: 1px solid $primary-color;
+            
+        }
+        
+        .post {
+            
+            padding: 1em;
+            
+            &:nth-child( odd ) {
+                
+                background-color: darken( $topbar-background, 10% );
+                @include light-or-dark-text( darken( $topbar-background, 10% ) );
+                
+            }
+            
+            &:nth-child( even ) {
+                
+                background-color: darken( $topbar-background, 5% );
+                @include light-or-dark-text( darken( $topbar-background, 5% ) );
+                
+            }
+            
+        }
+        
+    }
+    
 }

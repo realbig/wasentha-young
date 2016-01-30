@@ -82,7 +82,7 @@ function wasentha_customize_register( $wp_customize ) {
         ) 
     );
     
-    $wp_customize->add_setting( 'wasentha_logo_image' , array(
+    $wp_customize->add_setting( 'wasentha_logo_image', array(
             'default'     => 'http://placehold.it/1200x312',
             'transport'   => 'refresh',
         ) 
@@ -105,7 +105,7 @@ function wasentha_customize_register( $wp_customize ) {
         'active_callback' => 'is_front_page',
     ) ) );
     
-    $wp_customize->add_setting( 'home_page_intro_paragraph' , array(
+    $wp_customize->add_setting( 'home_page_intro_paragraph', array(
             'default'     => 'Enter Text in the Customizer',
             'transport'   => 'refresh',
         ) 
@@ -115,6 +115,68 @@ function wasentha_customize_register( $wp_customize ) {
         'label'        => __( 'Intro Paragraph', THEME_ID ),
         'section'    => 'wasentha_customizer_section',
         'settings'   => 'home_page_intro_paragraph',
+        'active_callback' => 'is_front_page',
+    ) ) );
+    
+    $wp_customize->add_setting( 'home_page_workshop_title', array(
+            'default'     => 'Workshops',
+            'transport'   => 'refresh',
+        ) 
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_workshop_title', array(
+        'label'        => __( 'Workshops Title', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'home_page_workshop_title',
+        'active_callback' => 'is_front_page',
+    ) ) );
+    
+    $wp_customize->add_setting( 'home_page_workshop_content' , array(
+            'default'     => 'Enter Text in the Customizer',
+            'transport'   => 'refresh',
+        ) 
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_workshop_content', array(
+        'type' => 'textarea',
+        'label'        => __( 'Workshops Content', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'home_page_workshop_content',
+        'active_callback' => 'is_front_page',
+    ) ) );
+    
+    $wp_customize->add_setting( 'home_page_exhibits_title', array(
+            'default'     => 'Current Exhibits',
+            'transport'   => 'refresh',
+        ) 
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_exhibits_title', array(
+        'label'        => __( 'Exhibits Title', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'home_page_exhibits_title',
+        'active_callback' => 'is_front_page',
+    ) ) );
+    
+    $wp_customize->add_setting( 'home_page_exhibits_content' , array(
+            'default'     => 'Enter Text in the Customizer',
+            'transport'   => 'refresh',
+        ) 
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_exhibits_content', array(
+        'type' => 'textarea',
+        'label'        => __( 'Exhibits Content', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'home_page_exhibits_content',
+        'active_callback' => 'is_front_page',
+    ) ) );
+    
+    $wp_customize->add_setting( 'home_page_recent_posts' , array(
+            'default'     => '[wasentha_post excerpt=false date=true classes="home-blogs-list" title="Recent Blog Posts"]',
+            'transport'   => 'refresh',
+        ) 
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_recent_posts', array(
+        'label'        => __( 'Recent Posts Shortcode', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'home_page_recent_posts',
         'active_callback' => 'is_front_page',
     ) ) );
     
@@ -438,7 +500,7 @@ function wasentha_artwork_shortcode_register( $atts ) {
             $artwork->the_post();
     
                 echo $atts['before_item'];
-                    get_template_part( 'partials/wasentha_artwork', 'loop-single' );
+                    include( locate_template( 'partials/wasentha_artwork-loop-single.php' ) );
                 echo $atts['after_item'];
     
         endwhile;
@@ -476,6 +538,10 @@ function wasentha_post_shortcode_register( $atts ) {
             'after_item' => '</article>',
             'category' => '',
             'classes' => '', // Classes for wrapper <div>
+            'posts_per_page' => 5,
+            'excerpt' => true,
+            'date' => false,
+            'title' => '',
         ),
         $atts,
         'wasentha_post'
@@ -502,6 +568,18 @@ function wasentha_post_shortcode_register( $atts ) {
     
         echo '<div id="wasentha_post-shortcode-' . get_the_id() . '"' . ( ( $atts['classes'] !== '' ) ? ' class="' . $atts['classes'] . '"' : '' ) . '>';
     
+        if ( $atts['title'] !== '' ) {
+            ?>
+            
+            <div class="heading">
+                
+                <h2><?php echo $atts['title']; ?></h2>
+
+            </div>
+
+            <?php
+        }
+    
         while ( $wasentha_post->have_posts() ) :
             $wasentha_post->the_post();
     
@@ -518,7 +596,7 @@ function wasentha_post_shortcode_register( $atts ) {
                 }
     
                 echo $atts['before_item'];
-                    get_template_part( 'partials/post', 'loop-single' );
+                    include( locate_template( 'partials/post-loop-single.php' ) );
                 echo $atts['after_item'];
     
         endwhile;
@@ -618,10 +696,10 @@ function wasentha_testimonial_shortcode_register( $atts ) {
     else :
     
         if ( $atts['category'] !== '' ) {
-            return 'No Posts in the ' . $atts['category'] . ' Category Found';
+            return 'No Testimonials in the ' . $atts['category'] . ' Category Found';
         }
     
-        return 'No Posts Found';
+        return 'No Testimonials Found';
     
     endif;
 

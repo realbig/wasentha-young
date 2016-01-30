@@ -2930,14 +2930,6 @@ Adds some functionality to foundation.
   .button.xxlarge-expand {
     width: 100%; } }
 
-.valign-center {
-  display: table; }
-  .valign-center > .columns {
-    display: table-cell;
-    vertical-align: middle; }
-  .valign-center > .columns, .valign-center > [class*="column"] + [class*="column"]:last-child {
-    float: none; }
-
 /*
 Base element settings (no classes or id's).
 
@@ -4922,4 +4914,27 @@ This provides overrides for some WP stuff (not much at all).
     vertical-align: middle; }
   .home #intro-message .thumbnail {
     margin-bottom: 0; }
+
+.home #workshops-exhibits {
+  padding: 30px;
+  background-color: #414c60;
+  color: #fff; }
+  .home #workshops-exhibits .valign-center {
+    display: table-cell;
+    vertical-align: middle; }
+
+.home #recent-posts .heading {
+  padding: 1em;
+  background-color: #2c3441;
+  color: #fff;
+  border-bottom: 1px solid #f36557; }
+
+.home #recent-posts .post {
+  padding: 1em; }
+  .home #recent-posts .post:nth-child(odd) {
+    background-color: #2c3441;
+    color: #fff; }
+  .home #recent-posts .post:nth-child(even) {
+    background-color: #374050;
+    color: #fff; }
 /*# sourceMappingURL=style.css.map */

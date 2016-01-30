@@ -16,7 +16,7 @@ get_header();
 the_post();
 ?>
 
-<div id="intro-message" class="row collapse align-center">
+<div id="intro-message" class="row collapse">
     <div class="media-object stack-for-small">
 
         <div class="media-object-section">
@@ -34,29 +34,36 @@ the_post();
 
     <div class="row">
 
-        <div class="small-12 medium-9 columns">
+        <div class="small-12 columns">
 
             <div class="page-copy">
                 <?php the_content(); ?>
             </div>
 
-            <?php if ( comments_open() ) : ?>
-
-                <div class="page-comments">
-                    <?php comments_template(); ?>
-                </div>
-
-            <?php endif; ?>
-
-        </div>
-
-        <div class="small-12 medium-3 columns sidebar">
-
-            <?php dynamic_sidebar( 'main-sidebar' ); ?>
-
         </div>
 
     </div>
+</section>
+
+<section id="workshops-exhibits" class="row collapse">
+
+    <div class="small-12 medium-6 columns valign-center text-center">
+        
+        <h1><?php echo get_theme_mod( 'home_page_workshop_title', 'Workshops' ); ?></h1>
+        <?php echo apply_filters( 'the_content', get_theme_mod( 'home_page_workshop_content', 'Enter Text in the Customizer' ) ); ?>
+        
+    </div>
+    <div class="small-12 medium-6 columns valign-center text-center">
+        
+        <h1><?php echo get_theme_mod( 'home_page_exhibits_title', 'Current Exhibits' ); ?></h1>
+        <?php echo apply_filters( 'the_content', get_theme_mod( 'home_page_exhibits_content', 'Enter Text in the Customizer' ) ); ?>
+        
+    </div>
+
+</section>
+
+<section id="recent-posts">
+    <?php echo do_shortcode( get_theme_mod( 'home_page_recent_posts', '[wasentha_post excerpt=false date=true classes="home-blogs-list" title="Recent Blog Posts"]' ) ); ?>
 </section>
 
 <?php

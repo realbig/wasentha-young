@@ -17,12 +17,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<h1 class="post-title">
-    <a href="<?php the_permalink(); ?>">
+
+<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+    
+    <h1 class="post-title">
+        
         <?php the_title(); ?>
-    </a>
-</h1>
+        
+    </h1>
+        
+    <?php if ( strtolower( $atts['date'] ) === "true" ) : ?>
+
+        <?php the_time( 'm/d/Y' ); // the_date() only shows the first occurence ?>
+
+    <?php endif; ?>
+        
+</a>
+
+<?php // WordPress likes to treat it as a String even when I enter it as a Bool ?>
+<?php if ( strtolower( $atts['excerpt'] ) !== "false" ) : ?>
 
 <div class="post-copy">
     <?php the_excerpt(); ?>
 </div>
+
+<?php endif; ?>
