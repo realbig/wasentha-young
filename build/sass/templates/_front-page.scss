@@ -6,8 +6,8 @@
     #intro-message {
         
         padding: 30px;
-        background-color: $topbar-background;
-        @include light-or-dark-text( $topbar-background );
+        background-color: darken( $topbar-background, 10% );
+        @include light-or-dark-text( darken( $topbar-background, 10% ) );
         font-size: 1.5em;
         
         .media-object {
