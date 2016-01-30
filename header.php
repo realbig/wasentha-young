@@ -77,7 +77,7 @@ if ( ! isset( $_SESSION ) ) {
                 <style type = "text/css">
                     
                     @media only screen and ( min-width: 40.063em ) {
-                        #site-header {
+                        #site-header, .header-logo-wrapper {
                             height: <?php echo $image_height; ?>;
                         }
                     }
@@ -109,11 +109,20 @@ if ( ! isset( $_SESSION ) ) {
                         </div>
 
                     </div>
-
-                    <div class="header-logo small-12 medium-9 columns hide-for-small-only" style="background-image: url('<?php echo get_theme_mod( 'wasentha_logo_image', 'http://placehold.it/1200x312' ); ?>'); height: <?php echo $image_height; ?>;">
-                    </div>
                     
-                    <img class="header-logo-mobile show-for-small-only small-12" src="<?php echo get_theme_mod( 'wasentha_logo_image', 'http://placehold.it/1200x312' ); ?>" />
+                    <div class="header-logo-wrapper small-12 medium-9 columns">
+
+                        <div class="header-logo hide-for-small-only" style="background-image: url('<?php echo get_theme_mod( 'wasentha_logo_image', 'http://placehold.it/1200x312' ); ?>'); height: <?php echo $image_height; ?>;">
+                        </div>
+
+                        <h1>
+                            <span class="title"><?php echo get_bloginfo( 'name' ); ?></span>
+                            <span class="description"><?php echo get_bloginfo( 'description' ); ?></span>
+                        </h1>
+                        
+                        <img class="header-logo-mobile show-for-small-only small-12" src="<?php echo get_theme_mod( 'wasentha_logo_image', 'http://placehold.it/1200x312' ); ?>" />
+                        
+                    </div>
 
                 </header>
 

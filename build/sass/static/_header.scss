@@ -8,6 +8,13 @@
     }
     
     .header-logo-wrapper {
+        
+        position: relative;
+        padding: 0;
+        
+        @media #{$screen} and ( max-width: 40em ) {
+            padding-bottom: 30px;
+        }
 
         h1 {
             width: 100%;
@@ -16,8 +23,8 @@
             span {
                 color: $light-color;
                 position: absolute; 
-                top: 40%;
-                width: 30%;
+                top: 10%;
+                width: 33%;
                 text-shadow:
                     -1px -1px 0 $dark-gray,  
                     1px -1px 0 $dark-gray,
@@ -25,19 +32,20 @@
                     1px 1px 0 $dark-gray;
             }
 
-            @media #{$screen} and ( max-width: 40em ) {
-                span {
-                    top: 5%;
-                }    
-            }
-
             span.title { 
-                left: 5%;
+                left: 3%;
+                top: 20%;
             }
 
             span.description {
                 right: 5%;
                 text-align: right;
+            }
+            
+            @media #{$screen} and ( max-width: 40em ) {
+                span {
+                    top: 5% !important;
+                }    
             }
 
         }

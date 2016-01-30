@@ -4862,23 +4862,30 @@ This provides overrides for some WP stuff (not much at all).
   background-repeat: no-repeat;
   background-position: center; }
 
-#site-header .header-logo-wrapper h1 {
-  width: 100%;
-  margin-bottom: 0; }
-  #site-header .header-logo-wrapper h1 span {
-    color: #fff;
-    position: absolute;
-    top: 40%;
-    width: 30%;
-    text-shadow: -1px -1px 0 #8a8a8a, 1px -1px 0 #8a8a8a, -1px 1px 0 #8a8a8a, 1px 1px 0 #8a8a8a; }
+#site-header .header-logo-wrapper {
+  position: relative;
+  padding: 0; }
   @media only screen and (max-width: 40em) {
+    #site-header .header-logo-wrapper {
+      padding-bottom: 30px; } }
+  #site-header .header-logo-wrapper h1 {
+    width: 100%;
+    margin-bottom: 0; }
     #site-header .header-logo-wrapper h1 span {
-      top: 5%; } }
-  #site-header .header-logo-wrapper h1 span.title {
-    left: 5%; }
-  #site-header .header-logo-wrapper h1 span.description {
-    right: 5%;
-    text-align: right; }
+      color: #fff;
+      position: absolute;
+      top: 10%;
+      width: 33%;
+      text-shadow: -1px -1px 0 #8a8a8a, 1px -1px 0 #8a8a8a, -1px 1px 0 #8a8a8a, 1px 1px 0 #8a8a8a; }
+    #site-header .header-logo-wrapper h1 span.title {
+      left: 3%;
+      top: 20%; }
+    #site-header .header-logo-wrapper h1 span.description {
+      right: 5%;
+      text-align: right; }
+    @media only screen and (max-width: 40em) {
+      #site-header .header-logo-wrapper h1 span {
+        top: 5% !important; } }
 
 #respond #submit {
   background-color: #f36557;
