@@ -4944,6 +4944,9 @@ This provides overrides for some WP stuff (not much at all).
 .page .page-comments {
   clear: both; }
 
+.page div[id^='wasentha_post-shortcode-'] .post {
+  padding-bottom: 30px; }
+
 .sidebar li.widget {
   list-style-type: none; }
 
