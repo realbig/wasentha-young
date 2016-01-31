@@ -11,17 +11,17 @@ Version: 0.1.0
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
-@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
-@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
-@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
-@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
-@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,600,600italic);
 html {
   font-family: sans-serif;
@@ -1835,7 +1835,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Dawning of a New Day", cursive;
+  font-family: "Dancing Script", cursive;
   font-weight: 700;
   font-style: normal;
   color: inherit;
