@@ -10,5 +10,13 @@
     .page-comments {
         clear: both;
     }
+    
+    div[id^='wasentha_post-shortcode-'] {
+        
+        .post {
+            padding-bottom: 30px;
+        }
+        
+    }
 
 }

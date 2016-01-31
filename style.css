@@ -4869,14 +4869,29 @@ This provides overrides for some WP stuff (not much at all).
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a:after {
   border-left-color: #fff; }
 
+.nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow:hover > a:after {
+  border-left-color: #fff; }
+
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a:after {
   border-top-color: #fff; }
 
-.nav-menu a:after {
-  border-color: #ab488c; }
+.nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow:hover > a:after {
+  border-top-color: #fff; }
 
 .nav-menu > .menu {
   /* Adds Stone Icon to each top-level item. Cycles through in sets of 3 after setting "Home" to Stacked */ }
+  .nav-menu > .menu > li:hover {
+    background-color: #1f242d; }
+    .nav-menu > .menu > li:hover > a {
+      color: #fff; }
+  .nav-menu > .menu > li li:hover {
+    background-color: #e6e6e6; }
+    .nav-menu > .menu > li li:hover > a {
+      color: #333; }
+  .nav-menu > .menu > li .is-dropdown-submenu-parent.is-right-arrow:hover > a:after {
+    border-left-color: #333 !important; }
+  .nav-menu > .menu > li .is-dropdown-submenu-parent.is-down-arrow:hover > a:after {
+    border-top-color: #333 !important; }
   .nav-menu > .menu > li > a > span {
     font-family: 'icomoon', sans-serif;
     speak: none;
@@ -4960,7 +4975,8 @@ This provides overrides for some WP stuff (not much at all).
     #site-header .header-logo-wrapper h1 span.title {
       left: 3%; }
     #site-header .header-logo-wrapper h1 span.description {
-      right: 5%;
+      right: 4%;
+      padding-right: 1%;
       text-align: right; }
     @media only screen and (max-width: 40em) {
       #site-header .header-logo-wrapper h1 span {
@@ -5015,6 +5031,9 @@ This provides overrides for some WP stuff (not much at all).
 .page .page-comments {
   clear: both; }
 
+.page div[id^='wasentha_post-shortcode-'] .post {
+  padding-bottom: 30px; }
+
 .sidebar li.widget {
   list-style-type: none; }
 
@@ -5030,7 +5049,14 @@ This provides overrides for some WP stuff (not much at all).
   .home #intro-message .media-object {
     margin-bottom: 0; }
   .home #intro-message .media-object-section:last-of-type {
-    vertical-align: middle; }
+    vertical-align: middle;
+    font-weight: 300; }
+    .home #intro-message .media-object-section:last-of-type p {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-bottom: 0;
+      border-top: 1px solid #fefefe;
+      border-bottom: 1px solid #fefefe; }
   .home #intro-message .thumbnail {
     margin-bottom: 0; }
 

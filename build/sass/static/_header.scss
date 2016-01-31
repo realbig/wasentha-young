@@ -35,13 +35,14 @@
                     -1px 1px 0 $dark-gray,
                     1px 1px 0 $dark-gray;
             }
-
+            
             span.title { 
                 left: 3%;
             }
 
             span.description {
-                right: 5%;
+                right: 4%;
+                padding-right: 1%; // Prevents letters from getting cut off
                 text-align: right;
             }
             

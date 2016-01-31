@@ -114,7 +114,7 @@ if ( ! isset( $_SESSION ) ) {
 
                         <div class="header-logo hide-for-small-only" style="background-image: url('<?php echo get_theme_mod( 'wasentha_logo_image', 'http://placehold.it/1200x312' ); ?>'); height: <?php echo $image_height; ?>;">
                         </div>
-
+                        
                         <h1>
                             <span class="title"><?php echo get_bloginfo( 'name' ); ?></span>
                             <span class="description"><?php echo get_bloginfo( 'description' ); ?></span>
