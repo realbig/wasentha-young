@@ -83,8 +83,17 @@ if ( ! isset( $_SESSION ) ) {
                     </div>
                     
                     <div class="header-logo-wrapper">
+                        
+                        <?php if ( is_front_page() ) : ?>
                     
-                        <img class="header-logo" src="<?php echo get_theme_mod( 'wasentha_logo_image', 'http://placehold.it/1200x312' ); ?>" />
+                            <img class="header-logo" src="<?php echo get_theme_mod( 'wasentha_logo_image', 'http://placehold.it/1200x312' ); ?>" />
+                        
+                        <?php else : ?>
+                        
+                            <div class="header-logo not-home" style="background-image: url('<?php echo get_theme_mod( 'wasentha_logo_image', 'http://placehold.it/1200x312' ); ?>')">
+                            </div>
+                        
+                        <?php endif; ?>
                         
                         <h1>
                             <span class="title"><?php echo get_bloginfo( 'name' ); ?></span>

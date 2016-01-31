@@ -10,6 +10,23 @@
     .header-logo {
         width: 100%;
     }
+    
+    .header-logo.not-home {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 70%;
+        height: 200px;
+        // Make the logo-banner less large on Inner Pages
+    }
+    
+    @media #{$screen} and ( max-width: 40em ) {
+        
+        .header-logo.not-home {
+            height: 100px;
+            // Smaller still on Mobile
+        }
+        
+    }
 
     .header-logo-wrapper {
 
@@ -31,7 +48,7 @@
 
             @media #{$screen} and ( max-width: 40em ) {
                 span {
-                    top: 5%;
+                    top: 5% !important;
                 }    
             }
 
@@ -42,6 +59,14 @@
             span.description {
                 right: 5%;
                 text-align: right;
+            }
+
+        }
+
+        .header-logo.not-home + h1 {
+            
+            span {
+                top: 30%;
             }
 
         }

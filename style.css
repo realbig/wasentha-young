@@ -4877,6 +4877,16 @@ This provides overrides for some WP stuff (not much at all).
 #site-header .header-logo {
   width: 100%; }
 
+#site-header .header-logo.not-home {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 70%;
+  height: 200px; }
+
+@media only screen and (max-width: 40em) {
+  #site-header .header-logo.not-home {
+    height: 100px; } }
+
 #site-header .header-logo-wrapper h1 {
   width: 100%;
   margin-bottom: 0; }
@@ -4888,12 +4898,15 @@ This provides overrides for some WP stuff (not much at all).
     text-shadow: -1px -1px 0 #8a8a8a, 1px -1px 0 #8a8a8a, -1px 1px 0 #8a8a8a, 1px 1px 0 #8a8a8a; }
   @media only screen and (max-width: 40em) {
     #site-header .header-logo-wrapper h1 span {
-      top: 5%; } }
+      top: 5% !important; } }
   #site-header .header-logo-wrapper h1 span.title {
     left: 5%; }
   #site-header .header-logo-wrapper h1 span.description {
     right: 5%;
     text-align: right; }
+
+#site-header .header-logo-wrapper .header-logo.not-home + h1 span {
+  top: 30%; }
 
 #respond #submit {
   background-color: #f36557;
