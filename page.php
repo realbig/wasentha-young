@@ -32,14 +32,6 @@ the_post();
                 <?php the_content(); ?>
             </div>
             
-            <?php if ( comments_open() ) : ?>
-            
-                <div class="page-comments">
-                    <?php comments_template(); ?>
-                </div>
-            
-            <?php endif; ?>
-            
         </div>
         
         <div class="small-12 medium-3 columns sidebar">
