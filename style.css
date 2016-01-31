@@ -4819,14 +4819,29 @@ This provides overrides for some WP stuff (not much at all).
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a:after {
   border-left-color: #fff; }
 
+.nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow:hover > a:after {
+  border-left-color: #fff; }
+
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a:after {
   border-top-color: #fff; }
 
-.nav-menu a:after {
-  border-color: #f03927; }
+.nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow:hover > a:after {
+  border-top-color: #fff; }
 
 .nav-menu > .menu {
   /* Adds Stone Icon to each top-level item. Cycles through in sets of 3 after setting "Home" to Stacked */ }
+  .nav-menu > .menu > li:hover {
+    background-color: #2c3441; }
+    .nav-menu > .menu > li:hover > a {
+      color: #fff; }
+  .nav-menu > .menu > li li:hover {
+    background-color: #e6e6e6; }
+    .nav-menu > .menu > li li:hover > a {
+      color: #333; }
+  .nav-menu > .menu > li .is-dropdown-submenu-parent.is-right-arrow:hover > a:after {
+    border-left-color: #333 !important; }
+  .nav-menu > .menu > li .is-dropdown-submenu-parent.is-down-arrow:hover > a:after {
+    border-top-color: #333 !important; }
   .nav-menu > .menu > li > a:before {
     font-family: 'icomoon', sans-serif;
     speak: none;
