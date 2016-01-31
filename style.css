@@ -4975,7 +4975,14 @@ This provides overrides for some WP stuff (not much at all).
   .home #intro-message .media-object {
     margin-bottom: 0; }
   .home #intro-message .media-object-section:last-of-type {
-    vertical-align: middle; }
+    vertical-align: middle;
+    font-weight: 300; }
+    .home #intro-message .media-object-section:last-of-type p {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-bottom: 0;
+      border-top: 1px solid #fefefe;
+      border-bottom: 1px solid #fefefe; }
   .home #intro-message .thumbnail {
     margin-bottom: 0; }
 

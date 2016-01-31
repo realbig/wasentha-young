@@ -16,6 +16,26 @@
         
         .media-object-section:last-of-type {
             vertical-align: middle;
+            font-weight: 300;
+            
+            p {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                margin-bottom: 0;
+                @if lightness( $topbar-background ) < 50% {
+
+                    border-top: 1px solid $white;
+                    border-bottom: 1px solid $white;
+
+                }
+                @else {
+
+                    border-top: 1px solid $dark-gray;
+                    border-bottom: 1px solid $dark-gray;
+
+                }
+            }
+            
         }
         
         .thumbnail {
