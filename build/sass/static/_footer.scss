@@ -3,15 +3,22 @@
 #site-footer {
     
     padding: 30px;
-    background-color: $topbar-background;
-    @include light-or-dark-text( $topbar-background );
+    
+    background: linear-gradient(to bottom, $dark-section 0%, $light-section 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$dark-section, endColorstr=$light-section,GradientType=0 ); /* IE6-9 */
+    
+    @include light-or-dark-text( $dark-section );
+    
+    h3 {
+        color: $medium-gray;
+    }
     
     .em-calendar {
         
         thead, tbody, tfoot {
             
             background-color: transparent;
-            @include light-or-dark-text( $topbar-background );
+            @include light-or-dark-text( $dark-section );
             
             td {
                 
@@ -23,6 +30,16 @@
         
         thead {
             border-bottom: none;
+            
+            a { 
+                color: $medium-gray;
+                
+                &:hover {
+                    color: scale-color( $medium-gray, $lightness: -25% );
+                }
+                
+            }
+            
         }
         
         tbody {
@@ -31,15 +48,15 @@
             
             tr:nth-child( even ) {
                 
-                background-color: darken( $topbar-background, 5% );
-                @include light-or-dark-text( darken( $topbar-background, 5% ) );
+                background-color: $dark-section;
+                @include light-or-dark-text( $dark-section );
                 
             }
             
             .eventless-today, .eventful-today {
                 
-                background-color: darken( $topbar-background, 15% );
-                @include light-or-dark-text( darken( $topbar-background, 15% ) );
+                background-color: darken( $dark-section, 5% );
+                @include light-or-dark-text( darken( $dark-section, 5% ) );
                 
             }
             
@@ -59,7 +76,7 @@
         
         .testimonials-text, .testimonials-text p, .author, .author span {
             
-            @include light-or-dark-text( $topbar-background );
+            @include light-or-dark-text( $dark-section );
             
         }
         
