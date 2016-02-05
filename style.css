@@ -11,20 +11,6 @@ Version: 0.1.0
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -1837,7 +1823,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Dancing Script", cursive;
+  font-family: "ITC Bradley Hand", cursive;
   font-weight: 700;
   font-style: normal;
   color: inherit;
@@ -2965,7 +2951,7 @@ html {
   display: none; }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Calibri", "Candara", "Segoe", "Segoe UI", "Optima", "Arial", sans-serif;
   font-weight: 600; }
 
 .page-content {
@@ -4973,7 +4959,8 @@ This provides overrides for some WP stuff (not much at all).
       width: 33%;
       text-shadow: -1px -1px 0 #8a8a8a, 1px -1px 0 #8a8a8a, -1px 1px 0 #8a8a8a, 1px 1px 0 #8a8a8a; }
     #site-header .header-logo-wrapper h1 span.title {
-      left: 3%; }
+      left: 2%;
+      padding-left: 1%; }
     #site-header .header-logo-wrapper h1 span.description {
       right: 4%;
       padding-right: 1%;

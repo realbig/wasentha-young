@@ -18,20 +18,13 @@ $offcanvas-background: darken( $secondary-color, 10% );
 $button-background: $primary-color;
 $button-background-hover: $anchor-color-hover;
 
-
-// Header Font
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
-
-// Body Copy
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
-
 // We use these to define default font stacks
-$font-family-sans-serif: 'Raleway', sans-serif;
+$font-family-sans-serif: 'Calibri', 'Candara', 'Segoe', 'Segoe UI', 'Optima', 'Arial', sans-serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 $body-font-color: #222;
 
-$header-font-family: 'Dancing Script', cursive;
-$header-font-weight: 700;
+$header-font-family: 'ITC Bradley Hand', cursive;
+$header-font-weight: 700; // Makes it bold. Since we're using local font-families this is the best way to go about it
 
 // We use these to control header font styles
 
