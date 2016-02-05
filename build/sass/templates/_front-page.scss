@@ -6,8 +6,8 @@
     #intro-message {
         
         padding: 30px;
-        background-color: darken( $topbar-background, 10% );
-        @include light-or-dark-text( darken( $topbar-background, 10% ) );
+        background-color: $dark-section;
+        @include light-or-dark-text( $dark-section );
         font-size: 1.5em;
         
         .media-object {
@@ -22,7 +22,7 @@
                 padding-top: 15px;
                 padding-bottom: 15px;
                 margin-bottom: 0;
-                @if lightness( $topbar-background ) < 50% {
+                @if lightness( $dark-section ) < 50% {
 
                     border-top: 1px solid $white;
                     border-bottom: 1px solid $white;
@@ -46,6 +46,10 @@
     
     #workshops-exhibits {
         
+        h1 {
+            color: $anchor-color;
+        }
+        
         padding: 30px;
         background-color: $topbar-background;
         @include light-or-dark-text( $topbar-background );
@@ -67,10 +71,10 @@
         
         .heading {
             
-            background-color: darken( $topbar-background, 10% );
-            @include light-or-dark-text( darken( $topbar-background, 10% ) );
+            background-color: $dark-section;
+            color: $medium-gray;
             
-            border-bottom: 1px solid $primary-color;
+            border-bottom: 1px solid $anchor-color;
             
         }
         
@@ -78,15 +82,23 @@
             
             &:nth-child( odd ) {
                 
-                background-color: darken( $topbar-background, 10% );
-                @include light-or-dark-text( darken( $topbar-background, 10% ) );
+                background-color: $dark-section;
+                @include light-or-dark-text( $dark-section );
+                
+                a {
+                    color: $medium-gray;
+                    
+                    &:hover {
+                        color: scale-color( $medium-gray, $lightness: -25% );
+                    }
+                }
                 
             }
             
             &:nth-child( even ) {
                 
-                background-color: darken( $topbar-background, 5% );
-                @include light-or-dark-text( darken( $topbar-background, 5% ) );
+                background-color: $light-section;
+                @include light-or-dark-text( $light-section );
                 
             }
             

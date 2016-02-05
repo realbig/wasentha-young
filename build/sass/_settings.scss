@@ -11,7 +11,10 @@ $light-color: #fff;
 $primary-color: #BF67A3;
 $secondary-color: #7787A1;
 
-$topbar-background: darken( $secondary-color, 30% );
+$dark-section: #3F3F3F;
+$light-section: #A5A5A5;
+
+$topbar-background: $light-section;
 $body-background: darken( $primary-color, 50% );
 $offcanvas-background: darken( $secondary-color, 10% );
 
@@ -29,9 +32,8 @@ $header-font-weight: 700; // Makes it bold. Since we're using local font-familie
 // We use these to control header font styles
 
 // We use these to style anchors
-$anchor-color: lighten( $primary-color, 15% );
-
-$topbar-link-color: darken( $primary-color, 10% );
+$anchor-color: #603;
+$anchor-color-hover: scale-color($anchor-color, $lightness: -25%);
 
 @if lightness( $topbar-background ) < 50% {
 

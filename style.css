@@ -1869,12 +1869,12 @@ h6 {
     font-size: 1rem; } }
 
 a {
-  color: #d69dc4;
+  color: #603;
   text-decoration: none;
   line-height: inherit;
   cursor: pointer; }
   a:hover, a:focus {
-    color: #1585cf; }
+    color: #4d0026; }
   a img {
     border: 0; }
 
@@ -2258,9 +2258,9 @@ select {
     clear: both; }
   .top-bar,
   .top-bar ul {
-    background-color: #343d4b; }
+    background-color: #A5A5A5; }
   .top-bar a {
-    color: #fff; }
+    color: #333; }
   .top-bar input {
     width: 200px;
     margin-right: 1rem; }
@@ -2380,13 +2380,13 @@ select {
     display: block;
     width: 100%;
     height: 2px;
-    background: #fff;
+    background: #333;
     top: 0;
     left: 0;
-    box-shadow: 0 7px 0 #fff, 0 14px 0 #fff; }
+    box-shadow: 0 7px 0 #333, 0 14px 0 #333; }
   .menu-icon:hover::after {
-    background: #cccccc;
-    box-shadow: 0 7px 0 #cccccc, 0 14px 0 #cccccc; }
+    background: black;
+    box-shadow: 0 7px 0 black, 0 14px 0 black; }
 
 .menu-icon.dark {
   position: relative;
@@ -4847,29 +4847,29 @@ This provides overrides for some WP stuff (not much at all).
     background-color: #a4afc0;
     /* Top Level */ }
     .off-canvas > .menu > li a {
-      color: #d9d9d9 !important; }
+      color: #0d0d0d !important; }
     .off-canvas > .menu > li ul li {
       background-color: #95a2b6; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a:after {
-  border-left-color: #fff; }
+  border-left-color: #333; }
 
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow:hover > a:after {
-  border-left-color: #fff; }
+  border-left-color: #333; }
 
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a:after {
-  border-top-color: #fff; }
+  border-top-color: #333; }
 
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow:hover > a:after {
-  border-top-color: #fff; }
+  border-top-color: #333; }
 
 .nav-menu > .menu {
   /* Adds Stone Icon to each top-level item. Cycles through in sets of 3 after setting "Home" to Stacked */ }
   .nav-menu > .menu > li:hover {
-    background-color: #1f242d; }
+    background-color: #8c8c8c; }
     .nav-menu > .menu > li:hover > a {
-      color: #fff; }
+      color: #333; }
   .nav-menu > .menu > li li:hover {
     background-color: #e6e6e6; }
     .nav-menu > .menu > li li:hover > a {
@@ -4926,11 +4926,11 @@ This provides overrides for some WP stuff (not much at all).
   .nav-menu > .menu > li:nth-of-type(3n + 4) > a > span:after {
     content: "\e904"; }
   .nav-menu > .menu > li > ul * {
-    color: #BF67A3; }
+    color: #603; }
   .nav-menu > .menu > li > ul.menu.is-dropdown-submenu .is-dropdown-submenu-parent.is-right-arrow > a:after {
-    border-left-color: #BF67A3; }
+    border-left-color: #603; }
   .nav-menu > .menu > li > ul.menu.is-dropdown-submenu .is-dropdown-submenu-parent.is-down-arrow > a:after {
-    border-top-color: #BF67A3; }
+    border-top-color: #603; }
 
 .nav-menu .dropdown.menu .submenu.first-sub {
   left: 50%; }
@@ -4980,11 +4980,11 @@ This provides overrides for some WP stuff (not much at all).
 /* Override Foundation's _settings.scss here, or store your own variables */
 #site-footer {
   padding: 30px;
-  background-color: #343d4b;
-  color: #fff; }
+  background-color: #A5A5A5;
+  color: #333; }
   #site-footer .em-calendar thead, #site-footer .em-calendar tbody, #site-footer .em-calendar tfoot {
     background-color: transparent;
-    color: #fff; }
+    color: #333; }
     #site-footer .em-calendar thead td, #site-footer .em-calendar tbody td, #site-footer .em-calendar tfoot td {
       border-bottom: none; }
   #site-footer .em-calendar thead {
@@ -4992,17 +4992,17 @@ This provides overrides for some WP stuff (not much at all).
   #site-footer .em-calendar tbody {
     border-top: none; }
     #site-footer .em-calendar tbody tr:nth-child(even) {
-      background-color: #29313c;
-      color: #fff; }
+      background-color: #989898;
+      color: #333; }
     #site-footer .em-calendar tbody .eventless-today, #site-footer .em-calendar tbody .eventful-today {
-      background-color: #15181e;
+      background-color: #7f7f7f;
       color: #fff; }
     #site-footer .em-calendar tbody td {
       border: 1px solid #f1f1f1; }
     #site-footer .em-calendar tbody .days-names td {
       border-top: none; }
   #site-footer #wasentha_testimonial-shortcode .testimonials-text, #site-footer #wasentha_testimonial-shortcode .testimonials-text p, #site-footer #wasentha_testimonial-shortcode .author, #site-footer #wasentha_testimonial-shortcode .author span {
-    color: #fff; }
+    color: #333; }
 
 .single .thumbnail.post-thumbnail-container {
   float: left;
@@ -5030,7 +5030,7 @@ This provides overrides for some WP stuff (not much at all).
 /* Override Foundation's _settings.scss here, or store your own variables */
 .home #intro-message {
   padding: 30px;
-  background-color: #1f242d;
+  background-color: #3F3F3F;
   color: #fff;
   font-size: 1.5em; }
   .home #intro-message .media-object {
@@ -5049,8 +5049,10 @@ This provides overrides for some WP stuff (not much at all).
 
 .home #workshops-exhibits {
   padding: 30px;
-  background-color: #343d4b;
-  color: #fff; }
+  background-color: #A5A5A5;
+  color: #333; }
+  .home #workshops-exhibits h1 {
+    color: #603; }
   .home #workshops-exhibits .valign-center {
     display: table-cell;
     vertical-align: middle; }
@@ -5059,15 +5061,19 @@ This provides overrides for some WP stuff (not much at all).
   padding: 30px; }
 
 .home #recent-posts .heading {
-  background-color: #1f242d;
-  color: #fff;
-  border-bottom: 1px solid #BF67A3; }
+  background-color: #3F3F3F;
+  color: #cacaca;
+  border-bottom: 1px solid #603; }
 
 .home #recent-posts .post:nth-child(odd) {
-  background-color: #1f242d;
+  background-color: #3F3F3F;
   color: #fff; }
+  .home #recent-posts .post:nth-child(odd) a {
+    color: #cacaca; }
+    .home #recent-posts .post:nth-child(odd) a:hover {
+      color: #989898; }
 
 .home #recent-posts .post:nth-child(even) {
-  background-color: #29313c;
-  color: #fff; }
+  background-color: #A5A5A5;
+  color: #333; }
 /*# sourceMappingURL=style.css.map */

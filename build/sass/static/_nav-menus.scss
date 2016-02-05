@@ -176,18 +176,18 @@
         > li > ul {
 
             * {
-                color: $primary-color;
+                color: $anchor-color;
             }
 
             &.menu.is-dropdown-submenu {
                 .is-dropdown-submenu-parent.is-right-arrow {
                     > a:after {
-                        border-left-color: $primary-color;
+                        border-left-color: $anchor-color;
                     }
                 }
                 .is-dropdown-submenu-parent.is-down-arrow {
                     > a:after {
-                        border-top-color: $primary-color;
+                        border-top-color: $anchor-color;
                     }
                 }
             }
