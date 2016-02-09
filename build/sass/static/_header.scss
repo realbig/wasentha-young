@@ -45,7 +45,7 @@
             span {
                 color: $light-color;
                 position: absolute; 
-                top: 35%;
+                top: 30%;
                 width: 33%;
                 text-shadow:
                     -1px -1px 0 $dark-gray,  
@@ -66,6 +66,12 @@
                 text-align: right;
             }
             
+            @media #{$screen} and ( max-width: 64em ) {
+                span.title, span.description {
+                    top: 15%;
+                }    
+            }
+            
             @media #{$screen} and ( max-width: 40em ) {
                 span {
                     top: 5% !important;
@@ -79,11 +85,17 @@
     .header-logo.not-home + h1 {
 
         span {
-            top: 30%;
+            top: 20%;
         }
         
         span.description {
-            top: 20%;
+            top: 15%;
+        }
+        
+        @media #{$screen} and ( max-width: 64em ) {
+            span.description {
+                top: 15%;
+            }    
         }
         
         @media #{$screen} and ( max-width: 40em ) {

@@ -21,12 +21,28 @@ $offcanvas-background: darken( $secondary-color, 10% );
 $button-background: $primary-color;
 $button-background-hover: $anchor-color-hover;
 
+@font-face {font-family: "Bradley Hand ITC TT";
+    src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot");
+    src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.svg#Bradley Hand ITC TT") format("svg");
+}
+
+@font-face {font-family: "Calibri";
+    src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot");
+    src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.svg#Calibri") format("svg");
+}
+
 // We use these to define default font stacks
 $font-family-sans-serif: 'Calibri', 'Candara', 'Segoe', 'Segoe UI', 'Optima', 'Arial', sans-serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 $body-font-color: #222;
 
-$header-font-family: 'ITC Bradley Hand', cursive;
+$header-font-family: 'Bradley Hand ITC TT', cursive;
 $header-font-weight: 700; // Makes it bold. Since we're using local font-families this is the best way to go about it
 
 // We use these to control header font styles

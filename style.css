@@ -361,6 +361,16 @@ th {
   padding: 0; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
+@font-face {
+  font-family: "Bradley Hand ITC TT";
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot");
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.woff") format("woff"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.svg#Bradley Hand ITC TT") format("svg"); }
+
+@font-face {
+  font-family: "Calibri";
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot");
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.woff") format("woff"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.svg#Calibri") format("svg"); }
+
 /**
  * Foundation for Sites by ZURB
  * Version 6.1.0
@@ -1823,7 +1833,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "ITC Bradley Hand", cursive;
+  font-family: "Bradley Hand ITC TT", cursive;
   font-weight: 700;
   font-style: normal;
   color: inherit;
@@ -2979,6 +2989,16 @@ This provides overrides for some WP stuff (not much at all).
   position: fixed !important; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
+@font-face {
+  font-family: "Bradley Hand ITC TT";
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot");
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.woff") format("woff"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.svg#Bradley Hand ITC TT") format("svg"); }
+
+@font-face {
+  font-family: "Calibri";
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot");
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.woff") format("woff"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.svg#Calibri") format("svg"); }
+
 @font-face {
   font-family: 'icomoon';
   src: url("fonts/icons/wasentha.eot?mcl5xn");
@@ -4837,6 +4857,16 @@ This provides overrides for some WP stuff (not much at all).
   content: "\e904"; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
+@font-face {
+  font-family: "Bradley Hand ITC TT";
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot");
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.woff") format("woff"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.svg#Bradley Hand ITC TT") format("svg"); }
+
+@font-face {
+  font-family: "Calibri";
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot");
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.woff") format("woff"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.svg#Calibri") format("svg"); }
+
 .off-canvas-content {
   box-shadow: none; }
 
@@ -4852,6 +4882,16 @@ This provides overrides for some WP stuff (not much at all).
       background-color: #95a2b6; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
+@font-face {
+  font-family: "Bradley Hand ITC TT";
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot");
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.woff") format("woff"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.svg#Bradley Hand ITC TT") format("svg"); }
+
+@font-face {
+  font-family: "Calibri";
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot");
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.woff") format("woff"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.svg#Calibri") format("svg"); }
+
 .nav-menu .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a:after {
   border-left-color: #333; }
 
@@ -4936,6 +4976,16 @@ This provides overrides for some WP stuff (not much at all).
   left: 50%; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
+@font-face {
+  font-family: "Bradley Hand ITC TT";
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot");
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.woff") format("woff"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.svg#Bradley Hand ITC TT") format("svg"); }
+
+@font-face {
+  font-family: "Calibri";
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot");
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.woff") format("woff"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.svg#Calibri") format("svg"); }
+
 #site-header .header-logo {
   background-repeat: no-repeat;
   background-position: center; }
@@ -4966,7 +5016,7 @@ This provides overrides for some WP stuff (not much at all).
     #site-header .header-logo-wrapper h1 span {
       color: #fff;
       position: absolute;
-      top: 35%;
+      top: 30%;
       width: 33%;
       text-shadow: -1px -1px 0 #8a8a8a, 1px -1px 0 #8a8a8a, -1px 1px 0 #8a8a8a, 1px 1px 0 #8a8a8a; }
     #site-header .header-logo-wrapper h1 span.title {
@@ -4977,15 +5027,22 @@ This provides overrides for some WP stuff (not much at all).
       padding-right: 1%;
       top: 25%;
       text-align: right; }
+    @media only screen and (max-width: 64em) {
+      #site-header .header-logo-wrapper h1 span.title, #site-header .header-logo-wrapper h1 span.description {
+        top: 15%; } }
     @media only screen and (max-width: 40em) {
       #site-header .header-logo-wrapper h1 span {
         top: 5% !important; } }
 
 #site-header .header-logo.not-home + h1 span {
-  top: 30%; }
+  top: 20%; }
 
 #site-header .header-logo.not-home + h1 span.description {
-  top: 20%; }
+  top: 15%; }
+
+@media only screen and (max-width: 64em) {
+  #site-header .header-logo.not-home + h1 span.description {
+    top: 15%; } }
 
 @media only screen and (max-width: 40em) {
   #site-header .header-logo.not-home + h1 span {
@@ -5000,6 +5057,16 @@ This provides overrides for some WP stuff (not much at all).
     color: #fff; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
+@font-face {
+  font-family: "Bradley Hand ITC TT";
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot");
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.woff") format("woff"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.svg#Bradley Hand ITC TT") format("svg"); }
+
+@font-face {
+  font-family: "Calibri";
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot");
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.woff") format("woff"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.svg#Calibri") format("svg"); }
+
 #site-footer {
   padding: 30px;
   background: -webkit-linear-gradient(top, #3F3F3F 0%, #A5A5A5 100%);
@@ -5060,6 +5127,16 @@ This provides overrides for some WP stuff (not much at all).
   width: 100%; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
+@font-face {
+  font-family: "Bradley Hand ITC TT";
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot");
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.woff") format("woff"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.svg#Bradley Hand ITC TT") format("svg"); }
+
+@font-face {
+  font-family: "Calibri";
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot");
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.woff") format("woff"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.svg#Calibri") format("svg"); }
+
 .home #intro-message {
   padding: 30px;
   background-color: #3F3F3F;
