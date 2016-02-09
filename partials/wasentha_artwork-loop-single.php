@@ -27,11 +27,11 @@ if ( has_post_thumbnail() ) : ?>
 
 <div class="media-object-section">
 
-    <h2 class="post-title">
+    <h3 class="post-title">
         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
             <?php the_title(); ?>
         </a>
-    </h2>
+    </h3>
     <div class="post-meta">
 
         <strong>Date: </strong><?php the_time( get_option( 'date_format' ) ); // the_date() only shows the first occurence ?><br />

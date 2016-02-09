@@ -20,11 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
     
-    <h1 class="post-title">
+    <h3 class="post-title">
         
         <?php the_title(); ?>
         
-    </h1>
+    </h3>
         
     <?php if ( strtolower( $atts['date'] ) === "true" ) : ?>
 
