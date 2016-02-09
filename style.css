@@ -4936,26 +4936,37 @@ This provides overrides for some WP stuff (not much at all).
   left: 50%; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
-#site-header .top-bar {
-  height: 100%; }
-
 #site-header .header-logo {
   background-repeat: no-repeat;
   background-position: center; }
 
 #site-header .header-logo-wrapper {
   position: relative;
+  width: 100%; }
+
+#site-header .header-logo {
+  width: 100%; }
+
+#site-header .header-logo.not-home {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 70%;
+  height: 200px; }
+
+@media only screen and (max-width: 40em) {
+  #site-header .header-logo.not-home {
+    height: 100px; } }
+
+#site-header .header-logo-wrapper {
+  position: relative;
   padding: 0; }
-  @media only screen and (max-width: 40em) {
-    #site-header .header-logo-wrapper {
-      padding-bottom: 30px; } }
   #site-header .header-logo-wrapper h1 {
     width: 100%;
     margin-bottom: 0; }
     #site-header .header-logo-wrapper h1 span {
       color: #fff;
       position: absolute;
-      top: 10%;
+      top: 35%;
       width: 33%;
       text-shadow: -1px -1px 0 #8a8a8a, 1px -1px 0 #8a8a8a, -1px 1px 0 #8a8a8a, 1px 1px 0 #8a8a8a; }
     #site-header .header-logo-wrapper h1 span.title {
@@ -4964,10 +4975,21 @@ This provides overrides for some WP stuff (not much at all).
     #site-header .header-logo-wrapper h1 span.description {
       right: 4%;
       padding-right: 1%;
+      top: 25%;
       text-align: right; }
     @media only screen and (max-width: 40em) {
       #site-header .header-logo-wrapper h1 span {
         top: 5% !important; } }
+
+#site-header .header-logo.not-home + h1 span {
+  top: 30%; }
+
+#site-header .header-logo.not-home + h1 span.description {
+  top: 20%; }
+
+@media only screen and (max-width: 40em) {
+  #site-header .header-logo.not-home + h1 span {
+    top: 5% !important; } }
 
 #respond #submit {
   background-color: #BF67A3;
