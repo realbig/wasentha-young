@@ -18,9 +18,6 @@ $topbar-background: $light-section;
 $body-background: darken( $primary-color, 50% );
 $offcanvas-background: darken( $secondary-color, 10% );
 
-$button-background: $primary-color;
-$button-background-hover: $anchor-color-hover;
-
 @font-face {font-family: "Bradley Hand ITC TT";
     src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot");
     src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot?#iefix") format("embedded-opentype"),
@@ -50,6 +47,9 @@ $header-font-weight: 700; // Makes it bold. Since we're using local font-familie
 // We use these to style anchors
 $anchor-color: #603;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -25%);
+
+$button-background: $anchor-color;
+$button-background-hover: $anchor-color-hover;
 
 @if lightness( $topbar-background ) < 50% {
 

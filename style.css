@@ -1677,12 +1677,12 @@ body.is-reveal-open {
   padding: 0.85em 1em;
   margin: 0 0 1rem 0;
   font-size: 0.9rem;
-  background-color: #BF67A3;
+  background-color: #603;
   color: #fff; }
   [data-whatinput='mouse'] .button {
     outline: 0; }
   .button:hover, .button:focus {
-    background-color: #1585cf;
+    background-color: #4d0026;
     color: #fff; }
   .button.tiny {
     font-size: 0.6rem; }
@@ -5049,11 +5049,11 @@ This provides overrides for some WP stuff (not much at all).
     top: 5% !important; } }
 
 #respond #submit {
-  background-color: #BF67A3;
+  background-color: #603;
   color: #fff;
   border: none; }
   #respond #submit:hover, #respond #submit:focus {
-    background-color: #1585cf;
+    background-color: #4d0026;
     color: #fff; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
