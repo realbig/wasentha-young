@@ -45,37 +45,19 @@
             span {
                 color: $light-color;
                 position: absolute; 
-                top: 30%;
-                width: 33%;
+                top: 5%;
+                width: 40%;
                 text-shadow:
                     -1px -1px 0 $dark-gray,  
                     1px -1px 0 $dark-gray,
                     -1px 1px 0 $dark-gray,
                     1px 1px 0 $dark-gray;
             }
-            
-            span.title { 
-                left: 2%;
-                padding-left: 1%; // Prevents letters from getting cut off
-            }
 
             span.description {
-                right: 4%;
+                right: 2%;
                 padding-right: 1%; // Prevents letters from getting cut off
-                top: 25%;
                 text-align: right;
-            }
-            
-            @media #{$screen} and ( max-width: 64em ) {
-                span.title, span.description {
-                    top: 15%;
-                }    
-            }
-            
-            @media #{$screen} and ( max-width: 40em ) {
-                span {
-                    top: 5% !important;
-                }    
             }
 
         }
@@ -85,23 +67,7 @@
     .header-logo.not-home + h1 {
 
         span {
-            top: 20%;
-        }
-        
-        span.description {
-            top: 15%;
-        }
-        
-        @media #{$screen} and ( max-width: 64em ) {
-            span.description {
-                top: 15%;
-            }    
-        }
-        
-        @media #{$screen} and ( max-width: 40em ) {
-            span {
-                top: 5% !important;
-            }    
+            top: 5%;
         }
 
     }

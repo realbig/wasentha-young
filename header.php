@@ -96,7 +96,6 @@ if ( ! isset( $_SESSION ) ) {
                         <?php endif; ?>
                         
                         <h1>
-                            <span class="title"><?php echo get_bloginfo( 'name' ); ?></span>
                             <span class="description"><?php echo get_bloginfo( 'description' ); ?></span>
                         </h1>
                         

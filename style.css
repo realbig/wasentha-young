@@ -5016,37 +5016,16 @@ This provides overrides for some WP stuff (not much at all).
     #site-header .header-logo-wrapper h1 span {
       color: #fff;
       position: absolute;
-      top: 30%;
-      width: 33%;
+      top: 5%;
+      width: 40%;
       text-shadow: -1px -1px 0 #8a8a8a, 1px -1px 0 #8a8a8a, -1px 1px 0 #8a8a8a, 1px 1px 0 #8a8a8a; }
-    #site-header .header-logo-wrapper h1 span.title {
-      left: 2%;
-      padding-left: 1%; }
     #site-header .header-logo-wrapper h1 span.description {
-      right: 4%;
+      right: 2%;
       padding-right: 1%;
-      top: 25%;
       text-align: right; }
-    @media only screen and (max-width: 64em) {
-      #site-header .header-logo-wrapper h1 span.title, #site-header .header-logo-wrapper h1 span.description {
-        top: 15%; } }
-    @media only screen and (max-width: 40em) {
-      #site-header .header-logo-wrapper h1 span {
-        top: 5% !important; } }
 
 #site-header .header-logo.not-home + h1 span {
-  top: 20%; }
-
-#site-header .header-logo.not-home + h1 span.description {
-  top: 15%; }
-
-@media only screen and (max-width: 64em) {
-  #site-header .header-logo.not-home + h1 span.description {
-    top: 15%; } }
-
-@media only screen and (max-width: 40em) {
-  #site-header .header-logo.not-home + h1 span {
-    top: 5% !important; } }
+  top: 5%; }
 
 #respond #submit {
   background-color: #603;
