@@ -20,7 +20,7 @@ the_post();
     <div class="media-object stack-for-small">
 
         <div class="media-object-section">
-            <?php echo wp_get_attachment_image( get_theme_mod( 'home_page_intro_image', 9 ), 'medium', false, array( 'class' => 'thumbnail' ) ); ?>
+            <?php echo wp_get_attachment_image( get_theme_mod( 'home_page_intro_image', 9 ), 'thumbnail', false, array( 'class' => 'thumbnail' ) ); ?>
         </div>
 
         <div class="media-object-section">
