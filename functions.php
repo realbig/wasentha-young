@@ -370,6 +370,10 @@ function register_cpt_wasentha_artwork() {
         'not_found_in_trash' => _x( 'No Artwork found in Trash', THEME_ID ),
         'parent_item_colon' => _x( 'Parent Artwork:', THEME_ID ),
         'menu_name' => _x( 'Artwork', THEME_ID ),
+        'featured_image'        => _x( 'Art', THEME_ID ),
+        'remove_featured_image' => _x( 'Remove art', THEME_ID ),
+        'set_featured_image'    => _x( 'Set art', THEME_ID ),
+        'use_featured_image'    => _x( 'Use as art', THEME_ID ),
     );
     $args = array(
         'labels' => $labels,
@@ -811,28 +815,6 @@ function wasentha_artwork_post_thumbnail_html( $content ) {
 
     return $content;
     
-}
-
-/**
- * Replace Featured Image text above Metabox for Artwork CPT. Sadly we have to remove the Metabox and re-add it
- *
- * @since 0.3.0
- */
-add_action( 'do_meta_boxes', 'wasentha_artwork_post_thumbnail_label' );
-function wasentha_artwork_post_thumbnail_label() {
-    remove_meta_box( 'postimagediv', 'wasentha_artwork', 'side' );
-    add_meta_box( 'postimagediv', __( 'Art', THEME_ID ), 'post_thumbnail_meta_box', 'wasentha_artwork', 'side', 'low' );
-}
-
-/**
- * Allow blogname and blogdescription to be changed by non-admins
- *
- * @since 0.3.0
- */
-add_action( 'customize_register', 'add_site_identity_for_non_admins' );
-function add_site_identity_for_non_admins( $wp_customize ) {
-     $wp_customize->get_setting( 'blogname' )->capability = 'edit_theme_options';
-     $wp_customize->get_setting( 'blogdescription' )->capability = 'edit_theme_options';
 }
 
 /**
