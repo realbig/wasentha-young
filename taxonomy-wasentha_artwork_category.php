@@ -1,6 +1,6 @@
 <?php
 /**
- * Artwork Category Taxonomy index page.
+ * Artwork Material Taxonomy index page.
  *
  * @since 0.1.0
  * @package wasentha

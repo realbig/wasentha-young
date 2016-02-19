@@ -461,30 +461,30 @@ function register_taxonomy_wasentha_artwork_series() {
 }
 
 /**
- * Creates the Artwork Type Category
+ * Creates the Artwork Material Category
  *
  * @since 0.1.0
  */
-add_action( 'init', 'register_taxonomy_wasentha_artwork_category' );
-function register_taxonomy_wasentha_artwork_category() {
+add_action( 'init', 'register_taxonomy_wasentha_artwork_material' );
+function register_taxonomy_wasentha_artwork_material() {
 
     $labels = array(
-        'name' => _x( 'Artwork Type', THEME_ID ),
-        'singular_name' => _x( 'Artwork Category', THEME_ID ),
-        'search_items' => __( 'Search Artwork Categories', THEME_ID ),
-        'popular_items' => __( 'Popular Artwork Categories', THEME_ID ),
-        'all_items' => __( 'All Artwork Categories', THEME_ID ),
-        'parent_item' => __( 'Parent Artwork Category', THEME_ID ),
-        'parent_item_colon' => __( 'Parent Artwork Category:', THEME_ID ),
-        'edit_item' => __( 'Edit Artwork Category', THEME_ID ),
-        'update_item' => __( 'Update Artwork Category', THEME_ID ),
-        'add_new_item' => __( 'Add New Artwork Category', THEME_ID ),
-        'new_item_name' => __( 'New Artwork Category Name', THEME_ID ),
-        'separate_items_with_commas' => __( 'Separate Artwork Categories with commas', THEME_ID ),
-        'add_or_remove_items' => __( 'Add or remove Artwork Categories', THEME_ID ),
-        'choose_from_most_used' => __( 'Choose from the most used Artwork Categories', THEME_ID ),
-        'not_found' => __( 'No Artwork Categories found.', THEME_ID ),
-        'menu_name' => __( 'Artwork Categories', THEME_ID ),
+        'name' => _x( 'Artwork Material', THEME_ID ),
+        'singular_name' => _x( 'Artwork Material', THEME_ID ),
+        'search_items' => __( 'Search Artwork Materials', THEME_ID ),
+        'popular_items' => __( 'Popular Artwork Materials', THEME_ID ),
+        'all_items' => __( 'All Artwork Materials', THEME_ID ),
+        'parent_item' => __( 'Parent Artwork Material', THEME_ID ),
+        'parent_item_colon' => __( 'Parent Artwork Material:', THEME_ID ),
+        'edit_item' => __( 'Edit Artwork Material', THEME_ID ),
+        'update_item' => __( 'Update Artwork Material', THEME_ID ),
+        'add_new_item' => __( 'Add New Artwork Material', THEME_ID ),
+        'new_item_name' => __( 'New Artwork Material Name', THEME_ID ),
+        'separate_items_with_commas' => __( 'Separate Artwork Materials with commas', THEME_ID ),
+        'add_or_remove_items' => __( 'Add or remove Artwork Materials', THEME_ID ),
+        'choose_from_most_used' => __( 'Choose from the most used Artwork Materials', THEME_ID ),
+        'not_found' => __( 'No Artwork Materials found.', THEME_ID ),
+        'menu_name' => __( 'Artwork Materials', THEME_ID ),
     );
 
     $args = array(
@@ -496,7 +496,7 @@ function register_taxonomy_wasentha_artwork_category() {
         'rewrite' => array( 'slug' => 'artwork-type' ),
     );
 
-    register_taxonomy( 'wasentha_artwork_category', 'wasentha_artwork', $args );
+    register_taxonomy( 'wasentha_artwork_material', 'wasentha_artwork', $args );
 
 }
 

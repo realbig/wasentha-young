@@ -40,12 +40,12 @@ if ( has_post_thumbnail() ) : ?>
         <strong>Series:</strong> <?php the_terms( get_the_ID(), 'wasentha_artwork_series' ); ?>
         <?php endif; ?>
 
-        <?php if ( ( get_the_terms( get_the_ID(), 'wasentha_artwork_series' ) !== false ) && ( get_the_terms( get_the_ID(), 'wasentha_artwork_category' ) !== false ) ) : ?>
+        <?php if ( ( get_the_terms( get_the_ID(), 'wasentha_artwork_series' ) !== false ) && ( get_the_terms( get_the_ID(), 'wasentha_artwork_material' ) !== false ) ) : ?>
         &nbsp;/&nbsp;
         <?php endif; ?>
 
-        <?php if ( get_the_terms( get_the_ID(), 'wasentha_artwork_category' ) !== false ) : ?>
-        <strong>Categories:</strong> <?php the_terms( get_the_ID(), 'wasentha_artwork_category' ); ?><br />
+        <?php if ( get_the_terms( get_the_ID(), 'wasentha_artwork_material' ) !== false ) : ?>
+        <strong>Categories:</strong> <?php the_terms( get_the_ID(), 'wasentha_artwork_material' ); ?><br />
         <?php endif; ?>
 
         <?php if ( get_field( 'artwork_dimensions' ) !== '' ) : ?>
