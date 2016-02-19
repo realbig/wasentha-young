@@ -37,6 +37,13 @@ get_header();
                 </article>
         
             <?php endwhile; ?>
+            
+            <div class="pagination">
+                <?php echo paginate_links( array( 
+                    'current' => get_query_var( 'paged' ),
+                ) ); ?>
+            </div>
+            
         </div>
         <?php else : ?>
 

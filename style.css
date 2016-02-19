@@ -5099,6 +5099,9 @@ This provides overrides for some WP stuff (not much at all).
 .page div[id^='wasentha_post-shortcode-'] .post {
   padding-bottom: 30px; }
 
+.page .pagination {
+  text-align: center; }
+
 .sidebar li.widget {
   list-style-type: none; }
 
@@ -5165,4 +5168,7 @@ This provides overrides for some WP stuff (not much at all).
 .home #recent-posts .post:nth-child(even) {
   background-color: #A5A5A5;
   color: #333; }
+
+.home #recent-posts .post.pagination {
+  text-align: center; }
 /*# sourceMappingURL=style.css.map */

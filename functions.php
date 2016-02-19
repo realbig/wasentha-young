@@ -512,6 +512,13 @@ function register_taxonomy_wasentha_artwork_material() {
 add_shortcode( 'wasentha_artwork', 'wasentha_artwork_shortcode_register' );
 function wasentha_artwork_shortcode_register( $atts ) {
     
+    if ( is_front_page() ) {
+        $paged = get_query_var( 'page' ) ? get_query_var( 'page' ) : 1;
+    }
+    else {
+        $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; 
+    }
+    
     $atts = shortcode_atts(
         array( // a few default values
             'post_type' => 'wasentha_artwork',
@@ -521,6 +528,8 @@ function wasentha_artwork_shortcode_register( $atts ) {
             'before_item' => '<article class="media-object stack-for-small">',
             'after_item' => '</article>',
             'classes' => '', // Classes for wrapper <div>
+            'posts_per_page' => 5,
+            'paged' => $paged,
         ),
         $atts,
         'wasentha_artwork'
@@ -529,11 +538,17 @@ function wasentha_artwork_shortcode_register( $atts ) {
     $out = '';
     $artwork = new WP_Query( $atts );
     
+    // Pagination Fix
+    global $wp_query;
+    $temp_query = $wp_query;
+    $wp_query = NULL;
+    $wp_query = $artwork;
+    
     if ( $artwork->have_posts() ) : 
     
         ob_start();
     
-        echo '<div id="wasentha_artwork-shortcode"' . ( ( $atts['classes'] !== '' ) ? ' class="' . $atts['classes'] . '"' : '' ) . '>';
+        echo '<div id="wasentha_artwork-shortcode-' . get_the_id() . '"' . ( ( $atts['classes'] !== '' ) ? ' class="' . $atts['classes'] . '"' : '' ) . '>';
     
         while ( $artwork->have_posts() ) :
             $artwork->the_post();
@@ -544,12 +559,22 @@ function wasentha_artwork_shortcode_register( $atts ) {
     
         endwhile;
     
+            echo '<div class="pagination">';
+                echo paginate_links( array( 
+                    'current' => get_query_var( 'paged' ), // Despite being on the Home Page, since we are in a Custom Loop we use 'paged'
+                ) );
+            echo '</div>';
+    
         echo '</div>';
         
         $out = ob_get_contents();  
         ob_end_clean();
     
         wp_reset_postdata();
+    
+        // Reset main query object after Pagination is done.
+        $wp_query = NULL;
+        $wp_query = $temp_query;
     
         return html_entity_decode( $out );
     
@@ -567,6 +592,13 @@ function wasentha_artwork_shortcode_register( $atts ) {
 add_shortcode( 'wasentha_post', 'wasentha_post_shortcode_register' );
 function wasentha_post_shortcode_register( $atts ) {
     
+    if ( is_front_page() ) {
+        $paged = get_query_var( 'page' ) ? get_query_var( 'page' ) : 1;
+    }
+    else {
+        $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; 
+    }
+    
     $atts = shortcode_atts(
         array( // a few default values
             'post_type' => 'post',
@@ -581,6 +613,7 @@ function wasentha_post_shortcode_register( $atts ) {
             'excerpt' => true,
             'date' => false,
             'title' => '',
+            'paged' => $paged,
         ),
         $atts,
         'wasentha_post'
@@ -600,6 +633,12 @@ function wasentha_post_shortcode_register( $atts ) {
     
     $out = '';
     $wasentha_post = new WP_Query( $atts );
+    
+    // Pagination Fix
+    global $wp_query;
+    $temp_query = $wp_query;
+    $wp_query = NULL;
+    $wp_query = $wasentha_post;
     
     if ( $wasentha_post->have_posts() ) : 
     
@@ -640,12 +679,22 @@ function wasentha_post_shortcode_register( $atts ) {
     
         endwhile;
     
+            echo '<div class="post pagination">';
+                echo paginate_links( array( 
+                    'current' => get_query_var( 'paged' ), // Despite being on the Home Page, since we are in a Custom Loop we use 'paged'
+                ) );
+            echo '</div>';
+    
         echo '</div>';
         
         $out = ob_get_contents();  
         ob_end_clean();
     
         wp_reset_postdata();
+        
+        // Reset main query object after Pagination is done.
+        $wp_query = NULL;
+        $wp_query = $temp_query;
     
         return html_entity_decode( $out );
     

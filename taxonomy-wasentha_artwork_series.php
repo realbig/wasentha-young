@@ -40,6 +40,13 @@ $term = $wp_query->get_queried_object();
                 </article>
         
             <?php endwhile; ?>
+            
+            <div class="pagination">
+                <?php echo paginate_links( array( 
+                    'current' => get_query_var( 'paged' ),
+                ) ); ?>
+            </div>
+            
         </div>
         <?php else : ?>
 
