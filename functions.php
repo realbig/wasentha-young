@@ -823,3 +823,29 @@ function wasentha_artwork_post_thumbnail_label() {
     remove_meta_box( 'postimagediv', 'wasentha_artwork', 'side' );
     add_meta_box( 'postimagediv', __( 'Art', THEME_ID ), 'post_thumbnail_meta_box', 'wasentha_artwork', 'side', 'low' );
 }
+
+/**
+ * Allow blogname and blogdescription to be changed by non-admins
+ *
+ * @since 0.3.0
+ */
+add_action( 'customize_register', 'add_site_identity_for_non_admins' );
+function add_site_identity_for_non_admins( $wp_customize ) {
+     $wp_customize->get_setting( 'blogname' )->capability = 'edit_theme_options';
+     $wp_customize->get_setting( 'blogdescription' )->capability = 'edit_theme_options';
+}
+
+/**
+ * Change capability required to manage MailChimp options
+ * You will need to install Runkit to avoid whitescreens in VVV. WP Engine includes it by default.
+ * https://github.com/zenovich/runkit/https://github.com/zenovich/runkit/#building-and-installing-current-development-version-in-unix
+ * 
+ * Be sure to add "extension=runkit.so" to php.ini when you're done.
+ * 
+ * @since 0.3.0
+ */
+add_action( 'after_setup_theme', 'redefine_mailchimp_capability' );
+function redefine_mailchimp_capability() {
+    runkit_constant_remove( 'MCSF_CAP_THRESHOLD' );
+    define( 'MCSF_CAP_THRESHOLD', 'mailchimp_options' );
+}
