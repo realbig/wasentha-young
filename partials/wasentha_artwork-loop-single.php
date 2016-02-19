@@ -45,7 +45,7 @@ if ( has_post_thumbnail() ) : ?>
         <?php endif; ?>
 
         <?php if ( get_the_terms( get_the_ID(), 'wasentha_artwork_material' ) !== false ) : ?>
-        <strong>Categories:</strong> <?php the_terms( get_the_ID(), 'wasentha_artwork_material' ); ?><br />
+        <strong>Materials:</strong> <?php the_terms( get_the_ID(), 'wasentha_artwork_material' ); ?><br />
         <?php endif; ?>
 
         <?php if ( get_field( 'artwork_dimensions' ) !== '' ) : ?>
