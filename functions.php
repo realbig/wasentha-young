@@ -791,3 +791,35 @@ function get_wasentha_testimonial_callback() {
     die();
     
 }
+
+/**
+ * Replace Set Featured Image Label for Artwork CPT
+ *
+ * @since 0.3.0
+ *
+ * @param $content String current Featured Image Label
+ *
+ * @return String The modified Featured Image Label
+ */
+add_filter( 'admin_post_thumbnail_html', 'wasentha_artwork_post_thumbnail_html' );
+function wasentha_artwork_post_thumbnail_html( $content ) {
+    global $current_screen;
+ 
+    if ( 'wasentha_artwork' == $current_screen->post_type ) {
+        return $content = str_replace( __( 'Set featured image', THEME_ID ), __( 'Set Art', THEME_ID ), $content);
+    }
+
+    return $content;
+    
+}
+
+/**
+ * Replace Featured Image text above Metabox for Artwork CPT. Sadly we have to remove the Metabox and re-add it
+ *
+ * @since 0.3.0
+ */
+add_action( 'do_meta_boxes', 'wasentha_artwork_post_thumbnail_label' );
+function wasentha_artwork_post_thumbnail_label() {
+    remove_meta_box( 'postimagediv', 'wasentha_artwork', 'side' );
+    add_meta_box( 'postimagediv', __( 'Art', THEME_ID ), 'post_thumbnail_meta_box', 'wasentha_artwork', 'side', 'low' );
+}
