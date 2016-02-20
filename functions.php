@@ -844,39 +844,3 @@ function get_wasentha_testimonial_callback() {
     die();
     
 }
-
-/**
- * Replace Set Featured Image Label for Artwork CPT
- *
- * @since 0.3.0
- *
- * @param $content String current Featured Image Label
- *
- * @return String The modified Featured Image Label
- */
-add_filter( 'admin_post_thumbnail_html', 'wasentha_artwork_post_thumbnail_html' );
-function wasentha_artwork_post_thumbnail_html( $content ) {
-    global $current_screen;
- 
-    if ( 'wasentha_artwork' == $current_screen->post_type ) {
-        return $content = str_replace( __( 'Set featured image', THEME_ID ), __( 'Set Art', THEME_ID ), $content);
-    }
-
-    return $content;
-    
-}
-
-/**
- * Change capability required to manage MailChimp options
- * You will need to install Runkit to avoid whitescreens in VVV. WP Engine includes it by default.
- * https://github.com/zenovich/runkit/https://github.com/zenovich/runkit/#building-and-installing-current-development-version-in-unix
- * 
- * Be sure to add "extension=runkit.so" to php.ini when you're done.
- * 
- * @since 0.3.0
- */
-add_action( 'after_setup_theme', 'redefine_mailchimp_capability' );
-function redefine_mailchimp_capability() {
-    runkit_constant_remove( 'MCSF_CAP_THRESHOLD' );
-    define( 'MCSF_CAP_THRESHOLD', 'mailchimp_options' );
-}
