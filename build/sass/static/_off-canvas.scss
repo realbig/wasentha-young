@@ -14,7 +14,7 @@
 
         > li {
 
-            background-color: lighten( $secondary-color, 15% ); /* Top Level */
+            background-color: darken( $topbar-background, 10% ); /* Top Level */
             
             a {
                 color: darken( $topbar-link-color, 15% ) !important;
@@ -22,7 +22,7 @@
 
             ul {
                 li {
-                    background-color: lighten( $secondary-color, 10% );
+                    background-color: $topbar-background;
                 }
             }
 

@@ -2469,7 +2469,7 @@ body {
 
 .off-canvas {
   position: absolute;
-  background: #5e6e87;
+  background: #1b0c16;
   z-index: -1;
   max-height: 100%;
   overflow-y: auto;
@@ -2682,7 +2682,7 @@ body {
 
 .off-canvas {
   position: absolute;
-  background: #5e6e87;
+  background: #1b0c16;
   z-index: -1;
   max-height: 100%;
   overflow-y: auto;
@@ -2981,12 +2981,116 @@ img[class*=" wp-image-"] {
   img[class*=" wp-image-"]:hover, img[class*=" wp-image-"]:focus {
     box-shadow: 0 0 6px 1px rgba(33, 153, 232, 0.5); }
 
+/* Override Foundation's _settings.scss here, or store your own variables */
+@font-face {
+  font-family: "Bradley Hand ITC TT";
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot");
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.woff") format("woff"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.svg#Bradley Hand ITC TT") format("svg"); }
+
+@font-face {
+  font-family: "Calibri";
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot");
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.woff") format("woff"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.svg#Calibri") format("svg"); }
+
 /*
 This provides overrides for some WP stuff (not much at all).
 @since 0.1.0
 */
 #wpadminbar {
   position: fixed !important; }
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto; }
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+a img.alignnone {
+  margin: 5px 20px 20px 0; }
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-caption {
+  background: #fefefe;
+  border: 1px solid #e6e6e6;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center; }
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px; }
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto; }
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px; }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.screen-reader-text:focus {
+  background-color: #e6e6e6;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #BF67A3;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */ }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
 @font-face {
@@ -4874,12 +4978,12 @@ This provides overrides for some WP stuff (not much at all).
   min-height: 100vh;
   height: 100vh; }
   .off-canvas > .menu > li {
-    background-color: #a4afc0;
+    background-color: #8c8c8c;
     /* Top Level */ }
     .off-canvas > .menu > li a {
       color: #0d0d0d !important; }
     .off-canvas > .menu > li ul li {
-      background-color: #95a2b6; }
+      background-color: #A5A5A5; }
 
 /* Override Foundation's _settings.scss here, or store your own variables */
 @font-face {
@@ -5089,7 +5193,7 @@ This provides overrides for some WP stuff (not much at all).
 .single .post-comments {
   clear: both; }
 
-.page img[class*=" wp-image-"]:first-of-type {
+.page img.alignnone[class*=" wp-image-"]:first-of-type {
   float: left;
   margin-right: 2.5rem; }
 

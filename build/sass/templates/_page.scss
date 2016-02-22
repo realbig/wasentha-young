@@ -1,6 +1,6 @@
 .page {
 
-    img[class*=" wp-image-"]:first-of-type {
+    img.alignnone[class*=" wp-image-"]:first-of-type {
 
         float: left;
         margin-right: $thumbnail-margin-bottom + 1.5;

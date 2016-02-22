@@ -16,7 +16,7 @@ $light-section: #A5A5A5;
 
 $topbar-background: $light-section;
 $body-background: darken( $primary-color, 50% );
-$offcanvas-background: darken( $secondary-color, 10% );
+$offcanvas-background: $body-background;
 
 @font-face {font-family: "Bradley Hand ITC TT";
     src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot");
