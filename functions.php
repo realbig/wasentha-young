@@ -844,3 +844,17 @@ function get_wasentha_testimonial_callback() {
     die();
     
 }
+
+/*
+ * Since WP Smilies load as Images, MailChimp makes them HUGE. For RSS Feeds, let's make sure they are straight text.
+ *
+ * @since 0.3.0
+ */
+add_action( 'pre_get_posts', 'remove_wp_smilies_from_feed' );
+function remove_wp_smilies_from_feed( $query ) {
+    
+    if ( $query->is_feed ) {
+        remove_filter( 'the_content', 'convert_smilies' );
+    }
+    
+}
