@@ -871,4 +871,32 @@ function remove_wp_smilies_from_feed( $query ) {
         remove_filter( 'the_content', 'convert_smilies' );
     }
     
+    global $post;
+    
+    // If Writings Page 
+    if ( $post->post_name == 'writing' ) {
+        
+        add_filter( 'widget_posts_args', 'no_writings_category_on_writing_page' );
+        
+    }
+    
+}
+
+/* Exclude Writings Category from Recent Posts on Writings Page
+ *
+ * @since 0.3.0
+ */
+function no_writings_category_on_writing_page( $args ) {
+    
+    $args['tax_query'] = array(
+        array(
+            'taxonomy' => 'category',
+            'terms' => array( 'Writings' ),
+            'field' => 'name',
+            'operator' => 'NOT IN',
+        )
+    );
+    
+    return $args;
+    
 }
