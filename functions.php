@@ -276,6 +276,20 @@ add_action( 'widgets_init', function () {
         'description' => __( 'This is the Contact sidebar.', THEME_ID ),
     ) );
     
+    // Seminars Sidebar
+    register_sidebar( array(
+        'name' => __( 'Seminars', THEME_ID ),
+        'id' => 'seminar-sidebar',
+        'description' => __( 'This is the Seminars sidebar.', THEME_ID ),
+    ) );
+    
+    // Presentations Sidebar
+    register_sidebar( array(
+        'name' => __( 'Presentations', THEME_ID ),
+        'id' => 'presentation-sidebar',
+        'description' => __( 'This is the Presentations sidebar.', THEME_ID ),
+    ) );
+    
     // Footer
     $footer_columns = get_theme_mod( 'wasentha_footer_columns', 4 );
     for ( $index = 0; $index < $footer_columns; $index++ ) {

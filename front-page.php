@@ -51,13 +51,13 @@ the_post();
     <div class="small-12 medium-6 columns valign-center text-center">
         
         <h2><?php echo get_theme_mod( 'home_page_workshop_title', 'Workshops' ); ?></h2>
-        <?php echo apply_filters( 'the_content', get_theme_mod( 'home_page_workshop_content', 'Enter Text in the Customizer' ) ); ?>
+        <?php dynamic_sidebar( 'seminar-sidebar' ); ?>
         
     </div>
     <div class="small-12 medium-6 columns valign-center text-center">
         
         <h2><?php echo get_theme_mod( 'home_page_exhibits_title', 'Current Exhibits' ); ?></h2>
-        <?php echo apply_filters( 'the_content', get_theme_mod( 'home_page_exhibits_content', 'Enter Text in the Customizer' ) ); ?>
+        <?php dynamic_sidebar( 'presentation-sidebar' ); ?>
         
     </div>
 

@@ -176,6 +176,7 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -304,6 +305,8 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -918,8 +921,7 @@ button {
 
 .tabs-content {
   background: #fefefe;
-  -webkit-transition: all 0.5s ease;
-          transition: all 0.5s ease;
+  transition: all 0.5s ease;
   border: 1px solid #e6e6e6;
   border-top: 0; }
 
@@ -1669,8 +1671,7 @@ body.is-reveal-open {
   line-height: 1;
   cursor: pointer;
   -webkit-appearance: none;
-  -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
-          transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
   vertical-align: middle;
   border: 1px solid transparent;
   border-radius: 0;
@@ -2084,8 +2085,7 @@ textarea {
   background-color: #fefefe;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   border-radius: 0;
-  -webkit-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
-          transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+  transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
   -webkit-appearance: none;
   -moz-appearance: none; }
   [type='text']:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus,
@@ -2094,8 +2094,7 @@ textarea {
     background-color: #fefefe;
     outline: none;
     box-shadow: 0 0 5px #cacaca;
-    -webkit-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
-            transition: box-shadow 0.5s, border-color 0.25s ease-in-out; }
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out; }
 
 textarea {
   max-width: 100%; }
@@ -2427,15 +2426,13 @@ body {
   width: 100%;
   overflow-x: hidden;
   position: relative;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-overflow-scrolling: auto; }
 
 .off-canvas-wrapper-inner {
   position: relative;
   width: 100%;
-  -webkit-transition: -webkit-transform 0.5s ease;
-          transition: transform 0.5s ease; }
+  transition: transform 0.5s ease; }
   .off-canvas-wrapper-inner::before, .off-canvas-wrapper-inner::after {
     content: ' ';
     display: table; }
@@ -2446,10 +2443,8 @@ body {
 .off-canvas-content {
   min-height: 100%;
   background: #1b0c16;
-  -webkit-transition: -webkit-transform 0.5s ease;
-          transition: transform 0.5s ease;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  transition: transform 0.5s ease;
+  backface-visibility: hidden;
   z-index: 1;
   box-shadow: 0 0 10px rgba(10, 10, 10, 0.5); }
 
@@ -2462,8 +2457,7 @@ body {
   height: 100%;
   background: rgba(254, 254, 254, 0.25);
   cursor: pointer;
-  -webkit-transition: background 0.5s ease;
-          transition: background 0.5s ease; }
+  transition: background 0.5s ease; }
   .is-off-canvas-open .js-off-canvas-exit {
     display: block; }
 
@@ -2473,8 +2467,7 @@ body {
   z-index: -1;
   max-height: 100%;
   overflow-y: auto;
-  -webkit-transform: translateX(0);
-          transform: translateX(0); }
+  transform: translateX(0); }
   [data-whatinput='mouse'] .off-canvas {
     outline: 0; }
   .off-canvas.position-left {
@@ -2482,15 +2475,13 @@ body {
     top: 0;
     width: 250px; }
     .is-open-left {
-      -webkit-transform: translateX(250px);
-              transform: translateX(250px); }
+      transform: translateX(250px); }
   .off-canvas.position-right {
     right: -250px;
     top: 0;
     width: 250px; }
     .is-open-right {
-      -webkit-transform: translateX(-250px);
-              transform: translateX(-250px); }
+      transform: translateX(-250px); }
 
 @media screen and (min-width: 40em) {
   .position-left.reveal-for-medium {
@@ -2640,15 +2631,13 @@ body {
   width: 100%;
   overflow-x: hidden;
   position: relative;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-overflow-scrolling: auto; }
 
 .off-canvas-wrapper-inner {
   position: relative;
   width: 100%;
-  -webkit-transition: -webkit-transform 0.5s ease;
-          transition: transform 0.5s ease; }
+  transition: transform 0.5s ease; }
   .off-canvas-wrapper-inner::before, .off-canvas-wrapper-inner::after {
     content: ' ';
     display: table; }
@@ -2659,10 +2648,8 @@ body {
 .off-canvas-content {
   min-height: 100%;
   background: #1b0c16;
-  -webkit-transition: -webkit-transform 0.5s ease;
-          transition: transform 0.5s ease;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  transition: transform 0.5s ease;
+  backface-visibility: hidden;
   z-index: 1;
   box-shadow: 0 0 10px rgba(10, 10, 10, 0.5); }
 
@@ -2675,8 +2662,7 @@ body {
   height: 100%;
   background: rgba(254, 254, 254, 0.25);
   cursor: pointer;
-  -webkit-transition: background 0.5s ease;
-          transition: background 0.5s ease; }
+  transition: background 0.5s ease; }
   .is-off-canvas-open .js-off-canvas-exit {
     display: block; }
 
@@ -2686,8 +2672,7 @@ body {
   z-index: -1;
   max-height: 100%;
   overflow-y: auto;
-  -webkit-transform: translateX(0);
-          transform: translateX(0); }
+  transform: translateX(0); }
   [data-whatinput='mouse'] .off-canvas {
     outline: 0; }
   .off-canvas.position-left {
@@ -2695,15 +2680,13 @@ body {
     top: 0;
     width: 250px; }
     .is-open-left {
-      -webkit-transform: translateX(250px);
-              transform: translateX(250px); }
+      transform: translateX(250px); }
   .off-canvas.position-right {
     right: -250px;
     top: 0;
     width: 250px; }
     .is-open-right {
-      -webkit-transform: translateX(-250px);
-              transform: translateX(-250px); }
+      transform: translateX(-250px); }
 
 @media screen and (min-width: 40em) {
   .position-left.reveal-for-medium {
@@ -2764,8 +2747,7 @@ body {
   display: inline-block;
   line-height: 0;
   max-width: 100%;
-  -webkit-transition: box-shadow 200ms ease-out;
-          transition: box-shadow 200ms ease-out;
+  transition: box-shadow 200ms ease-out;
   border-radius: 0;
   margin-bottom: 1rem; }
   .thumbnail:hover, .thumbnail:focus {
@@ -2941,10 +2923,6 @@ Base element settings (no classes or id's).
     width: 100%;
     overflow-x: hidden; } }
 
-::-moz-selection {
-  background: #2199e8;
-  color: #333; }
-
 ::selection {
   background: #2199e8;
   color: #333; }
@@ -2974,8 +2952,7 @@ img[class*=" wp-image-"] {
   display: inline-block;
   line-height: 0;
   max-width: 100%;
-  -webkit-transition: box-shadow 200ms ease-out;
-          transition: box-shadow 200ms ease-out;
+  transition: box-shadow 200ms ease-out;
   border-radius: 0;
   margin-bottom: 1rem; }
   img[class*=" wp-image-"]:hover, img[class*=" wp-image-"]:focus {
@@ -5152,7 +5129,6 @@ a img.aligncenter {
 
 #site-footer {
   padding: 30px;
-  background: -webkit-linear-gradient(top, #3F3F3F 0%, #A5A5A5 100%);
   background: linear-gradient(to bottom, #3F3F3F 0%, #A5A5A5 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$dark-section, endColorstr=$light-section,GradientType=0 );
@@ -5252,6 +5228,10 @@ a img.aligncenter {
   .home #workshops-exhibits .valign-center {
     display: table-cell;
     vertical-align: middle; }
+  .home #workshops-exhibits ul {
+    margin: 0; }
+  .home #workshops-exhibits li {
+    list-style: none; }
 
 .home #recent-posts .heading, .home #recent-posts .post {
   padding: 30px; }
@@ -5275,4 +5255,5 @@ a img.aligncenter {
 
 .home #recent-posts .post.pagination {
   text-align: center; }
+
 /*# sourceMappingURL=style.css.map */
