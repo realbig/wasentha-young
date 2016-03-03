@@ -130,19 +130,6 @@ function wasentha_customize_register( $wp_customize ) {
         'active_callback' => 'is_front_page',
     ) ) );
     
-    $wp_customize->add_setting( 'home_page_workshop_content' , array(
-            'default'     => 'Enter Text in the Customizer',
-            'transport'   => 'refresh',
-        ) 
-    );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_workshop_content', array(
-        'type' => 'textarea',
-        'label'        => __( 'Workshops Content', THEME_ID ),
-        'section'    => 'wasentha_customizer_section',
-        'settings'   => 'home_page_workshop_content',
-        'active_callback' => 'is_front_page',
-    ) ) );
-    
     $wp_customize->add_setting( 'home_page_exhibits_title', array(
             'default'     => 'Current Exhibits',
             'transport'   => 'refresh',
@@ -152,19 +139,6 @@ function wasentha_customize_register( $wp_customize ) {
         'label'        => __( 'Exhibits Title', THEME_ID ),
         'section'    => 'wasentha_customizer_section',
         'settings'   => 'home_page_exhibits_title',
-        'active_callback' => 'is_front_page',
-    ) ) );
-    
-    $wp_customize->add_setting( 'home_page_exhibits_content' , array(
-            'default'     => 'Enter Text in the Customizer',
-            'transport'   => 'refresh',
-        ) 
-    );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_exhibits_content', array(
-        'type' => 'textarea',
-        'label'        => __( 'Exhibits Content', THEME_ID ),
-        'section'    => 'wasentha_customizer_section',
-        'settings'   => 'home_page_exhibits_content',
         'active_callback' => 'is_front_page',
     ) ) );
     
