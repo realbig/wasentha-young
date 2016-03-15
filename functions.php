@@ -526,6 +526,12 @@ function wasentha_artwork_shortcode_register( $atts ) {
     $out = '';
     $artwork = new WP_Query( $atts );
     
+    $paginate_args = array(
+        'current' => $paged,
+        'prev_text' => __( '&laquo; View Older Artwork', THEME_ID ),
+        'next_text' => __( 'View Newer Artwork &raquo;', THEME_ID ),
+    );
+    
     // Pagination Fix
     global $wp_query;
     $temp_query = $wp_query;
@@ -548,9 +554,7 @@ function wasentha_artwork_shortcode_register( $atts ) {
         endwhile;
     
             echo '<div class="pagination">';
-                echo paginate_links( array( 
-                    'current' => get_query_var( 'paged' ), // Despite being on the Home Page, since we are in a Custom Loop we use 'paged'
-                ) );
+                echo paginate_links( $paginate_args );
             echo '</div>';
     
         echo '</div>';
@@ -622,6 +626,16 @@ function wasentha_post_shortcode_register( $atts ) {
     $out = '';
     $wasentha_post = new WP_Query( $atts );
     
+    $paginate_args = array(
+        'current' => $paged,
+        'prev_text' => __( '&laquo; View Older Posts', THEME_ID ),
+        'next_text' => __( 'View Newer Posts &raquo;', THEME_ID ),
+    );
+
+    if ( is_front_page() ) {
+        $paginate_args['format'] = 'blog/page/%#%';
+    }
+    
     // Pagination Fix
     global $wp_query;
     $temp_query = $wp_query;
@@ -668,9 +682,7 @@ function wasentha_post_shortcode_register( $atts ) {
         endwhile;
     
             echo '<div class="post pagination">';
-                echo paginate_links( array( 
-                    'current' => get_query_var( 'paged' ), // Despite being on the Home Page, since we are in a Custom Loop we use 'paged'
-                ) );
+                echo paginate_links( $paginate_args );
             echo '</div>';
     
         echo '</div>';
