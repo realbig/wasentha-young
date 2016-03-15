@@ -264,6 +264,17 @@ add_action( 'widgets_init', function () {
         'description' => __( 'This is the Presentations sidebar.', THEME_ID ),
     ) );
     
+    // Testimonials Sidebar
+    register_sidebar( array(
+        'name' => __( 'Footer Testimonials', THEME_ID ),
+        'id' => 'footer-testimonials',
+        'description' => __( 'This is the Testimonials area in the Footer.', THEME_ID ),
+        'before_widget' =>  '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  =>  '</aside>',
+        'before_title'  =>  '<h3 class="widget-title">',
+        'after_title'   =>  '</h3>',
+    ) );
+    
     // Footer
     $footer_columns = get_theme_mod( 'wasentha_footer_columns', 4 );
     for ( $index = 0; $index < $footer_columns; $index++ ) {
@@ -271,7 +282,7 @@ add_action( 'widgets_init', function () {
             array(
                 'name'          =>  'Footer ' . ( $index + 1 ),
                 'id'            =>  'footer-' . ( $index + 1 ),
-                'description'   =>  '',
+                'description'   =>  sprintf( __( 'This is Footer Widget Area %d', THEME_ID ), ( $index + 1 ) ),
                 'before_widget' =>  '<aside id="%1$s" class="widget %2$s">',
                 'after_widget'  =>  '</aside>',
                 'before_title'  =>  '<h3 class="widget-title">',

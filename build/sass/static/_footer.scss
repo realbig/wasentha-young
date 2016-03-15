@@ -13,6 +13,14 @@
         color: $medium-gray;
     }
     
+    .row {
+        margin-bottom: 30px;
+        
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    
     .em-calendar {
         
         thead, tbody, tfoot {

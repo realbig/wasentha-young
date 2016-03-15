@@ -5163,6 +5163,10 @@ a img.aligncenter {
   color: #fff; }
   #site-footer h3 {
     color: #cacaca; }
+  #site-footer .row {
+    margin-bottom: 30px; }
+    #site-footer .row:last-of-type {
+      margin-bottom: 0; }
   #site-footer .em-calendar thead, #site-footer .em-calendar tbody, #site-footer .em-calendar tfoot {
     background-color: transparent;
     color: #fff; }
