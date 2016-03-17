@@ -1,0 +1,52 @@
+@import "../functions";
+@import "../settings";
+
+.realbig-slider-container {
+
+    width: 100%;
+    margin: 0 auto 0;
+
+    .realbig-slider {
+
+        .slide {
+
+            background-size: cover;
+            text-align: center;
+            padding-top: 0;
+
+        }
+
+        .arrow {
+            
+            border-top-color: $anchor-color;
+            border-right-color: $anchor-color;
+
+            &:hover {
+                border-color: $anchor-color-hover;
+            }
+
+        }
+
+        .indicators {
+            
+            margin-left: 0;
+
+            li {
+                
+                background: $white;
+
+                &.active {
+                    background: $anchor-color;
+                }
+
+                &:hover {
+                    background-color: $anchor-color-hover;
+                }
+
+            }
+
+        }
+
+    }
+
+}

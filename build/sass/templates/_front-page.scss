@@ -45,6 +45,72 @@
         
     }
     
+    #home-slider.realbig-slider-container {
+        
+        background-color: $light-section;
+
+        .realbig-slider {
+
+            height: 300px;
+            padding-top: 0;
+            
+            .slide {
+                
+                .columns {
+                    height: 100%;
+                }
+                
+                .columns:first-of-type {
+                    border-right: 3px solid $anchor-color;
+                }
+                
+                .columns.image {
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+                
+                .columns.text {
+                    padding: 30px;
+                }
+                
+                @media #{$screen} and ( max-width: 40em ) {
+                    
+                    padding: 15px;
+                    
+                    .columns {
+                    
+                        padding: 0;
+                        
+                    }
+                    
+                }
+            
+                h2 {
+                    margin-top: 1em;
+                }
+            
+                .button {
+                    margin-top: 2em;
+                }
+                
+            }
+        
+            .indicators {
+                bottom: -1.25em;
+            }
+        
+            @media #{$screen} and ( max-width: 40em ) {
+                
+                .indicators {
+                    display: none;
+                }
+                
+            }
+
+        }
+
+    }
+    
     #workshops-exhibits {
         
         h1 {

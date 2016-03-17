@@ -360,6 +360,99 @@ td,
 th {
   padding: 0; }
 
+.realbig-slider-container {
+  width: 90%;
+  position: relative;
+  margin: 5% auto 0; }
+  .realbig-slider-container .realbig-slider {
+    width: 100%;
+    position: relative;
+    padding-top: 60%;
+    overflow: hidden; }
+    .realbig-slider-container .realbig-slider .inner {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      .realbig-slider-container .realbig-slider .inner .slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+        background-size: cover; }
+        .realbig-slider-container .realbig-slider .inner .slide.active, .realbig-slider-container .realbig-slider .inner .slide.left, .realbig-slider-container .realbig-slider .inner .slide.right {
+          z-index: 2;
+          opacity: 1; }
+        .realbig-slider-container .realbig-slider .inner .slide.left {
+          left: -100%;
+          right: 0; }
+        .realbig-slider-container .realbig-slider .inner .slide.right {
+          right: -100%;
+          left: auto; }
+    .realbig-slider-container .realbig-slider.transition .slide {
+      -webkit-transition-property: right, left, margin;
+              transition-property: right, left, margin; }
+      .realbig-slider-container .realbig-slider.transition .slide.left {
+        left: 0%; }
+      .realbig-slider-container .realbig-slider.transition .slide.right {
+        right: 0%; }
+      .realbig-slider-container .realbig-slider.transition .slide.shift-right {
+        right: 100%;
+        left: auto; }
+      .realbig-slider-container .realbig-slider.transition .slide.shift-left {
+        left: 100%;
+        right: auto; }
+      .realbig-slider-container .realbig-slider.transition .slide.js-reset-left {
+        left: auto; }
+    .realbig-slider-container .realbig-slider .arrow {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      z-index: 5;
+      border-top: 3px solid #fff;
+      border-right: 3px solid #fff;
+      cursor: pointer;
+      -webkit-transition: border-color 0.3s ease-out;
+              transition: border-color 0.3s ease-out; }
+      .realbig-slider-container .realbig-slider .arrow:hover {
+        border-color: #93278f; }
+      .realbig-slider-container .realbig-slider .arrow.arrow-left {
+        left: 20px;
+        -webkit-transform: rotate(225deg);
+                transform: rotate(225deg); }
+      .realbig-slider-container .realbig-slider .arrow.arrow-right {
+        right: 20px;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+    .realbig-slider-container .realbig-slider .indicators {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      z-index: 4;
+      padding: 0;
+      text-align: center; }
+      .realbig-slider-container .realbig-slider .indicators li {
+        width: 13px;
+        height: 13px;
+        display: inline-block;
+        margin: 5px;
+        background: #fff;
+        list-style-type: none;
+        border-radius: 50%;
+        cursor: pointer;
+        -webkit-transition: background 0.3s ease-out;
+                transition: background 0.3s ease-out; }
+        .realbig-slider-container .realbig-slider .indicators li.active {
+          background: #93278f; }
+        .realbig-slider-container .realbig-slider .indicators li:hover {
+          background-color: #2b2b2b; }
+
 /* Override Foundation's _settings.scss here, or store your own variables */
 @font-face {
   font-family: "Bradley Hand ITC TT";
@@ -4974,6 +5067,38 @@ a img.aligncenter {
   src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot");
   src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.woff") format("woff"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.svg#Calibri") format("svg"); }
 
+.realbig-slider-container {
+  width: 100%;
+  margin: 0 auto 0; }
+  .realbig-slider-container .realbig-slider .slide {
+    background-size: cover;
+    text-align: center;
+    padding-top: 0; }
+  .realbig-slider-container .realbig-slider .arrow {
+    border-top-color: #603;
+    border-right-color: #603; }
+    .realbig-slider-container .realbig-slider .arrow:hover {
+      border-color: #4d0026; }
+  .realbig-slider-container .realbig-slider .indicators {
+    margin-left: 0; }
+    .realbig-slider-container .realbig-slider .indicators li {
+      background: #fefefe; }
+      .realbig-slider-container .realbig-slider .indicators li.active {
+        background: #603; }
+      .realbig-slider-container .realbig-slider .indicators li:hover {
+        background-color: #4d0026; }
+
+/* Override Foundation's _settings.scss here, or store your own variables */
+@font-face {
+  font-family: "Bradley Hand ITC TT";
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot");
+  src: url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.woff") format("woff"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/c8e367ed921e0b64eb40752644e1e353.svg#Bradley Hand ITC TT") format("svg"); }
+
+@font-face {
+  font-family: "Calibri";
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot");
+  src: url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.woff") format("woff"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.svg#Calibri") format("svg"); }
+
 .off-canvas-content {
   box-shadow: none; }
 
@@ -5249,6 +5374,35 @@ a img.aligncenter {
       border-bottom: 1px solid #fefefe; }
   .home #intro-message .thumbnail {
     margin-bottom: 0; }
+
+.home #home-slider.realbig-slider-container {
+  background-color: #A5A5A5; }
+  .home #home-slider.realbig-slider-container .realbig-slider {
+    height: 300px;
+    padding-top: 0; }
+    .home #home-slider.realbig-slider-container .realbig-slider .slide .columns {
+      height: 100%; }
+    .home #home-slider.realbig-slider-container .realbig-slider .slide .columns:first-of-type {
+      border-right: 3px solid #603; }
+    .home #home-slider.realbig-slider-container .realbig-slider .slide .columns.image {
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .home #home-slider.realbig-slider-container .realbig-slider .slide .columns.text {
+      padding: 30px; }
+    @media only screen and (max-width: 40em) {
+      .home #home-slider.realbig-slider-container .realbig-slider .slide {
+        padding: 15px; }
+        .home #home-slider.realbig-slider-container .realbig-slider .slide .columns {
+          padding: 0; } }
+    .home #home-slider.realbig-slider-container .realbig-slider .slide h2 {
+      margin-top: 1em; }
+    .home #home-slider.realbig-slider-container .realbig-slider .slide .button {
+      margin-top: 2em; }
+    .home #home-slider.realbig-slider-container .realbig-slider .indicators {
+      bottom: -1.25em; }
+    @media only screen and (max-width: 40em) {
+      .home #home-slider.realbig-slider-container .realbig-slider .indicators {
+        display: none; } }
 
 .home #workshops-exhibits {
   padding: 30px;
