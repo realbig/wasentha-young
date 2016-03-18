@@ -7,13 +7,19 @@
     margin: 0 auto 0;
 
     .realbig-slider {
+        
+        .inner {
+            
+            height: 90%;
+            
+            .slide {
 
-        .slide {
+                background-size: cover;
+                text-align: center;
+                padding-top: 0;
 
-            background-size: cover;
-            text-align: center;
-            padding-top: 0;
-
+            }
+            
         }
 
         .arrow {
