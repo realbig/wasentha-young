@@ -142,15 +142,28 @@ function wasentha_customize_register( $wp_customize ) {
         'active_callback' => 'is_front_page',
     ) ) );
     
-    $wp_customize->add_setting( 'home_page_recent_posts' , array(
-            'default'     => '[wasentha_post excerpt=false date=true classes="home-blogs-list" title="Recent Blog Posts"]',
+    $wp_customize->add_setting( 'wasentha_recent_posts_title', array(
+            'default'     => 'Recent Blog Posts',
             'transport'   => 'refresh',
         ) 
     );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_recent_posts', array(
-        'label'        => __( 'Recent Posts Shortcode', THEME_ID ),
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wasentha_recent_posts_title', array(
+        'label'        => __( 'Recent Posts Title', THEME_ID ),
         'section'    => 'wasentha_customizer_section',
-        'settings'   => 'home_page_recent_posts',
+        'settings'   => 'wasentha_recent_posts_title',
+        'active_callback' => 'is_front_page',
+    ) ) );
+    
+    $wp_customize->add_setting( 'wasentha_recent_posts_limit' , array(
+            'default'     => 5,
+            'transport'   => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wasentha_recent_posts_limit', array(
+        'type' => 'number',
+        'label'        => __( 'Number of Recent Posts on the Home Page', THEME_ID ),
+        'section'    => 'wasentha_customizer_section',
+        'settings'   => 'wasentha_recent_posts_limit',
         'active_callback' => 'is_front_page',
     ) ) );
     

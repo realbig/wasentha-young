@@ -149,7 +149,7 @@ the_post();
 </section>
 
 <section id="recent-posts">
-    <?php echo do_shortcode( get_theme_mod( 'home_page_recent_posts', '[wasentha_post excerpt=false date=true classes="home-blogs-list" title="Recent Blog Posts"]' ) ); ?>
+    <?php echo do_shortcode( '[wasentha_post excerpt=true date=true classes="home-blogs-list" title="' . get_theme_mod( 'wasentha_recent_posts_title', 'Recent Blog Posts' ) . '" posts_per_page=' . get_theme_mod( 'wasentha_recent_posts_limit', 5 ) . ']' ); ?>
 </section>
 
 <?php
