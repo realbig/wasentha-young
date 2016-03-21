@@ -5358,8 +5358,9 @@ a img.aligncenter {
     .home #home-slider.realbig-slider-container .realbig-slider .slide .columns:first-of-type {
       border-right: 3px solid #603; }
     .home #home-slider.realbig-slider-container .realbig-slider .slide .columns.image {
-      background-size: cover;
-      background-repeat: no-repeat; }
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50% 50%; }
     .home #home-slider.realbig-slider-container .realbig-slider .slide .columns.text {
       padding: 30px; }
     @media only screen and (max-width: 40em) {
