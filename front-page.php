@@ -83,7 +83,7 @@ the_post();
                             <?php endif; ?>
 
                             <div class="small-6 columns text">
-                                <h2><?php echo get_sub_field( 'descriptor' ); ?></h2>
+                                <<?php echo get_sub_field( 'descriptor_size' ); ?>><?php echo get_sub_field( 'descriptor' ); ?></<?php echo get_sub_field( 'descriptor_size' ); ?>>
                                 <a href="<?php echo $url; ?>" class="button"><?php echo get_sub_field( 'button_text' ); ?></a>
                             </div>
 
