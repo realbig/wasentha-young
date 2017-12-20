@@ -910,3 +910,16 @@ function no_writings_category_on_writing_page( $args ) {
     return $args;
     
 }
+
+/**
+ * Post Promoter Pro uses "administrator" as the Cap. While this works, "manage_options" should have been used instead for better compatibility
+ * 
+ * @param		string Capability
+ * 
+ * @return		string Capability
+ */
+add_filter( 'ppp_manage_role', function( $cap ) {
+	
+	return 'manage_options';
+	
+} );
