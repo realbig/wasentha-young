@@ -884,7 +884,7 @@ function remove_wp_smilies_from_feed( $query ) {
     global $post;
     
     // If Writings Page 
-    if ( $post->post_name == 'writing' ) {
+    if ( is_object( $post ) && $post->post_name == 'writing' ) {
         
         add_filter( 'widget_posts_args', 'no_writings_category_on_writing_page' );
         

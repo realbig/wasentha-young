@@ -1,7 +1,3 @@
-// Copy of Foundation's _settings.scss with the path to util/util changed.
-// ZURB closed zurb/foundation-sites#7573 "Fixed util import in settings/_settings.scss", even though it is fairly broken unless you have your project structured with all your SASS in Foundation's scss folder... which would not be ideal.
-@import "foundation-settings";
-
 /* Override Foundation's _settings.scss here, or store your own variables */
 
 $dark-color: #333;

@@ -42,7 +42,7 @@ body {
     font-weight: 600;
 }
 
-.page-content {
+.page-content, section#site-content > div#container {
     
     background-color: $white;
     padding: 30px;
