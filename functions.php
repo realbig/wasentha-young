@@ -923,3 +923,16 @@ add_filter( 'ppp_manage_role', function( $cap ) {
 	return 'manage_options';
 	
 } );
+
+/**
+ * Changes the Product Description Heading in WooCommerce
+ * 
+ * @param		string Product Description Heading
+ *                                    
+ * @return		string Product Description Heading
+ */
+add_filter( 'woocommerce_product_description_heading', function( $product_description_heading ) {
+	
+	return __( 'Description', THEME_ID );
+	
+} );
