@@ -34,8 +34,6 @@ the_post();
 
             <div class="post-meta">
 
-                <strong>Date: </strong><?php the_date(); ?><br />
-
                 <?php if ( get_the_terms( get_the_ID(), 'wasentha_artwork_series' ) !== false ) : ?>
                     <strong>Series:</strong> <?php the_terms( get_the_ID(), 'wasentha_artwork_series' ); ?>
                 <?php endif; ?>

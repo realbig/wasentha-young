@@ -34,8 +34,6 @@ if ( has_post_thumbnail() ) : ?>
     </h3>
     <div class="post-meta">
 
-        <strong>Date: </strong><?php the_time( get_option( 'date_format' ) ); // the_date() only shows the first occurence ?><br />
-
         <?php if ( get_the_terms( get_the_ID(), 'wasentha_artwork_series' ) !== false ) : ?>
         <strong>Series:</strong> <?php the_terms( get_the_ID(), 'wasentha_artwork_series' ); ?>
         <?php endif; ?>
