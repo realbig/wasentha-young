@@ -3,10 +3,6 @@ javascript:
     root: .
     filename: script.js
     vendor:
-      - build/vendor/js/modernizr.js
-      - build/vendor/js/fastclick.js
-      - build/vendor/js/placeholder.js
-      - build/vendor/js/jquery.cookie.js
       - build/vendor/js/realbig-slider.js
       - bower_components/foundation-sites/js/foundation.core.js
       - bower_components/foundation-sites/js/foundation.util.keyboard.js
