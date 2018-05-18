@@ -24,7 +24,7 @@ if ( defined( 'THEME_VERSION' ) || defined( 'THEME_ID' ) || isset( $wasentha_fon
 /**
  * The theme's current version (make sure to keep this up to date!)
  */
-define( 'THEME_VERSION', '1.0.1' );
+define( 'THEME_VERSION', '1.0.2' );
 
 /**
  * The theme's ID (used in handlers).
