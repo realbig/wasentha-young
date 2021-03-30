@@ -940,7 +940,7 @@ add_filter( 'woocommerce_product_description_heading', function( $product_descri
 
 /**
  * Defers parsing of JS
- * @since {{VERSION}}
+ * @since 1.0.3
  */
 
 add_filter( 'script_loader_tag', 'rbw_defer_js', 10, 3 );
