@@ -86,6 +86,11 @@ $button-background-hover: $anchor-color-hover;
 $titlebar-icon-color: $topbar-link-color;
 $titlebar-icon-color-hover: darken( $topbar-link-color, 20% );
 
+$dropdownmenu-arrow-color: $topbar-link-color;
+$dropdown-menu-item-color-active: $topbar-link-color;
+$dropdownmenu-submenu-background: $light-section;
+$topbar-submenu-background: $dropdownmenu-submenu-background;
+
 // Media query ranges
 $small-range: (0em, 40em);
 $medium-range: (40.063em, 64em);

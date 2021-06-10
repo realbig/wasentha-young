@@ -1,3 +1,5 @@
+import './vendor/realbig-slider';
+
 jQuery( document ).ready( function( $ ) {
 
     $( '.realbig-slider' ).each( function( index ) {
