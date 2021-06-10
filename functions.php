@@ -214,7 +214,7 @@ add_action( 'init', function () {
     // Theme styles
     wp_register_style(
         THEME_ID,
-        get_template_directory_uri() . '/style.css',
+        get_template_directory_uri() . '/dist/assets/css/app.css',
         null,
         defined( 'WP_DEBUG' ) && WP_DEBUG ? time() : THEME_VERSION
     );
@@ -222,7 +222,7 @@ add_action( 'init', function () {
     // Theme script
     wp_register_script(
         THEME_ID,
-        get_template_directory_uri() . '/script.js',
+        get_template_directory_uri() . '/dist/assets/js/app.js',
         array( 'jquery' ),
         defined( 'WP_DEBUG' ) && WP_DEBUG ? time() : THEME_VERSION,
         true

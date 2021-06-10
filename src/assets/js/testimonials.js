@@ -15,7 +15,7 @@ jQuery( function( $ ) {
 
             success: function( response ) {
 
-                var options = jQuery.parseJSON( response ); // Parses JSON from the AJAX response
+                var options = JSON.parse( response ); // Parses JSON from the AJAX response
                 
                 options = options[ Math.floor( Math.random() * options.length ) ]; // Choose One at Random
 
