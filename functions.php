@@ -936,20 +936,3 @@ add_filter( 'woocommerce_product_description_heading', function( $product_descri
 	return __( 'Description', THEME_ID );
 	
 } );
-
-
-/**
- * Defers parsing of JS
- * @since 1.0.3
- */
-
-add_filter( 'script_loader_tag', 'rbw_defer_js', 10, 3 );
-
-function rbw_defer_js( $tag, $handle, $src ) {
-
-	if ( is_admin() ) return $tag;
-    if ( $handle == 'jquery' ) return $tag;
-        
-    $tag = str_replace( 'src', 'defer="defer" src', $tag );
-    return $tag;
-}
